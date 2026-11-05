@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإيصال — الشاشات</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;600;800&amp;family=Readex+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.h{font-family:'Handjet',sans-serif}
+.zb{-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;padding-bottom:18px}
+.bar{background:repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 3px,currentColor 3px 4px,transparent 4px 7px,currentColor 7px 10px,transparent 10px 11px,currentColor 11px 12px,transparent 12px 15px)}
+.lead{flex:1;border-bottom:2px dotted currentColor;opacity:.55;margin:0 6px;transform:translateY(-5px)}
+.phone{width:390px;height:844px;box-sizing:border-box;overflow:hidden;border:10px solid #23252B;border-radius:44px;display:flex;flex-direction:column;position:relative}
+.sec{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.1em;color:#5A5D66}
+.sample{font-family:'JetBrains Mono',monospace;font-size:11px;border:1px solid currentColor;padding:1px 6px}
+.cap{font-size:15px;line-height:1.7}
+button{font-family:'Readex Pro',sans-serif}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:1440px;height:3300px;box-sizing:border-box;padding:64px;background:#D9DAD5;color:#23252B;font-family:'Readex Pro',sans-serif;display:flex;flex-direction:column;gap:64px;overflow:hidden">
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="margin:0;font-size:28px">الموبايل · للبيّاع</h2><span class="sec">a. النهارده (فاتح) · b. البروفايل (غامق) · بيانات عينة</span></div>
+    <div style="display:flex;gap:40px;align-items:flex-start">
+
+      <div class="phone" style="background:#E3E4E0">
+        <div style="padding:18px 16px 10px;display:flex;justify-content:space-between;align-items:flex-end">
+          <div style="display:flex;flex-direction:column"><span class="m" style="font-size:12px;color:#5A5D66;text-align:right">TUE 03.11.2026 · POS AHMED.S</span><h1 class="h" style="margin:0;font-size:60px;line-height:.95;font-weight:800">النهارده</h1></div>
+          <span class="sample" style="color:#5A5D66">عينة</span>
+        </div>
+        <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:0 12px">
+          <div class="zb" style="background:#F5F6F4;padding:10px 12px 18px;display:flex;flex-direction:column">
+            <div style="display:flex;justify-content:space-between;border-bottom:1px dashed #23252B;padding-bottom:6px"><b style="color:#A3134C">متأخرات</b><span class="m" style="font-size:12px">x3</span></div>
+            <sc-for list="{{overdue}}" as="o" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:8px;align-items:center;min-height:56px;border-inline-start:{{o.stripe}} solid #C2185B;padding-inline-start:8px;border-bottom:1px dashed #A4A7AE">
+                <span style="display:flex;flex-direction:column;min-width:0"><span style="display:flex;justify-content:space-between;gap:6px"><b style="font-size:14px">{{o.name}}</b><b style="font-size:12px;color:#A3134C">{{o.late}}</b></span><span style="display:flex;align-items:baseline;font-size:12px;color:#5A5D66"><span>{{o.what}}</span><span class="lead"></span><span class="m" style="color:#23252B;font-weight:700">{{o.amount}}</span></span></span>
+                <button aria-label="اتصل" style="width:44px;height:44px;border:0;background:#23252B;color:#F5F6F4;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></button>
+              </div>
+            </sc-for>
+          </div>
+          <div class="zb" style="background:#F5F6F4;padding:10px 12px 18px;display:flex;flex-direction:column">
+            <div style="display:flex;justify-content:space-between;border-bottom:1px dashed #23252B;padding-bottom:6px"><b>النهارده</b><span class="m" style="font-size:12px">x4</span></div>
+            <sc-for list="{{today}}" as="t" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:48px minmax(0,1fr) 44px;gap:8px;align-items:center;min-height:50px;border-bottom:1px dashed #A4A7AE">
+                <span class="m" style="font-weight:700;text-align:right;font-size:14px">{{t.time}}</span>
+                <span style="display:flex;flex-direction:column;min-width:0"><b style="font-size:14px">{{t.name}}</b><span style="font-size:12px;color:#5A5D66;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{t.what}}</span></span>
+                <button aria-label="تمّت" style="width:44px;height:44px;border:1.5px solid #23252B;background:transparent;color:#23252B;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></button>
+              </div>
+            </sc-for>
+          </div>
+          <div class="zb" style="background:#F5F6F4;padding:10px 12px 18px;display:flex;flex-direction:column">
+            <div style="display:flex;justify-content:space-between;border-bottom:1px dashed #23252B;padding-bottom:6px"><b>جداد</b><span class="m" style="font-size:12px">*** لم يتم الاتصال ***</span></div>
+            <sc-for list="{{fresh}}" as="f" hint-placeholder-count="3">
+              <div style="display:flex;align-items:baseline;min-height:40px;padding-top:10px;font-size:14px"><b>{{f.name}}</b><span class="lead"></span><span style="font-size:12px;color:#5A5D66">{{f.src}} · {{f.age}}</span></div>
+            </sc-for>
+          </div>
+        </div>
+        <nav style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#F5F6F4;border-top:1px dashed #23252B;padding-bottom:10px">
+          <a href="#" style="height:56px;display:flex;align-items:center;justify-content:center;background:#23252B;color:#F5F6F4;text-decoration:none;font-weight:600;font-size:13px">النهارده</a>
+          <a href="#" style="height:56px;display:flex;align-items:center;justify-content:center;color:#23252B;text-decoration:none;font-size:13px">العملاء</a>
+          <a href="#" style="height:56px;display:flex;align-items:center;justify-content:center;color:#23252B;text-decoration:none;font-size:13px">واتساب</a>
+          <a href="#" style="height:56px;display:flex;align-items:center;justify-content:center;color:#23252B;text-decoration:none;font-size:13px">تقفيل</a>
+        </nav>
+      </div>
+
+      <div class="phone" style="background:#111214;color:#EDEDE9;border-color:#000">
+        <div style="height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 6px">
+          <button aria-label="رجوع" style="width:44px;height:44px;border:0;background:transparent;color:#EDEDE9;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          <span class="sample" style="color:#A4A7AE;margin-left:8px">عينة</span>
+        </div>
+        <div class="zb" style="margin:0 12px;background:#1C1D21;padding:12px 14px 18px;display:flex;flex-direction:column;gap:4px;font-size:14px">
+          <div style="text-align:center;display:flex;flex-direction:column;gap:2px;border-bottom:1px dashed #EDEDE9;padding-bottom:8px"><span class="h" style="font-size:40px;font-weight:800;line-height:1">أ. هالة منصور</span><span class="m" style="font-size:11px;color:#A4A7AE">AG-001873 · OPENED 22.10.2026 · AHMED.S</span></div>
+          <div style="display:flex;align-items:baseline"><span>الوحدة</span><span class="lead"></span><span>شقة 140م · التجمع الخامس</span></div>
+          <div style="display:flex;align-items:baseline"><span>الموبايل</span><span class="lead"></span><span class="m">+20 10• ••• •678</span></div>
+          <div style="display:flex;align-items:baseline"><span>المرحلة</span><span class="lead"></span><span><span class="m">[■■■■□]</span> عرض سعر</span></div>
+          <div style="display:flex;align-items:baseline"><span>المتابعة</span><span class="lead"></span><b>النهارده <span class="m">17:00</span></b></div>
+          <div style="display:flex;align-items:baseline;border-top:4px double #EDEDE9;margin-top:4px;padding-top:6px"><b style="font-size:16px">الإجمالي</b><span class="lead"></span><span class="h" style="font-size:34px;font-weight:600;line-height:1">2,450,000 ج</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:4px"><span class="bar" style="width:150px;height:26px;color:#EDEDE9"></span><span class="m" style="font-size:11px;color:#A4A7AE">TXN 0004233</span></div>
+        </div>
+        <div style="flex:1;overflow:hidden;padding:10px 12px;display:flex;flex-direction:column;gap:8px">
+          <span class="m" style="font-size:11px;color:#A4A7AE;text-align:center">— — واتساب · رقم الشركة — —</span>
+          <div class="zb" style="align-self:flex-start;max-width:80%;background:#1C1D21;padding:7px 10px 16px;font-size:14px;line-height:1.55">مساء الخير، العرض اللي بعته امبارح لسه ساري؟<span class="m" style="display:block;font-size:10px;color:#A4A7AE;text-align:left">14:02</span></div>
+          <div class="zb" style="align-self:flex-end;max-width:80%;background:#EDEDE9;color:#111214;padding:7px 10px 16px;font-size:14px;line-height:1.55">أيوه ساري لآخر الأسبوع: مقدم <span class="m">10%</span> والباقي على <span class="m">6</span> سنين.<span class="m" style="display:block;font-size:10px;color:#44464D;text-align:left">✓✓ 14:10 · TXN 4228</span></div>
+          <div class="zb" style="align-self:flex-start;max-width:80%;background:#1C1D21;padding:7px 10px 16px;font-size:14px;line-height:1.55">طب ينفع نعاين تاني يوم السبت؟<span class="m" style="display:block;font-size:10px;color:#A4A7AE;text-align:left">14:12</span></div>
+          <div class="zb" style="align-self:flex-end;max-width:80%;background:#EDEDE9;color:#111214;padding:7px 10px 16px;font-size:14px;line-height:1.55">أكيد، هكلمك الساعة <span class="m">5</span> نثبّت الميعاد.<span class="m" style="display:block;font-size:10px;color:#44464D;text-align:left">✓✓ 14:15 · TXN 4231</span></div>
+        </div>
+        <div style="display:flex;gap:8px;padding:8px 10px 18px;border-top:1px dashed #A4A7AE">
+          <input aria-label="رسالة" placeholder="اكتب رسالة…" style="flex:1;min-width:0;height:44px;border:0;border-bottom:2px dotted #EDEDE9;background:transparent;color:#EDEDE9;font:400 15px 'Readex Pro',sans-serif;outline:none">
+          <button style="height:44px;padding:0 16px;border:0;background:#EDEDE9;color:#111214;font-weight:700">ابعت</button>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;flex-direction:column;gap:18px;padding-top:6px">
+        <div style="border-top:2px solid #23252B;padding-top:10px;display:flex;flex-direction:column;gap:4px"><b>كل قسم إيصال لوحده</b><span class="cap">متأخرات، النهارده، جداد: تلات إيصالات مقطوعة. البيّاع بيخلّص إيصال ويرميه، ولما الإيصال يخلص بيطوي لتحت.</span></div>
+        <div style="border-top:2px solid #23252B;padding-top:10px;display:flex;flex-direction:column;gap:4px"><b>تخن الوردي = قد إيه اتأخرت</b><span class="cap">شريف <span class="m">12px</span>، كريم <span class="m">6px</span>، منى <span class="m">3px</span>. بتشوف مين الأول من غير ما تقرا.</span></div>
+        <div style="border-top:2px solid #23252B;padding-top:10px;display:flex;flex-direction:column;gap:4px"><b>البروفايل فاتورة</b><span class="cap">صاحب الشغل فاهم الفاتورة من غير شرح: بند، نقط، سعر، إجمالي تحته خطين. والموبايل متخبّي بالنجوم زي إيصال الفيزا.</span></div>
+        <div style="border-top:2px solid #23252B;padding-top:10px;display:flex;flex-direction:column;gap:4px"><b>كل رسالة ليها رقم عملية</b><span class="cap">الواتساب جزء من السجل. لو البيّاع مسح الشات من موبايله، الإيصال موجود عند الشركة.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="margin:0;font-size:28px">لوحة صاحب الشغل · حيطة التقفيلات</h2><span class="sec">c. WEB · بيانات عينة</span></div>
+    <div style="background:#E3E4E0;border:1.5px solid #23252B;padding:24px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;border-bottom:1px dashed #23252B;padding-bottom:14px">
+        <span class="h" style="font-size:44px;font-weight:800;line-height:1">أجندة</span>
+        <nav style="display:flex;gap:4px"><a href="#" style="height:44px;padding:0 14px;display:flex;align-items:center;background:#23252B;color:#F5F6F4;text-decoration:none">الملخص</a><a href="#" style="height:44px;padding:0 14px;display:flex;align-items:center;color:#23252B;text-decoration:none">العملاء</a><a href="#" style="height:44px;padding:0 14px;display:flex;align-items:center;color:#23252B;text-decoration:none">الفريق</a><a href="#" style="height:44px;padding:0 14px;display:flex;align-items:center;color:#23252B;text-decoration:none">السجل</a></nav>
+        <span style="margin-inline-start:auto;display:flex;gap:12px;align-items:center"><span class="sample" style="color:#5A5D66">عينة</span><span class="m">NOV 2026</span><span>وليد الجندي</span></span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px">
+        <div class="zb" style="background:#F5F6F4;padding:18px 20px 24px;display:flex;flex-direction:column;gap:6px;font-size:15px">
+          <div style="text-align:center;border-bottom:1px dashed #23252B;padding-bottom:8px"><span class="h" style="font-size:34px;font-weight:800">تقفيل الشهر · نوفمبر</span></div>
+          <div style="display:flex;align-items:baseline"><span>عملاء جداد</span><span class="lead"></span><span class="m" style="font-weight:700">312</span></div>
+          <div style="display:flex;align-items:baseline"><span>صفقات اتقفلت</span><span class="lead"></span><span class="m" style="font-weight:700">23</span></div>
+          <div style="display:flex;align-items:baseline"><span>نسبة التحويل</span><span class="lead"></span><span class="h" style="font-size:40px;font-weight:800;line-height:1">7.4%</span></div>
+          <div style="display:flex;align-items:baseline;border-inline-start:8px solid #C2185B;padding-inline-start:8px;color:#A3134C;font-weight:700"><span>متابعات متأخرة</span><span class="lead"></span><span class="m">41</span></div>
+          <div style="display:flex;align-items:baseline;border-top:4px double #23252B;padding-top:6px;font-weight:700"><span>قيمة اللي اتقفل</span><span class="lead"></span><span class="m">38,600,000 ج</span></div>
+          <div style="border-top:1px dashed #23252B;margin-top:8px;padding-top:8px;display:flex;flex-direction:column;gap:4px">
+            <b style="font-size:14px">جم منين</b>
+            <sc-for list="{{sources}}" as="s" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:110px minmax(0,1fr) 36px;gap:8px;font-size:13px;align-items:center"><span>{{s.name}}</span><span class="m" style="text-align:right;letter-spacing:-.05em;overflow:hidden;white-space:nowrap">{{s.bar}}</span><span class="m" style="font-weight:700;text-align:left">{{s.n}}</span></div></sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <b style="font-size:17px">تقفيلات امبارح · المتأخر عند كل بيّاع</b>
+          <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:start">
+            <sc-for list="{{team}}" as="p" hint-placeholder-count="5">
+              <div class="zb" style="background:#F5F6F4;padding:12px 10px 22px;display:flex;flex-direction:column;gap:6px;font-size:13px">
+                <span class="m" style="font-size:10px;color:#5A5D66;text-align:right">Z · 02.11 · 21:00</span>
+                <b style="font-size:15px">{{p.name}}</b>
+                <div style="display:flex;align-items:baseline"><span>معاه</span><span class="lead"></span><span class="m">{{p.active}}</span></div>
+                <div style="display:flex;align-items:baseline"><span>مكالمات</span><span class="lead"></span><span class="m">{{p.calls}}</span></div>
+                <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;border-top:1px dashed #23252B;padding-top:6px"><span style="font-size:12px">متأخر</span><span class="h" style="font-size:44px;font-weight:800;line-height:.9;color:{{p.color}}">{{p.late}}</span></div>
+                <span style="height:{{p.h}};background:#C2185B"></span>
+                <span style="font-size:12px;color:{{p.color}}">أقدم: {{p.oldest}}</span>
+                <button style="height:44px;border:1.5px solid #C2185B;background:transparent;color:#A3134C;font-weight:700;font-size:13px">اقفل الحساب</button>
+              </div>
+            </sc-for>
+          </div>
+          <span style="font-size:13px;color:#5A5D66">كل بيّاع إيصال. الشريط الوردي تحت الرقم طوله قد المتأخر. الإيصالات بتتعلّق على الحيطة الساعة <span class="m">21:00</span> كل يوم.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="margin:0;font-size:28px">اللحظة اللي هتتصوّر: إيصال الصفقة</h2><span class="sec">d. 3 FRAMES · ~3s</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="phone" style="background:#E3E4E0">
+          <div style="padding:20px 16px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <span class="h" style="font-size:40px;font-weight:800;line-height:1">أ. هالة منصور</span>
+            <div class="zb" style="background:#F5F6F4;padding:12px 14px 20px;display:flex;flex-direction:column;gap:6px;font-size:14px">
+              <div style="display:flex;align-items:baseline"><span>شقة 140م · التجمع</span><span class="lead"></span><span class="m">2,600,000</span></div>
+              <div style="display:flex;align-items:baseline"><span>خصم كاش</span><span class="lead"></span><span class="m">-150,000</span></div>
+              <div style="display:flex;align-items:baseline;border-top:4px double #23252B;padding-top:6px;font-weight:700"><span>الإجمالي</span><span class="lead"></span><span class="m">2,450,000 ج</span></div>
+            </div>
+            <div style="margin-top:auto;height:64px;border:1.5px solid #23252B;background:#F5F6F4;position:relative;display:flex;align-items:center;justify-content:center">
+              <span style="position:absolute;right:0;top:0;bottom:0;width:62%;background:#23252B"></span>
+              <span style="position:absolute;right:calc(62% - 2px);top:6px;bottom:6px;width:56px;background:#F5F6F4;border:1.5px solid #23252B;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#23252B" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></span>
+              <span style="position:relative;font-weight:700;color:#23252B;margin-left:-180px">اسحب عشان تقفل</span>
+            </div>
+          </div>
+        </div>
+        <span class="cap"><b>١. السحب.</b> زي «اسحب للدفع». مفيش زرار «تم البيع» يتداس بالغلط، والسحب بيوصل لآخره بس لما كل البنود تبقى متسجّلة.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="phone" style="background:#23252B">
+          <div style="height:22px;margin:40px 24px 0;background:#000;border-radius:2px"></div>
+          <div style="margin:0 40px;background:#F5F6F4;color:#23252B;padding:14px 16px;display:flex;flex-direction:column;gap:6px;font-size:14px;height:420px;box-sizing:border-box;overflow:hidden;justify-content:flex-end">
+            <span class="m" style="font-size:11px;text-align:center;opacity:.35">TXN 0004240 · 03.11.2026 · 17:42</span>
+            <div style="display:flex;align-items:baseline;opacity:.55"><span>العميل</span><span class="lead"></span><span>أ. هالة منصور</span></div>
+            <div style="display:flex;align-items:baseline;opacity:.8"><span>البيّاع</span><span class="lead"></span><span>أحمد سمير</span></div>
+            <div style="display:flex;align-items:baseline"><span>المدة</span><span class="lead"></span><span><span class="m">12</span> يوم · <span class="m">9</span> مكالمات</span></div>
+            <div style="display:flex;align-items:baseline;border-top:4px double #23252B;padding-top:6px"><b>الإجمالي</b><span class="lead"></span><span class="h" style="font-size:34px;font-weight:800;line-height:1">2,450,000 ج</span></div>
+            <div class="m" style="font-size:12px;text-align:center;letter-spacing:.3em">▒▒▒▒▒▒▒▒▒▒▒▒</div>
+          </div>
+          <span style="color:#A4A7AE;text-align:center;margin-top:24px;font-size:13px" class="m">PRINTING… 40ms/line</span>
+        </div>
+        <span class="cap"><b>٢. الطباعة.</b> الموبايل يبقى ماكينة. الإيصال بيطلع من فتحة فوق، سطر بسطر وبصوت خفيف زي الطابعة، والسطر الأخير لسه بيطبع.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="phone" style="background:#E3E4E0;align-items:center">
+          <div class="zb" style="margin-top:40px;width:300px;background:#F5F6F4;padding:18px 18px 28px;display:flex;flex-direction:column;gap:6px;font-size:14px;transform:rotate(-2deg);box-sizing:border-box">
+            <span class="h" style="font-size:52px;font-weight:800;line-height:.95;text-align:center">مبروك<br>يا أحمد</span>
+            <span style="text-align:center;font-size:13px">الصفقة رقم <span class="m">24</span> في الشركة الشهر ده</span>
+            <div style="border-top:1px dashed #23252B;margin-top:6px"></div>
+            <div style="display:flex;align-items:baseline"><span>شقة 140م</span><span class="lead"></span><span>التجمع</span></div>
+            <div style="display:flex;align-items:baseline;border-top:4px double #23252B;padding-top:6px;font-weight:700"><span>الإجمالي</span><span class="lead"></span><span class="m">2,450,000 ج</span></div>
+            <span class="bar" style="height:30px;margin-top:6px;color:#23252B"></span>
+            <span class="h" style="font-size:22px;font-weight:800;text-align:center">احتفظ بالإيصال</span>
+          </div>
+          <div style="margin-top:auto;padding:16px;display:flex;flex-direction:column;gap:8px;width:100%;box-sizing:border-box">
+            <button style="height:52px;border:0;background:#23252B;color:#F5F6F4;font-weight:700;font-size:15px">ابعته لجروب الشغل</button>
+            <button style="height:48px;border:1.5px dashed #23252B;background:transparent;color:#23252B;font-weight:600">احفظ صورة</button>
+          </div>
+        </div>
+        <span class="cap"><b>٣. القطع.</b> الإيصال بيتقطع ويميل ٢ درجة. الصورة اللي بتتبعت فيها اسم البيّاع والمبلغ، ومن غير اسم العميل كامل ولا رقمه.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:32px;border-top:4px double #23252B;padding-top:24px">
+    <div style="display:flex;flex-direction:column;gap:4px"><span class="sec">SELF-CRITIQUE</span><span class="h" style="font-size:88px;font-weight:800;line-height:.9">7.5/10</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px"><b>اللي بيعدّي النتيجة</b><span style="font-size:15px;line-height:1.8">الإيصال هو لغة البيّاع المصري: فوري، الكاشير، الفيزا. فيه نظام كامل (أرقام عمليات، تقفيل Z، إجمالي) وبيتكلم عن الفلوس بطبيعته. الشريط الوردي تفصيلة حقيقية محدش هياخد باله منها غير اللي اشتغل على كاشير، ولما ياخد باله هيبتسم. والإيصال اللي بيتبعت للجروب هيتشاف كتير.</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px"><b>ليه مش 9</b><span style="font-size:15px;line-height:1.8">ورق الكاشير بيبهت ويترمي، وده عكس «متأمّن» و«ولا عميل يضيع». الأمان هنا مقري بس مش محسوس. Handjet بالعربي محتاج اختبار حقيقي على شاشات رخيصة. وهو قريب من نتيجة الحيطة: حبر واحد ولون واحد. عشان يبقى 9: نفرض العكس، يعني الإيصال الرقمي الوحيد اللي مبيبهتش، ونبيع طابعة <span class="m">58mm</span> صغيرة لمكتب صاحب الشغل تطبع كل صفقة بجد.</span></div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      overdue: [
+        { name: 'م. شريف عبد العظيم', late: 'متأخر يومين', what: 'فيلا · زايد', amount: '6,800,000', stripe: '12px' },
+        { name: 'كريم فؤاد', late: 'متأخر يوم', what: 'دوبلكس · مدينتي', amount: '4,150,000', stripe: '6px' },
+        { name: 'أ. منى الدسوقي', late: 'من 5 ساعات', what: 'IELTS مسائي', amount: '7,500', stripe: '3px' }
+      ],
+      today: [
+        { time: '11:00', name: 'أ. نرمين صبحي', what: 'مكالمة · شقة 120م المعادي' },
+        { time: '13:30', name: 'محمود رجب', what: 'معاينة · العاصمة R7' },
+        { time: '17:00', name: 'أ. هالة منصور', what: 'العرض المعدّل · 2,450,000 ج' },
+        { time: '19:00', name: 'يوسف حمدي', what: 'ألماني A1 · 6,200 ج' }
+      ],
+      fresh: [
+        { name: 'رنا عادل', src: 'فيسبوك', age: '3 س' },
+        { name: 'إسلام توفيق', src: 'OLX', age: '5 س' },
+        { name: 'دينا مجدي', src: 'ترشيح', age: '6 س' }
+      ],
+      sources: [
+        { name: 'فيسبوك', bar: '████████████████████', n: '118' },
+        { name: 'واتساب مباشر', bar: '█████████████', n: '74' },
+        { name: 'ترشيحات', bar: '████████', n: '46' },
+        { name: 'OLX', bar: '███████', n: '39' },
+        { name: 'Property Finder', bar: '████', n: '21' },
+        { name: 'بوستر', bar: '██', n: '14' }
+      ],
+      team: [
+        { name: 'مصطفى حسن', active: '68', calls: '6', late: '14', h: '56px', oldest: '9 أيام', color: '#A3134C' },
+        { name: 'سارة نبيل', active: '71', calls: '11', late: '11', h: '44px', oldest: '4 أيام', color: '#A3134C' },
+        { name: 'عمر الشاذلي', active: '57', calls: '17', late: '8', h: '32px', oldest: '3 أيام', color: '#23252B' },
+        { name: 'نهى عاطف', active: '52', calls: '19', late: '5', h: '20px', oldest: 'يومين', color: '#23252B' },
+        { name: 'أحمد سمير', active: '64', calls: '23', late: '3', h: '12px', oldest: 'يوم', color: '#23252B' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>أجندة R4 — الحركة والخامة</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Alexandria:wght@600;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'Geist Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.n{font-variant-numeric:tabular-nums lining-nums;direction:ltr;unicode-bidi:isolate}
+.h{font-family:'Amiri',serif}
+.a{font-family:'Alexandria',sans-serif}
+.row{background:#1B1D1C;border-radius:24px;padding:22px 24px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:center}
+.fr{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1}
+.t{font-family:'Geist Mono',monospace;font-size:11px;color:#A3A69F}
+.grain{position:absolute;inset:0;width:100%;height:100%;opacity:.16;mix-blend-mode:overlay}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:1440px;height:1250px;box-sizing:border-box;padding:48px 64px;background:#141514;color:#F2F1EC;font-family:'IBM Plex Sans Arabic',sans-serif;display:flex;flex-direction:column;gap:18px;overflow:hidden">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><filter id="grain3"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs></svg>
+
+  <header style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:6px"><h2 class="h" style="margin:0;font-size:48px;font-weight:700">أربع حركات هي الهوية.</h2><span style="font-size:14px;color:#B9BBB4;max-width:520px;line-height:1.7">كل حركة ليها صوت واهتزاز ومواصفات تنفيذ. ولو reduced-motion شغّال، كله يتحوّل <span class="m">fade 120ms</span>.</span></header>
+
+  <div class="row">
+    <div style="display:flex;flex-direction:column;gap:6px"><b class="a" style="font-size:22px">العقرب بيتك</b><span style="font-size:13px;line-height:1.7;color:#B9BBB4">بيتحرك مرة كل دقيقة، مش بنعومة. ولما يعدّي نقطة ما اتعملتش، النقطة بتحمر وتكبر <span class="m">1→1.25→1</span>.</span><span class="t">tick 180ms · haptic light · sound «تك»</span></div>
+    <div style="display:flex;gap:16px">
+      <sc-for list="{{hand}}" as="f" hint-placeholder-count="4">
+        <div class="fr"><svg width="120" height="120" viewBox="0 0 400 400" aria-hidden="true"><path d="M93.9 306.1 A150 150 0 1 1 306.1 306.1" fill="none" stroke="#2A2D2B" stroke-width="26" stroke-linecap="round"/><path d="{{f.arc}}" fill="none" stroke="#F2F1EC" stroke-width="26" stroke-linecap="round"/><circle cx="84.1" cy="295.2" r="{{f.r}}" fill="{{f.dot}}"/><text x="200" y="230" text-anchor="middle" font-family="Geist Mono" font-size="60" fill="#F2F1EC">{{f.time}}</text></svg><span class="t">{{f.label}}</span></div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div class="row">
+    <div style="display:flex;flex-direction:column;gap:6px"><b class="a" style="font-size:22px">الكارت بيتقلب</b><span style="font-size:13px;line-height:1.7;color:#B9BBB4">لما الصفقة تتقفل، الكارت الزمرد بيلف على محوره وطالع من الناحية التانية أونيكس بفويل فضّي. ومعاه اهتزاز تقيل مرة واحدة في النص.</span><span class="t">500ms cubic-bezier(.2,.8,.2,1) · haptic heavy @50%</span></div>
+    <div style="display:flex;gap:16px;align-items:center">
+      <sc-for list="{{flip}}" as="f" hint-placeholder-count="4">
+        <div class="fr"><div style="width:160px;height:100px;border-radius:16px;background:{{f.bg}};color:{{f.fg}};box-shadow:inset 0 0 0 1.5px {{f.foil}};position:relative;overflow:hidden;transform:perspective(500px) rotateY({{f.deg}});display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box"><svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grain3)"/></svg><b style="font-size:13px;position:relative">{{f.txt}}</b></div><span class="t">{{f.label}}</span></div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div class="row">
+    <div style="display:flex;flex-direction:column;gap:6px"><b class="a" style="font-size:22px">المانشيت بيتكتب</b><span style="font-size:13px;line-height:1.7;color:#B9BBB4">أول ما تفتح الصبح بس، الجملة بتتكتب حرف حرف، والرقم الأول. بعد كده بتظهر على طول.</span><span class="t">28ms/char · once per day · no sound</span></div>
+    <div style="display:flex;gap:16px">
+      <sc-for list="{{type}}" as="f" hint-placeholder-count="3">
+        <div class="fr" style="align-items:stretch"><div style="height:110px;background:#0B0C0C;border-radius:16px;padding:14px;box-sizing:border-box;display:flex;align-items:center"><span class="h" style="font-size:24px;line-height:1.35;font-weight:700">{{f.txt}}<span style="display:inline-block;width:2px;height:24px;background:#FF6F5E;vertical-align:middle;margin-inline-start:2px"></span></span></div><span class="t" style="text-align:center">{{f.label}}</span></div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div class="row">
+    <div style="display:flex;flex-direction:column;gap:6px"><b class="a" style="font-size:22px">القفل بيتملي</b><span style="font-size:13px;line-height:1.7;color:#B9BBB4">زرار قفل الحساب حواليه قوس زي قوس الساعة، وبيتملي وإنت دايس. ومعاه اهتزاز عند النص وعند الآخر.</span><span class="t">hold 1600ms · haptic 0/50/100%</span></div>
+    <div style="display:flex;gap:16px">
+      <sc-for list="{{lock}}" as="f" hint-placeholder-count="3">
+        <div class="fr"><svg width="110" height="110" viewBox="0 0 400 400" aria-hidden="true"><path d="M93.9 306.1 A150 150 0 1 1 306.1 306.1" fill="none" stroke="#2A2D2B" stroke-width="24" stroke-linecap="round"/><path d="{{f.arc}}" fill="none" stroke="#FF6F5E" stroke-width="24" stroke-linecap="round"/><circle cx="200" cy="200" r="92" fill="{{f.fill}}"/><rect x="164" y="196" width="72" height="56" rx="10" fill="none" stroke="#F2F1EC" stroke-width="12"/><path d="M178 196v-22a22 22 0 0 1 44 0v22" fill="none" stroke="#F2F1EC" stroke-width="12"/></svg><span class="t">{{f.label}}</span></div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:6px">
+    <div style="background:#1B1D1C;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:8px"><b class="a">الخط</b><span class="h" style="font-size:30px;font-weight:700;line-height:1.2">مانشيت · Amiri</span><span style="font-size:15px">الكلام · IBM Plex Sans Arabic</span><span class="n" style="font-size:22px;font-weight:600">2,450,000 ج · أرقام Plex tnum</span><span class="m" style="font-size:13px;color:#A3A69F">14:20 · № 1873 · Geist Mono بس للوقت والأرقام التسلسلية</span><span style="font-size:12px;color:#A3A69F">Amiri هنا مؤقت. الخط النهائي «ثمانية Serif Display» لو الرخصة سمحت.</span></div>
+    <div style="background:#1B1D1C;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:8px"><b class="a">الخامة</b><span style="font-size:13px;line-height:1.8;color:#B9BBB4">حبيبات: <span class="m">fractalNoise .85 · 16% overlay</span><br>فويل: <span class="m">inset 1.5px</span>، نحاس <span class="m">#C08A5B</span> وفضة <span class="m">#C9CCD1</span><br>ضل الكارت بس: <span class="m">0 30 60 -30 rgba(0,0,0,.8)</span><br>ميلان: لحد <span class="m">4°</span> مع الـgyroscope<br>حواف: كارت <span class="m">24–26</span> · شيت <span class="m">30</span> · زرار <span class="m">16</span> · شريحة <span class="m">999</span></span></div>
+    <div style="background:#1B1D1C;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:8px"><b class="a">الألوان · غامق أولًا</b>
+      <sc-for list="{{colors}}" as="c" hint-placeholder-count="6"><span style="display:grid;grid-template-columns:24px minmax(0,1fr) 70px 40px;gap:8px;align-items:center;font-size:12px"><span style="width:24px;height:24px;border-radius:50%;background:{{c.h}};box-shadow:0 0 0 1px #3A3D3A"></span><span>{{c.n}}</span><span class="m" style="font-size:11px">{{c.h}}</span><span class="m" style="font-size:11px;font-weight:600">{{c.cr}}</span></span></sc-for>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1250}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const arc = (p) => {
+      const t = (-135 + 270 * p) * Math.PI / 180;
+      const x = (200 + 150 * Math.sin(t)).toFixed(1), y = (200 - 150 * Math.cos(t)).toFixed(1);
+      return `M93.9 306.1 A150 150 0 ${270 * p > 180 ? 1 : 0} 1 ${x} ${y}`;
+    };
+    const R = '#FF6F5E', K = '#F2F1EC';
+    return {
+      hand: [
+        { arc: arc(.43), time: '14:18', dot: R, r: '16', label: '14:18' },
+        { arc: arc(.44), time: '14:19', dot: R, r: '16', label: '14:19' },
+        { arc: arc(.445), time: '14:20', dot: R, r: '22', label: 'تك + النقطة تكبر' },
+        { arc: arc(.445), time: '14:20', dot: R, r: '16', label: 'ترجع لمكانها' }
+      ],
+      flip: [
+        { bg: '#0E5E46', fg: '#FFFFFF', foil: '#C08A5B', deg: '0deg', txt: 'أ. هالة منصور', label: '0ms' },
+        { bg: '#0E5E46', fg: '#FFFFFF', foil: '#C08A5B', deg: '-60deg', txt: 'أ. هالة منصور', label: '160ms' },
+        { bg: '#0B0C0C', fg: '#E6E7E9', foil: '#C9CCD1', deg: '-120deg', txt: '', label: '330ms · haptic' },
+        { bg: '#0B0C0C', fg: '#E6E7E9', foil: '#C9CCD1', deg: '0deg', txt: 'اتقفلت · 2,450,000', label: '500ms' }
+      ],
+      type: [ { txt: '3', label: '0ms' }, { txt: '3 فاتوك.', label: '200ms' }, { txt: '3 فاتوك. ابدأ بـم. شريف،', label: '700ms' } ],
+      lock: [ { arc: arc(0.001), fill: '#3A1712', label: '0ms' }, { arc: arc(.5), fill: '#5C1F16', label: '800ms · haptic' }, { arc: arc(1), fill: '#C8321F', label: '1600ms · اتقفل' } ],
+      colors: [
+        { n: 'الأرضية', h: '#0B0C0C', cr: '—' }, { n: 'السطح', h: '#161817', cr: '—' }, { n: 'الحبر', h: '#F2F1EC', cr: '18.0' },
+        { n: 'ثانوي', h: '#A3A69F', cr: '7.9' }, { n: 'عقرب / متأخر', h: '#FF6F5E', cr: '7.2' }, { n: 'أخضر', h: '#5FD0A4', cr: '10.3' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

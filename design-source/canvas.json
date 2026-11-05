@@ -1,0 +1,755 @@
+{
+ "v": 3,
+ "attachments": {},
+ "boards": {
+  "D1-Screens.dc.html": {
+   "h": 3300,
+   "page": "r1",
+   "title": "01 · ورق مؤمّن — الشاشات واللحظة",
+   "w": 1440,
+   "x": 1520,
+   "y": 1600
+  },
+  "D1-System.dc.html": {
+   "h": 2900,
+   "page": "r1",
+   "title": "01 · ورق مؤمّن — النظام",
+   "w": 1440,
+   "x": 0,
+   "y": 1600
+  },
+  "D2-Screens.dc.html": {
+   "h": 3300,
+   "page": "r1",
+   "title": "02 · الإيصال — الشاشات واللحظة",
+   "w": 1440,
+   "x": 1520,
+   "y": 5450
+  },
+  "D2-System.dc.html": {
+   "h": 2900,
+   "page": "r1",
+   "title": "02 · الإيصال — النظام",
+   "w": 1440,
+   "x": 0,
+   "y": 5450
+  },
+  "D3-Screens.dc.html": {
+   "h": 3300,
+   "page": "r1",
+   "title": "03 · أوزاليد — الشاشات واللحظة",
+   "w": 1440,
+   "x": 1520,
+   "y": 9300
+  },
+  "D3-System.dc.html": {
+   "h": 2900,
+   "page": "r1",
+   "title": "03 · أوزاليد — النظام",
+   "w": 1440,
+   "x": 0,
+   "y": 9300
+  },
+  "Final-Components.dc.html": {
+   "h": 3000,
+   "page": "r1",
+   "title": "★ ورق مؤمّن v1 — Components & states",
+   "w": 1440,
+   "x": 1520,
+   "y": 13150
+  },
+  "Final-README.dc.html": {
+   "h": 3000,
+   "page": "r1",
+   "title": "★ README — Flutter + CSS",
+   "w": 1440,
+   "x": 3040,
+   "y": 13150
+  },
+  "Final-Tokens.dc.html": {
+   "h": 2700,
+   "page": "r1",
+   "title": "★ ورق مؤمّن v1 — Tokens",
+   "w": 1440,
+   "x": 0,
+   "y": 13150
+  },
+  "Main.dc.html": {
+   "h": 1100,
+   "page": "r1",
+   "title": "00 · الاتجاهات التلاتة + التوصية",
+   "w": 1440,
+   "x": 0,
+   "y": 0
+  },
+  "Piece-qac0.dc.html": {
+   "frameless": true,
+   "h": 70,
+   "title": "Box",
+   "w": 112,
+   "x": 1471,
+   "y": 1244
+  },
+  "R10-Mobile.dc.html": {
+   "h": 1130,
+   "page": "r10",
+   "title": "R10 · موبايل البيّاع · صور حقيقية",
+   "w": 1880,
+   "x": 0,
+   "y": 300
+  },
+  "R11-Mobile.dc.html": {
+   "h": 1130,
+   "page": "r11",
+   "title": "R11 · موبايل البيّاع · أداة شغل",
+   "w": 1880,
+   "x": 0,
+   "y": 300
+  },
+  "R12-A.dc.html": {
+   "h": 1000,
+   "page": "r12",
+   "title": "A · سكون — حبر ومرجاني",
+   "w": 1880,
+   "x": 0,
+   "y": 300
+  },
+  "R12-B.dc.html": {
+   "h": 1000,
+   "page": "r12",
+   "title": "B · إشارة — أسود وأصفر",
+   "w": 1880,
+   "x": 0,
+   "y": 1420
+  },
+  "R12-C.dc.html": {
+   "h": 1000,
+   "page": "r12",
+   "title": "C · جنينة — غابة وخوخي",
+   "w": 1880,
+   "x": 0,
+   "y": 2540
+  },
+  "R13-Ideas.dc.html": {
+   "h": 1430,
+   "page": "r13",
+   "title": "R13 · 9 حاجات صغيرة من تطبيقات تانية",
+   "w": 1440,
+   "x": 0,
+   "y": 1480
+  },
+  "R13-Mobile.dc.html": {
+   "h": 1060,
+   "page": "final",
+   "title": "الموبايل · النهارده، العميل، الصفقات، بليل",
+   "w": 1880,
+   "x": 0,
+   "y": 2040
+  },
+  "R14-Evolve.dc.html": {
+   "h": 1060,
+   "page": "final",
+   "title": "الموبايل · المكالمة، حصل إيه، العملاء",
+   "w": 1880,
+   "x": 0,
+   "y": 3220
+  },
+  "R15-Call.dc.html": {
+   "h": 1080,
+   "page": "final",
+   "title": "الموبايل · الاتصال والواتساب",
+   "w": 2320,
+   "x": 0,
+   "y": 4400
+  },
+  "R16-Agent.dc.html": {
+   "h": 700,
+   "page": "final",
+   "title": "الكمبيوتر · البيّاع",
+   "w": 1440,
+   "x": 0,
+   "y": 6660
+  },
+  "R16-Customer.dc.html": {
+   "h": 700,
+   "page": "final",
+   "title": "الكمبيوتر · العميل",
+   "w": 1440,
+   "x": 1560,
+   "y": 5600
+  },
+  "R16-Owner.dc.html": {
+   "h": 940,
+   "page": "final",
+   "title": "الكمبيوتر · الرئيسية",
+   "w": 1440,
+   "x": 0,
+   "y": 5600
+  },
+  "R17-Settings.dc.html": {
+   "h": 700,
+   "page": "final",
+   "title": "الكمبيوتر · الإعدادات",
+   "w": 1440,
+   "x": 0,
+   "y": 7540
+  },
+  "R17-Units.dc.html": {
+   "h": 760,
+   "page": "final",
+   "title": "الكمبيوتر · الوحدات",
+   "w": 1440,
+   "x": 1560,
+   "y": 6660
+  },
+  "R18-System.dc.html": {
+   "h": 1620,
+   "page": "final",
+   "title": "نظام التصميم",
+   "w": 1440,
+   "x": 0,
+   "y": 300
+  },
+  "R2-Halqa.dc.html": {
+   "h": 3200,
+   "page": "r2",
+   "title": "R2-C · حلقة ★",
+   "w": 1440,
+   "x": 3040,
+   "y": 1600
+  },
+  "R2-Khat.dc.html": {
+   "h": 3200,
+   "page": "r2",
+   "title": "R2-B · خط",
+   "w": 1440,
+   "x": 1520,
+   "y": 1600
+  },
+  "R2-Main.dc.html": {
+   "h": 1100,
+   "page": "r2",
+   "title": "R2 · الفكرة والتوصية",
+   "w": 1440,
+   "x": 0,
+   "y": 0
+  },
+  "R2-Raqam.dc.html": {
+   "h": 3200,
+   "page": "r2",
+   "title": "R2-A · رقم",
+   "w": 1440,
+   "x": 0,
+   "y": 1600
+  },
+  "R3-Main.dc.html": {
+   "h": 1100,
+   "page": "r3",
+   "title": "R3 · الفكرة والهوية",
+   "w": 1440,
+   "x": 0,
+   "y": 0
+  },
+  "R3-Mobile.dc.html": {
+   "h": 2100,
+   "page": "r3",
+   "title": "R3 · الموبايل",
+   "w": 1440,
+   "x": 0,
+   "y": 1600
+  },
+  "R3-Moments.dc.html": {
+   "h": 2100,
+   "page": "r3",
+   "title": "R3 · اللحظات",
+   "w": 1440,
+   "x": 1520,
+   "y": 1600
+  },
+  "R3-System.dc.html": {
+   "h": 2100,
+   "page": "r3",
+   "title": "R3 · النظام والمكوّنات",
+   "w": 1440,
+   "x": 4560,
+   "y": 1600
+  },
+  "R3-Web.dc.html": {
+   "h": 1400,
+   "page": "r3",
+   "title": "R3 · لوحة صاحب الشغل",
+   "w": 1440,
+   "x": 3040,
+   "y": 1600
+  },
+  "R4-Edition.dc.html": {
+   "h": 2100,
+   "page": "r4",
+   "title": "R4 · عدد خاص + جرنال الصبح",
+   "w": 1440,
+   "x": 0,
+   "y": 2470
+  },
+  "R4-Spec.dc.html": {
+   "h": 1250,
+   "page": "r4",
+   "title": "R4 · الحركة والخامة والخط",
+   "w": 1440,
+   "x": 0,
+   "y": 4690
+  },
+  "R4-Today.dc.html": {
+   "h": 1150,
+   "page": "r4",
+   "title": "R4 · النهارده: الساعة البطل",
+   "w": 1440,
+   "x": 0,
+   "y": 300
+  },
+  "R4-Wallet.dc.html": {
+   "h": 2050,
+   "page": "r4",
+   "title": "R4 · المحفظة: كروت ليها خامة",
+   "w": 1440,
+   "x": 1828,
+   "y": 972
+  },
+  "R5-Desktop-Customer.dc.html": {
+   "expand": "fill",
+   "h": 1000,
+   "page": "r5",
+   "title": "R5 · الكمبيوتر · العميل + واتساب",
+   "w": 1440,
+   "x": 1520,
+   "y": 300
+  },
+  "R5-Desktop-Home.dc.html": {
+   "expand": "fill",
+   "h": 1260,
+   "page": "r5",
+   "title": "R5 · الكمبيوتر · الرئيسية لصاحب الشغل",
+   "w": 1440,
+   "x": 0,
+   "y": 300
+  },
+  "R5-Mobile.dc.html": {
+   "h": 1120,
+   "page": "r5",
+   "title": "R5 · الموبايل · فاتح وغامق",
+   "w": 1440,
+   "x": 0,
+   "y": 1680
+  },
+  "R5-System.dc.html": {
+   "h": 1330,
+   "page": "r5",
+   "title": "R5 · النظام والمكوّنات",
+   "w": 1440,
+   "x": 1520,
+   "y": 1680
+  },
+  "R6-Desktop-Customer.dc.html": {
+   "expand": "fill",
+   "h": 1000,
+   "page": "r6",
+   "title": "R6 · الكمبيوتر · العميل والمحادثة",
+   "w": 1440,
+   "x": 1520,
+   "y": 300
+  },
+  "R6-Desktop-Home.dc.html": {
+   "expand": "fill",
+   "h": 1120,
+   "page": "r6",
+   "title": "R6 · الكمبيوتر · الرئيسية",
+   "w": 1440,
+   "x": 0,
+   "y": 300
+  },
+  "R6-Mobile.dc.html": {
+   "h": 1150,
+   "page": "r6",
+   "title": "R6 · الموبايل",
+   "w": 1440,
+   "x": 0,
+   "y": 1640
+  },
+  "R6-System.dc.html": {
+   "h": 1110,
+   "page": "r6",
+   "title": "R6 · النظام",
+   "w": 1440,
+   "x": 1520,
+   "y": 1640
+  },
+  "R7-Mobile.dc.html": {
+   "h": 1160,
+   "page": "r7",
+   "title": "R7 · موبايل البيّاع",
+   "w": 1880,
+   "x": 1520,
+   "y": 300
+  },
+  "R7-Palette.dc.html": {
+   "h": 880,
+   "page": "r7",
+   "title": "R7 · تركيبة الألوان",
+   "w": 1440,
+   "x": 0,
+   "y": 300
+  },
+  "R8-Mobile.dc.html": {
+   "h": 1100,
+   "page": "r8",
+   "title": "R8 · موبايل البيّاع · نسخة هادية",
+   "w": 1880,
+   "x": 0,
+   "y": 300
+  },
+  "R9-Mobile.dc.html": {
+   "h": 1110,
+   "page": "r9",
+   "title": "R9 · موبايل البيّاع · متوازن",
+   "w": 2320,
+   "x": 0,
+   "y": 300
+  },
+  "R19-Dark-Owner.dc.html": {
+   "x": 3120,
+   "y": 5600,
+   "w": 1440,
+   "h": 940,
+   "title": "الكمبيوتر · الرئيسية · غامق",
+   "page": "final"
+  },
+  "R19-Dark-Customer.dc.html": {
+   "x": 4680,
+   "y": 5600,
+   "w": 1440,
+   "h": 700,
+   "title": "الكمبيوتر · العميل · غامق",
+   "page": "final"
+  },
+  "R19-Dark-Agent.dc.html": {
+   "x": 3120,
+   "y": 6660,
+   "w": 1440,
+   "h": 700,
+   "title": "الكمبيوتر · البيّاع · غامق",
+   "page": "final"
+  },
+  "R19-Dark-Units.dc.html": {
+   "x": 4680,
+   "y": 6660,
+   "w": 1440,
+   "h": 760,
+   "title": "الكمبيوتر · الوحدات · غامق",
+   "page": "final"
+  },
+  "R19-Dark-Settings.dc.html": {
+   "x": 3120,
+   "y": 7540,
+   "w": 1440,
+   "h": 700,
+   "title": "الكمبيوتر · الإعدادات · غامق",
+   "page": "final"
+  }
+ },
+ "createdOnFiles": {
+  "at": "2026-11-03T10:00:00Z",
+  "v": 1
+ },
+ "designSystems": [],
+ "launch": {
+  "page": "final",
+  "view": "canvas"
+ },
+ "notes": {
+  "finalt": {
+   "kind": "title1",
+   "maxW": 3000,
+   "page": "final",
+   "text": "أجندة · النسخة النهائية — نظام التصميم، 4 لوح موبايل، 5 شاشات كمبيوتر",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r10t": {
+   "kind": "title1",
+   "maxW": 1880,
+   "page": "r10",
+   "text": "الجولة 10 · الوحدة والعميل هم البطل",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r11t": {
+   "kind": "title1",
+   "maxW": 1880,
+   "page": "r11",
+   "text": "الجولة 11 · أداة شغل، مش كتالوج شقق",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r12t": {
+   "kind": "title1",
+   "maxW": 1880,
+   "page": "r12",
+   "text": "3 هويات لأجندة · نفس الشاشات، 3 أرواح",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r13t": {
+   "kind": "title1",
+   "maxW": 1880,
+   "page": "r13",
+   "text": "الجولة 13 · حاجات صغيرة جامدة من تطبيقات تانية",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r2t": {
+   "kind": "title1",
+   "maxW": 4480,
+   "page": "r2",
+   "text": "رقم · خط · حلقة — تلات أشكال، كل واحد بوعد",
+   "w": 240,
+   "x": 0,
+   "y": 1300
+  },
+  "r3t": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "r3",
+   "text": "يومك ساعة · عملاءك كروت · وأخبارك مانشيت",
+   "w": 240,
+   "x": 0,
+   "y": 1300
+  },
+  "r4t": {
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "r4",
+   "text": "الجولة 4 · بطل واحد في كل شاشة، وخامة في كل كارت",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r5t": {
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "r5",
+   "text": "الجولة 5 · Dashboard SaaS حديث، فاتح ومألوف",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r6t": {
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "r6",
+   "text": "الجولة 6 · نفس الأساس، بتفاصيل مصمم",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r7t": {
+   "kind": "title1",
+   "maxW": 3400,
+   "page": "r7",
+   "text": "الجولة 7 · كحلي ولايم وباستيل",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r8t": {
+   "kind": "title1",
+   "maxW": 1880,
+   "page": "r8",
+   "text": "الجولة 8 · حاجة واحدة بس في كل شاشة",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "r9t": {
+   "kind": "title1",
+   "maxW": 2320,
+   "page": "r9",
+   "text": "الجولة 9 · كل اللي محتاجه، في مكانه، من غير زحمة",
+   "w": 240,
+   "x": 0,
+   "y": 0
+  },
+  "t1": {
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "r1",
+   "text": "01 · ورق مؤمّن — دفتر الشيكات وورقة البنكنوت",
+   "w": 240,
+   "x": 0,
+   "y": 1300
+  },
+  "t2": {
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "r1",
+   "text": "02 · الإيصال — ورق الكاشير الحراري",
+   "w": 240,
+   "x": 0,
+   "y": 5150
+  },
+  "t3": {
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "r1",
+   "text": "03 · أوزاليد — طبعة اللوحة الهندسية",
+   "w": 240,
+   "x": 0,
+   "y": 9000
+  },
+  "t4": {
+   "kind": "title1",
+   "maxW": 4480,
+   "page": "r1",
+   "text": "★ الاتجاه المختار: ورق مؤمّن — النظام الكامل",
+   "w": 240,
+   "x": 0,
+   "y": 12850
+  },
+  "darkt": {
+   "x": 3120,
+   "y": 5420,
+   "text": "الوضع الغامق",
+   "kind": "title1",
+   "maxW": 3000,
+   "page": "final"
+  },
+  "lightt": {
+   "x": 0,
+   "y": 5420,
+   "text": "الوضع الفاتح",
+   "kind": "title1",
+   "maxW": 3000,
+   "page": "final"
+  }
+ },
+ "order": [
+  "R18-System.dc.html",
+  "R13-Mobile.dc.html",
+  "R14-Evolve.dc.html",
+  "R15-Call.dc.html",
+  "R16-Owner.dc.html",
+  "R16-Customer.dc.html",
+  "R16-Agent.dc.html",
+  "R17-Units.dc.html",
+  "R17-Settings.dc.html",
+  "R19-Dark-Settings.dc.html",
+  "R19-Dark-Units.dc.html",
+  "R19-Dark-Agent.dc.html",
+  "R19-Dark-Customer.dc.html",
+  "R19-Dark-Owner.dc.html",
+  "R13-Ideas.dc.html",
+  "R12-A.dc.html",
+  "R12-B.dc.html",
+  "R12-C.dc.html",
+  "R11-Mobile.dc.html",
+  "R10-Mobile.dc.html",
+  "R9-Mobile.dc.html",
+  "R8-Mobile.dc.html",
+  "R7-Palette.dc.html",
+  "R7-Mobile.dc.html",
+  "R6-Desktop-Home.dc.html",
+  "R6-Desktop-Customer.dc.html",
+  "R6-Mobile.dc.html",
+  "R6-System.dc.html",
+  "R5-Desktop-Home.dc.html",
+  "R5-Desktop-Customer.dc.html",
+  "R5-Mobile.dc.html",
+  "R5-System.dc.html",
+  "R3-Main.dc.html",
+  "R3-Mobile.dc.html",
+  "R3-Moments.dc.html",
+  "R3-Web.dc.html",
+  "R3-System.dc.html",
+  "R2-Main.dc.html",
+  "R2-Raqam.dc.html",
+  "R2-Khat.dc.html",
+  "R2-Halqa.dc.html",
+  "Main.dc.html",
+  "D1-System.dc.html",
+  "D1-Screens.dc.html",
+  "D2-System.dc.html",
+  "D2-Screens.dc.html",
+  "D3-System.dc.html",
+  "D3-Screens.dc.html",
+  "Final-Tokens.dc.html",
+  "Final-Components.dc.html",
+  "Final-README.dc.html",
+  "R4-Today.dc.html",
+  "R4-Wallet.dc.html",
+  "R4-Edition.dc.html",
+  "R4-Spec.dc.html",
+  "Piece-qac0.dc.html"
+ ],
+ "pages": [
+  {
+   "id": "final",
+   "name": "★ النسخة النهائية"
+  },
+  {
+   "id": "r13",
+   "name": "الجولة 13 · أفكار من برّه"
+  },
+  {
+   "id": "r12",
+   "name": "الجولة 12 · 3 هويات للتطبيق"
+  },
+  {
+   "id": "r11",
+   "name": "الجولة 11 · أداة شغل"
+  },
+  {
+   "id": "r10",
+   "name": "الجولة 10 · الوحدة والعميل"
+  },
+  {
+   "id": "r9",
+   "name": "الجولة 9 · موبايل متوازن"
+  },
+  {
+   "id": "r8",
+   "name": "الجولة 8 · موبايل هادي"
+  },
+  {
+   "id": "r7",
+   "name": "الجولة 7 · موبايل البيّاع"
+  },
+  {
+   "id": "r6",
+   "name": "الجولة 6 · التشطيب الاحترافي"
+  },
+  {
+   "id": "r5",
+   "name": "الجولة 5 · SaaS حديث"
+  },
+  {
+   "id": "r4",
+   "name": "الجولة 4 · التشطيب"
+  },
+  {
+   "id": "r3",
+   "name": "الجولة 3 · الساعة + المحفظة + المانشيت"
+  },
+  {
+   "id": "r2",
+   "name": "الجولة 2 · رقم، خط، حلقة"
+  },
+  {
+   "id": "r1",
+   "name": "الجولة 1 · ورق مؤمّن"
+  }
+ ],
+ "title": "أجندة — Identity Directions"
+}

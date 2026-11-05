@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>README — Flutter و CSS</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.r{font-family:'Aref Ruqaa',serif}
+.sec{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#46544D}
+pre{margin:0;direction:ltr;text-align:left;font:400 12.5px/1.6 'IBM Plex Mono',monospace;background:#14201B;color:#E6ECE7;padding:18px 20px;overflow:hidden;white-space:pre}
+.c{color:#A3B2AA}.k{color:#7FC2A5}.s{color:#F2867C}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{font-size:11px;color:#46544D;font-weight:600;text-align:right;padding:8px 10px;border-bottom:1.5px solid #14201B}
+td{padding:6px 10px;border-bottom:1px dashed #9DB8AA;vertical-align:middle}
+td.m,th.m{text-align:left}
+h2{margin:0;font-size:24px}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:1440px;height:3000px;box-sizing:border-box;padding:64px;background:#F1F4EE;color:#14201B;font-family:'IBM Plex Sans Arabic',sans-serif;display:flex;flex-direction:column;gap:36px;overflow:hidden">
+
+  <header style="display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:40px;align-items:end;border-bottom:4px double #14201B;padding-bottom:20px">
+    <div style="display:flex;flex-direction:column;gap:6px"><span class="sec" style="text-align:right">README.md · agenda-design-system/</span><h1 class="r" style="margin:0;font-size:72px;line-height:1">الخريطة: توكن → CSS → Flutter</h1><span style="font-size:16px">نفس الاسم في كل حتة. الملف الكامل فيه الكود كله، وده ملخّصه على الكانفاس.</span></div>
+    <div style="border:1.5px solid #14201B;background:#FBFCF9;padding:14px 16px;display:flex;flex-direction:column;gap:6px;font-size:14px">
+      <b>اتنين ملفات بس</b>
+      <span class="m" style="text-align:right">app/agenda-tokens.css</span>
+      <span class="m" style="text-align:right">lib/theme/agenda_theme.dart</span>
+      <span style="color:#46544D;font-size:13px">الخطوط بتتحمّل مع التطبيق نفسه في Flutter، و<span class="m">next/font</span> بيعملها self-host على الويب. مفيش أي طلب لـCDN برّا.</span>
+    </div>
+  </header>
+
+  <section style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between"><h2>اللون</h2><span class="sec">14 TOKENS</span></div>
+      <div style="border:1.5px solid #14201B;background:#FBFCF9">
+        <table>
+          <thead><tr><th>token</th><th class="m">CSS</th><th class="m">Flutter</th><th class="m">L</th><th class="m">D</th></tr></thead>
+          <tbody>
+            <sc-for list="{{colors}}" as="c" hint-placeholder-count="14">
+              <tr><td style="font-weight:600">{{c.t}}</td><td class="m">{{c.css}}</td><td class="m">{{c.fl}}</td><td><span style="display:flex;align-items:center;gap:6px;direction:ltr"><span style="width:16px;height:16px;border:1px solid #14201B;background:{{c.l}}"></span><span class="m" style="font-size:11px">{{c.l}}</span></span></td><td><span style="display:flex;align-items:center;gap:6px;direction:ltr"><span style="width:16px;height:16px;border:1px solid #14201B;background:{{c.d}}"></span><span class="m" style="font-size:11px">{{c.d}}</span></span></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between"><h2>الخط والمقاسات والحركة</h2><span class="sec">TYPE · SIZE · MOTION</span></div>
+      <div style="border:1.5px solid #14201B;background:#FBFCF9">
+        <table>
+          <thead><tr><th>token</th><th class="m">CSS</th><th class="m">Flutter</th><th class="m">value</th></tr></thead>
+          <tbody>
+            <sc-for list="{{rest}}" as="c" hint-placeholder-count="16">
+              <tr><td style="font-weight:600">{{c.t}}</td><td class="m">{{c.css}}</td><td class="m">{{c.fl}}</td><td class="m" style="font-size:11px">{{c.v}}</td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between"><h2>CSS · Next.js</h2><span class="sec">app/agenda-tokens.css</span></div>
+<pre><span class="c">/* light = ورق البنك */</span>
+:root {
+  --ag-paper:<span class="s">#F1F4EE</span>; --ag-sheet:<span class="s">#FBFCF9</span>;
+  --ag-sheet-sunk:<span class="s">#E4E9E2</span>;
+  --ag-ink:<span class="s">#14201B</span>; --ag-ink-2:<span class="s">#46544D</span>;
+  --ag-brand:<span class="s">#1E5A45</span>; --ag-on-brand:<span class="s">#FFFFFF</span>;
+  --ag-brand-tint:<span class="s">#DCE8E0</span>;
+  --ag-serial:<span class="s">#B3261E</span>; --ag-on-serial:<span class="s">#FFFFFF</span>;
+  --ag-serial-tint:<span class="s">#F6E1DE</span>;
+  --ag-guilloche:<span class="s">#9DB8AA</span>; --ag-rule:<span class="s">#C9D3CC</span>;
+
+  --ag-font-display: var(--font-ruqaa), <span class="s">'Aref Ruqaa'</span>, serif;
+  --ag-font-body: var(--font-plex-ar), <span class="s">'IBM Plex Sans Arabic'</span>;
+  --ag-font-mono: var(--font-plex-mono), <span class="s">'IBM Plex Mono'</span>;
+
+  --ag-space-1:4px;  --ag-space-2:8px;  --ag-space-3:12px;
+  --ag-space-4:16px; --ag-space-6:24px; --ag-space-8:32px;
+  --ag-radius-control:2px; --ag-radius-sheet:6px 6px 0 0;
+  --ag-border-control:1.5px; --ag-border-focus:2.5px;
+  --ag-touch-min:44px; --ag-control-h:48px; --ag-nav-h:64px;
+  --ag-elev-1: -3px 3px 0 var(--ag-paper),
+               -3px 3px 0 1px var(--ag-ink);
+  --ag-ease-standard: cubic-bezier(.2,0,0,1);
+  --ag-dur-standard:160ms; --ag-dur-tear:240ms;
+  --ag-dur-void:900ms; --ag-dur-hold:2000ms;
+}
+<span class="c">/* dark = تحت لمبة كشف التزوير */</span>
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ag-paper:<span class="s">#0E1613</span>; --ag-sheet:<span class="s">#16201C</span>;
+    --ag-ink:<span class="s">#E6ECE7</span>;  --ag-ink-2:<span class="s">#A3B2AA</span>;
+    --ag-brand:<span class="s">#7FC2A5</span>; --ag-on-brand:<span class="s">#0E1613</span>;
+    --ag-serial:<span class="s">#F2867C</span>; --ag-on-serial:<span class="s">#0E1613</span>;
+    <span class="c">/* … same block under :root[data-theme="dark"] */</span>
+  }
+}
+.ag-num {
+  font-family: var(--ag-font-mono);
+  font-variant-numeric: tabular-nums lining-nums;
+  direction: ltr; unicode-bidi: isolate;
+}
+.ag-guilloche { <span class="c">/* --gx1 --gy2 --gr from serial */</span>
+  background-image:
+   repeating-radial-gradient(circle at var(--gx1) 130%, …),
+   repeating-radial-gradient(circle at 100% var(--gy2), …);
+}</pre>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between"><h2>Flutter · ThemeData</h2><span class="sec">lib/theme/agenda_theme.dart</span></div>
+<pre><span class="k">ThemeData</span> agendaTheme(<span class="k">Brightness</span> b) {
+  <span class="k">final</span> p = b == Brightness.light ? AgPalette.light : AgPalette.dark;
+  <span class="k">final</span> scheme = <span class="k">ColorScheme</span>(
+    brightness: b,
+    primary: p.brand,          onPrimary: p.onBrand,
+    primaryContainer: p.brandTint, onPrimaryContainer: p.ink,
+    error: p.serial,           onError: p.onSerial,
+    errorContainer: p.serialTint,  onErrorContainer: p.serial,
+    surface: p.paper,          onSurface: p.ink,
+    onSurfaceVariant: p.ink2,
+    surfaceContainer: p.sheet, surfaceContainerLow: p.sheetSunk,
+    outline: p.ink,            outlineVariant: p.rule,
+    secondary: p.ink,          onSecondary: p.paper,
+    shadow: Colors.transparent, surfaceTint: Colors.transparent,
+  );
+  <span class="k">final</span> text = <span class="k">TextTheme</span>(
+    displayLarge: ruqaa(44, 52), displayMedium: ruqaa(32, 40),
+    displaySmall: ruqaa(24, 32),
+    titleLarge: plex(22, 30, w700), titleMedium: plex(17, 26, w600),
+    bodyLarge:  plex(17, 28, w400), bodyMedium:  plex(15, 24, w400),
+    labelLarge: plex(14, 20, w600), labelSmall:  plex(12, 18, w500),
+  ).apply(bodyColor: p.ink, displayColor: p.ink);
+
+  <span class="k">return</span> <span class="k">ThemeData</span>(
+    useMaterial3: <span class="k">true</span>, colorScheme: scheme, textTheme: text,
+    scaffoldBackgroundColor: p.paper,
+    splashFactory: NoSplash.splashFactory,   <span class="c">// ختم، مش ripple</span>
+    filledButtonTheme: FilledButtonThemeData(style: FilledButton.styleFrom(
+      minimumSize: <span class="k">const</span> Size(44, 48), elevation: 0,
+      shape: <span class="k">const</span> RoundedRectangleBorder(borderRadius: AgRadius.control))),
+    inputDecorationTheme: InputDecorationTheme(
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: p.ink, width: 1.5)),
+      focusedBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: p.brand, width: 2.5)),
+      errorBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: p.serial, width: 2.5))),
+    cardTheme: CardThemeData(color: p.sheet, elevation: 0,
+      shape: RoundedRectangleBorder(side: BorderSide(color: p.ink))),
+    navigationBarTheme: NavigationBarThemeData(height: 64,
+      indicatorColor: Colors.transparent, backgroundColor: p.paper),
+    bottomSheetTheme: BottomSheetThemeData(backgroundColor: p.sheet,
+      shape: <span class="k">const</span> RoundedRectangleBorder(borderRadius: AgRadius.sheet)),
+    extensions: [AgTokens.of(p)],  <span class="c">// guilloche, serial, amount*, words</span>
+  );
+}
+
+<span class="c">// usage</span>
+<span class="k">final</span> ag = Theme.of(context).extension&lt;AgTokens&gt;()!;
+Text(<span class="s">'2,450,000 ج'</span>, style: ag.amountXl, textDirection: TextDirection.ltr);
+Text(amountInWords(2450000), style: ag.amountWords);</pre>
+    </div>
+  </section>
+
+  <section style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+    <div style="border:1.5px solid #14201B;background:#FBFCF9;padding:16px;display:flex;flex-direction:column;gap:8px"><b style="font-size:17px">الجيلوش من المسلسل</b><span style="font-size:14px;line-height:1.7">على الويب: <span class="m">style="--gx1:18%;--gy2:-73%;--gr:7px"</span> بيتحسبوا من <span class="m">001873</span>. في Flutter: <span class="m">GuillochePainter(seed)</span> جوّه <span class="m">RepaintBoundary</span>، وبيتعمله cache كـ<span class="m">ui.Picture</span> عشان الموبايلات الرخيصة.</span><span class="m" style="font-size:12px;text-align:right;color:#46544D">r = 4 + n%4 · gx1 = d1d2% · gy2 = −d3d4%</span></div>
+    <div style="border:1.5px solid #14201B;background:#FBFCF9;padding:16px;display:flex;flex-direction:column;gap:8px"><b style="font-size:17px">قفل الحساب</b><span style="font-size:14px;line-height:1.7">دوسة طويلة <span class="m">AgMotion.hold</span> مع اهتزاز عند <span class="m">0</span> و<span class="m">50</span> و<span class="m">100%</span>. السيرفر بيلغي التوكن ويرجّع العملاء للشركة، وبعدين push لموبايل البيّاع. شاشة «مقفول» بتفضل مكان التطبيق لحد ما يعمل logout.</span></div>
+    <div style="border:1.5px solid #14201B;background:#FBFCF9;padding:16px;display:flex;flex-direction:column;gap:8px"><b style="font-size:17px">قبل ما تعمل merge</b><span style="font-size:14px;line-height:1.7">مفيش hex مكتوب بإيده. كل رقم <span class="m">tnum</span>. كل «متأخر» جنبه الكلمة. كل زرار أيقونة ليه <span class="m">Semantics</span>. الرقعة مش أصغر من <span class="m">15px</span>. والنقشة ما تظهرش غير على داتا محمية.</span></div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      colors: [
+        { t: 'paper', css: '--ag-paper', fl: 'surface', l: '#F1F4EE', d: '#0E1613' },
+        { t: 'sheet', css: '--ag-sheet', fl: 'surfaceContainer', l: '#FBFCF9', d: '#16201C' },
+        { t: 'sheet-sunk', css: '--ag-sheet-sunk', fl: 'surfaceContainerLow', l: '#E4E9E2', d: '#0A110E' },
+        { t: 'ink', css: '--ag-ink', fl: 'onSurface / outline', l: '#14201B', d: '#E6ECE7' },
+        { t: 'ink-2', css: '--ag-ink-2', fl: 'onSurfaceVariant', l: '#46544D', d: '#A3B2AA' },
+        { t: 'ink-disabled', css: '--ag-ink-disabled', fl: 'AgTokens.inkDisabled', l: '#8A968F', d: '#5C6B63' },
+        { t: 'brand', css: '--ag-brand', fl: 'primary', l: '#1E5A45', d: '#7FC2A5' },
+        { t: 'on-brand', css: '--ag-on-brand', fl: 'onPrimary', l: '#FFFFFF', d: '#0E1613' },
+        { t: 'brand-tint', css: '--ag-brand-tint', fl: 'primaryContainer', l: '#DCE8E0', d: '#173A2D' },
+        { t: 'serial', css: '--ag-serial', fl: 'error', l: '#B3261E', d: '#F2867C' },
+        { t: 'on-serial', css: '--ag-on-serial', fl: 'onError', l: '#FFFFFF', d: '#0E1613' },
+        { t: 'serial-tint', css: '--ag-serial-tint', fl: 'errorContainer', l: '#F6E1DE', d: '#3A1C19' },
+        { t: 'guilloche', css: '--ag-guilloche', fl: 'AgTokens.guilloche', l: '#9DB8AA', d: '#2F4A3E' },
+        { t: 'rule', css: '--ag-rule', fl: 'outlineVariant', l: '#C9D3CC', d: '#2A3832' }
+      ],
+      rest: [
+        { t: 'display-l', css: '.ag-display-l', fl: 'displayLarge', v: 'Ruqaa 44/52 700' },
+        { t: 'words', css: '.ag-words', fl: 'AgTokens.amountWords', v: 'Ruqaa 16/26' },
+        { t: 'title-l', css: '.ag-title-l', fl: 'titleLarge', v: 'Plex Ar 22/30 700' },
+        { t: 'body', css: '.ag-body', fl: 'bodyMedium', v: 'Plex Ar 15/24' },
+        { t: 'label', css: '.ag-label', fl: 'labelLarge', v: 'Plex Ar 14/20 600' },
+        { t: 'amount-xl', css: '.ag-amount-xl', fl: 'AgTokens.amountXl', v: 'Mono 32/40 tnum' },
+        { t: 'serial', css: '.ag-serial', fl: 'AgTokens.serialText', v: 'Mono 13 +.14em' },
+        { t: 'space', css: '--ag-space-1…16', fl: 'AgSpace.s1…s16', v: '4·8·12·16·20·24·32·48·64' },
+        { t: 'radius', css: '--ag-radius-control', fl: 'AgRadius.control', v: '2 · sheet 6/0' },
+        { t: 'border', css: '--ag-border-*', fl: 'AgBorder.*', v: '1 · 1.5 · 2.5 · 4dbl' },
+        { t: 'touch', css: '--ag-touch-min', fl: 'AgSize.touch', v: '44' },
+        { t: 'nav', css: '--ag-nav-h', fl: 'NavigationBarTheme.height', v: '64' },
+        { t: 'elev-1', css: '--ag-elev-1', fl: 'AgPaperStack(1)', v: '-3 3 0 + hairline' },
+        { t: 'standard', css: '--ag-dur-standard', fl: 'AgMotion.standard', v: '160ms (.2,0,0,1)' },
+        { t: 'tear', css: '--ag-dur-tear', fl: 'AgMotion.tear', v: '240ms (.3,0,.2,1)' },
+        { t: 'void', css: '--ag-dur-void', fl: 'AgMotion.voidReveal', v: '900ms steps(9)' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

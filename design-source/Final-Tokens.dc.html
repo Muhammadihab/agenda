@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>ورق مؤمّن v1 — Tokens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.r{font-family:'Aref Ruqaa',serif}
+.sec{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;color:#46544D}
+.th{font-size:12px;color:#46544D;font-weight:600}
+.cross{background:linear-gradient(135deg,transparent 0 38%,#B3261E 38% 42%,transparent 42% 50%,#B3261E 50% 54%,transparent 54%)}
+.micro{font-size:6px;line-height:8px;white-space:nowrap;overflow:hidden}
+h2{margin:0;font-size:30px}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:1440px;height:2700px;box-sizing:border-box;padding:64px;background:#F1F4EE;color:#14201B;font-family:'IBM Plex Sans Arabic',sans-serif;display:flex;flex-direction:column;gap:52px;overflow:hidden">
+
+  <header style="display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:48px;align-items:end;border-bottom:4px double #14201B;padding-bottom:28px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span class="sec" style="text-align:right">AGENDA DS · ورق مؤمّن · v1.0 · TOKENS</span>
+      <h1 class="r" style="margin:0;font-size:96px;line-height:1;font-weight:700">ورق مؤمّن</h1>
+      <span style="font-size:18px">كل قيمة هنا ليها اسم واحد في CSS وفي Flutter. الأسماء دي هي العقد بين التصميم والكود.</span>
+    </div>
+    <ol style="margin:0;padding-inline-start:22px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.6">
+      <li><b>حبرين بس.</b> أخضر للشركة، أحمر للمسلسل والخطر. أي لون تالت محتاج قرار مكتوب.</li>
+      <li><b>الحالة = شكل + كلمة.</b> اللون لوحده عمره ما يقول حالة.</li>
+      <li><b>كل رقم Mono جدولي.</b> مفيش استثناء، حتى في نص الجملة.</li>
+      <li><b>الرقعة لـ٣ حاجات بس:</b> الاسم، عنوان الشاشة، المبلغ بالحروف.</li>
+      <li><b>النقشة ليها معنى.</b> لو مفيش داتا محمية، مفيش جيلوش.</li>
+    </ol>
+  </header>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2>اللون · semantic</h2><span class="sec">--ag-color-* · AgColors.*</span></div>
+    <div style="border:1.5px solid #14201B;background:#FBFCF9">
+      <div style="display:grid;grid-template-columns:200px 170px 150px 150px minmax(0,1fr) 120px;gap:12px;padding:10px 16px;border-bottom:1.5px solid #14201B" class="th"><span>token</span><span>Flutter</span><span>light</span><span>dark</span><span>بيستخدم في</span><span>contrast L / D</span></div>
+      <sc-for list="{{colors}}" as="c" hint-placeholder-count="14">
+        <div style="display:grid;grid-template-columns:200px 170px 150px 150px minmax(0,1fr) 120px;gap:12px;padding:7px 16px;border-bottom:1px dashed #9DB8AA;align-items:center">
+          <span class="m" style="font-size:13px;text-align:right">{{c.token}}</span>
+          <span class="m" style="font-size:12px;text-align:right;color:#46544D">{{c.fl}}</span>
+          <span style="display:flex;align-items:center;gap:8px"><span style="width:36px;height:26px;border:1px solid #14201B;background:{{c.l}}"></span><span class="m" style="font-size:12px">{{c.l}}</span></span>
+          <span style="display:flex;align-items:center;gap:8px"><span style="width:36px;height:26px;border:1px solid #14201B;background:{{c.d}}"></span><span class="m" style="font-size:12px">{{c.d}}</span></span>
+          <span style="font-size:14px">{{c.use}}</span>
+          <span class="m" style="font-size:12px;font-weight:600">{{c.cr}}</span>
+        </div>
+      </sc-for>
+    </div>
+    <span style="font-size:13px;color:#46544D">التباين محسوب ضد <span class="m">paper</span> في نفس الوضع. <span class="m">guilloche</span> و<span class="m">rule</span> للزخرفة بس، وممنوع نكتب بيهم. حدود الحقول دايمًا <span class="m">ink</span> عشان تعدّي <span class="m">3:1</span>.</span>
+  </section>
+
+  <section style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h2>الخط</h2><span class="sec">--ag-type-* · TextTheme</span></div>
+      <div style="border:1.5px solid #14201B;background:#FBFCF9">
+        <div style="display:grid;grid-template-columns:130px 150px 110px minmax(0,1fr);gap:10px;padding:10px 14px;border-bottom:1.5px solid #14201B" class="th"><span>token</span><span>Flutter</span><span>size/lh/wt</span><span>عيّنة</span></div>
+        <sc-for list="{{types}}" as="t" hint-placeholder-count="13">
+          <div style="display:grid;grid-template-columns:130px 150px 110px minmax(0,1fr);gap:10px;padding:6px 14px;border-bottom:1px dashed #9DB8AA;align-items:center;min-height:36px">
+            <span class="m" style="font-size:12px;text-align:right">{{t.token}}</span>
+            <span class="m" style="font-size:11px;text-align:right;color:#46544D">{{t.fl}}</span>
+            <span class="m" style="font-size:11px;text-align:right">{{t.spec}}</span>
+            <span style="font-family:{{t.ff}};font-size:{{t.fs}};line-height:1.3;font-weight:{{t.fw}};white-space:nowrap;overflow:hidden">{{t.sample}}</span>
+          </div>
+        </sc-for>
+      </div>
+      <span style="font-size:13px;color:#46544D;line-height:1.7">الأرقام: <span class="m">font-feature-settings: "tnum" 1, "lnum" 1</span>. الفلوس دايمًا بفاصلة الآلاف والعملة «ج» بعد الرقم بمسافة ضيقة. التواريخ <span class="m">03.11.2026</span>، والوقت <span class="m">24h</span>.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between"><b style="font-size:18px">المسافات</b><span class="sec">--ag-space-N · AgSpace.sN</span></div>
+        <sc-for list="{{space}}" as="s" hint-placeholder-count="9"><div style="display:grid;grid-template-columns:120px 44px minmax(0,1fr);gap:10px;align-items:center"><span class="m" style="font-size:12px;text-align:right">{{s.t}}</span><span class="m" style="font-size:12px">{{s.v}}</span><span style="height:10px;background:#1E5A45;width:{{s.w}}"></span></div></sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;font-size:13px">
+        <div style="display:flex;flex-direction:column;gap:6px"><b style="font-size:16px">الحواف · الخطوط</b>
+          <span class="m" style="text-align:right">radius-none 0</span><span class="m" style="text-align:right">radius-control 2</span><span class="m" style="text-align:right">radius-sheet 6 6 0 0</span>
+          <span class="m" style="text-align:right">border-hair 1</span><span class="m" style="text-align:right">border-control 1.5</span><span class="m" style="text-align:right">border-focus 2.5</span><span class="m" style="text-align:right">border-total 4 double</span><span class="m" style="text-align:right">perf 1.5 dashed 6/3</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px"><b style="font-size:16px">المقاسات</b>
+          <span class="m" style="text-align:right">touch-min 44</span><span class="m" style="text-align:right">control-h 48</span><span class="m" style="text-align:right">control-h-lg 56</span><span class="m" style="text-align:right">nav-h 64</span><span class="m" style="text-align:right">gutter 16</span><span class="m" style="text-align:right">stub-w 56 (كعب)</span><span class="m" style="text-align:right">max-w-web 1312</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px"><b style="font-size:16px">الارتفاع · ورق فوق ورق</b>
+        <div style="display:flex;gap:26px;align-items:flex-end">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="width:90px;height:56px;background:#FBFCF9;border:1px solid #14201B"></span><span class="m" style="font-size:11px">elev-0</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="width:90px;height:56px;background:#FBFCF9;border:1px solid #14201B;box-shadow:-3px 3px 0 #F1F4EE,-3px 3px 0 1px #14201B"></span><span class="m" style="font-size:11px">elev-1 · 3px</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="width:90px;height:56px;background:#FBFCF9;border:1px solid #14201B;box-shadow:-3px 3px 0 #F1F4EE,-3px 3px 0 1px #14201B,-6px 6px 0 #F1F4EE,-6px 6px 0 1px #14201B"></span><span class="m" style="font-size:11px">elev-2 · 3+6</span></div>
+        </div>
+        <span style="font-size:13px;color:#46544D">مفيش blur في أي حتة. الورقة اللي تحت مرسومة بخط، فتشتغل زي ما هي في الغامق.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h2>الحركة</h2><span class="sec">--ag-motion-* · AgMotion</span></div>
+      <div style="border:1.5px solid #14201B;background:#FBFCF9">
+        <sc-for list="{{motion}}" as="mo" hint-placeholder-count="8"><div style="display:grid;grid-template-columns:150px 70px 200px minmax(0,1fr);gap:10px;padding:8px 14px;border-bottom:1px dashed #9DB8AA;align-items:center;font-size:13px"><span class="m" style="text-align:right">{{mo.t}}</span><span class="m">{{mo.d}}</span><span class="m" style="font-size:11px">{{mo.e}}</span><span>{{mo.use}}</span></div></sc-for>
+      </div>
+      <span style="font-size:13px;color:#46544D">لما <span class="m">prefers-reduced-motion</span> أو <span class="m">MediaQuery.disableAnimations</span> يكون شغال: كل حاجة <span class="m">fade 120ms</span>، والعدّاد يظهر الرقم النهائي على طول.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h2>الأيقونات</h2><span class="sec">24 GRID · STROKE 1.75 · SQUARE CAP</span></div>
+      <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px">
+        <sc-for list="{{icons}}" as="i" hint-placeholder-count="12">
+          <div style="border:1px solid #14201B;background:#FBFCF9;height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14201B" stroke-width="1.75" stroke-linecap="square" aria-hidden="true"><path d="{{i.d}}"/></svg>
+            <span class="m" style="font-size:10px">{{i.n}}</span>
+          </div>
+        </sc-for>
+      </div>
+      <span style="font-size:13px;color:#46544D">أيقونات خط بس، من غير ملء. أي أيقونة لوحدها لازم يكون ليها <span class="m">aria-label</span> / <span class="m">Semantics(label:)</span>. الأسهم بتتعكس مع RTL. التليفون والقفل مش بيتعكسوا.</span>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2>طباعة الأمان · مواصفات</h2><span class="sec">SECURITY PRINT SPECS</span></div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px">
+      <div style="border:1.5px solid #14201B;background:#FBFCF9;display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:110px;border-bottom:1px solid #14201B">
+          <span style="background-image:repeating-radial-gradient(circle at 10% 120%,transparent 0 5px,rgba(30,90,69,.35) 5px 6px),repeating-radial-gradient(circle at 90% -10%,transparent 0 5px,rgba(30,90,69,.35) 5px 6px)"></span>
+          <span style="border-inline:1px solid #14201B;background-image:repeating-radial-gradient(circle at 30% 140%,transparent 0 6px,rgba(30,90,69,.35) 6px 7px),repeating-radial-gradient(circle at 70% -40%,transparent 0 4px,rgba(30,90,69,.35) 4px 5px)"></span>
+          <span style="background-image:repeating-radial-gradient(circle at 80% 130%,transparent 0 7px,rgba(30,90,69,.35) 7px 8px),repeating-radial-gradient(circle at 0% 0%,transparent 0 5px,rgba(30,90,69,.35) 5px 6px)"></span>
+        </div>
+        <div class="m" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));font-size:10px;text-align:center;border-bottom:1px solid #14201B"><span>001873</span><span>001544</span><span>001790</span></div>
+        <div style="padding:12px;display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.6"><b style="font-size:15px">بصمة العميل (جيلوش من المسلسل)</b>مركزين + سُمك الحلقة بيطلعوا من أرقام المسلسل، فكل عميل ليه نقشة لوحده. <span class="m" style="font-size:11px;text-align:right">r = 4 + (n % 4) · cx₁ = d₁d₂% · cy₂ = −d₃d₄%</span></div>
+      </div>
+      <div style="border:1.5px solid #14201B;background:#FBFCF9;display:flex;flex-direction:column">
+        <div style="height:110px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #14201B;flex-direction:column;gap:4px"><span class="m" style="font-size:24px;color:#B3261E;letter-spacing:.14em;font-weight:600">AG 24 001873</span><span class="m" style="font-size:11px;color:#46544D">PREFIX · YY · SEQ6</span></div>
+        <div style="padding:12px;font-size:13px;line-height:1.6;display:flex;flex-direction:column;gap:4px"><b style="font-size:15px">الرقم المسلسل</b>بيتعمل على السيرفر أول ما العميل يدخل، ومبيتكررش ولا بيتمسح. بيبقى أحمر بس وهو متأخر أو مقفول، وغير كده بيبقى <span class="m">ink</span>. مسافة الحروف <span class="m">.14em</span>.</div>
+      </div>
+      <div style="border:1.5px solid #14201B;background:#FBFCF9;display:flex;flex-direction:column">
+        <div style="height:110px;display:flex;flex-direction:column;justify-content:center;gap:4px;border-bottom:1px solid #14201B;padding:0 12px" aria-hidden="true">
+          <div class="micro">ولا عميل يضيع منك · أجندة · متأمّن من جوّا · ولا عميل يضيع منك · أجندة · متأمّن من جوّا · ولا عميل يضيع منك · أجندة · متأمّن من جوّا</div>
+          <div class="m" style="font-size:14px">⑆001873⑆ 0140 ⑈2450000⑈ 04</div>
+          <div class="micro">LOGIKA · متأمّن من جوّا · LOGIKA · متأمّن من جوّا · LOGIKA · متأمّن من جوّا · LOGIKA · متأمّن من جوّا · LOGIKA</div>
+        </div>
+        <div style="padding:12px;font-size:13px;line-height:1.6;display:flex;flex-direction:column;gap:4px"><b style="font-size:15px">المايكرو تكست وسطر الماكينة</b>المايكرو <span class="m">6px</span> و<span class="m">aria-hidden</span> دايمًا. سطر الماكينة: <span class="m">⑆serial⑆ area ⑈amount⑈ stage</span>. بيتنسخ بدوسة ويتبعت للدعم.</div>
+      </div>
+      <div style="border:1.5px solid #14201B;background:#FBFCF9;display:flex;flex-direction:column">
+        <div style="height:110px;display:flex;flex-direction:column;justify-content:center;gap:6px;border-bottom:1px solid #14201B;padding:0 12px">
+          <span class="r" style="font-size:15px">فقط مليونان وأربعمائة وخمسون ألف جنيه لا غير</span>
+          <span style="font-size:14px;border-top:1px dashed #14201B;padding-top:4px">2 مليون و450 ألف</span>
+        </div>
+        <div style="padding:12px;font-size:13px;line-height:1.6;display:flex;flex-direction:column;gap:4px"><b style="font-size:15px">المبلغ بالحروف</b>البروفايل والعقود: صيغة الشيك كاملة بالرقعة. الكروت: الصيغة المختصرة بالكلام العادي. أقل من <span class="m">10,000</span> مفيش حروف خالص.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2>صوت الكلام</h2><span class="sec">COPY · مصري، قصير، فعل الأول</span></div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1.5px solid #14201B;background:#FBFCF9">
+      <div style="padding:10px 14px;border-bottom:1.5px solid #14201B;border-left:1px solid #14201B" class="th">الموقف</div><div style="padding:10px 14px;border-bottom:1.5px solid #14201B;border-left:1px solid #14201B" class="th">اكتب</div><div style="padding:10px 14px;border-bottom:1.5px solid #14201B;border-left:1px solid #14201B" class="th">متكتبش</div><div style="padding:10px 14px;border-bottom:1.5px solid #14201B" class="th">ليه</div>
+      <sc-for list="{{copy}}" as="c" hint-placeholder-count="5">
+        <div style="padding:9px 14px;border-bottom:1px dashed #9DB8AA;border-left:1px solid #14201B;font-size:14px">{{c.s}}</div><div style="padding:9px 14px;border-bottom:1px dashed #9DB8AA;border-left:1px solid #14201B;font-size:14px;font-weight:600;color:#1E5A45">{{c.y}}</div><div style="padding:9px 14px;border-bottom:1px dashed #9DB8AA;border-left:1px solid #14201B;font-size:14px;color:#B3261E;text-decoration:line-through">{{c.n}}</div><div style="padding:9px 14px;border-bottom:1px dashed #9DB8AA;font-size:13px;color:#46544D">{{c.w}}</div>
+      </sc-for>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2700}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const ar = "'IBM Plex Sans Arabic',sans-serif", ru = "'Aref Ruqaa',serif", mo = "'IBM Plex Mono',monospace";
+    return {
+      colors: [
+        { token: '--ag-paper', fl: 'surface', l: '#F1F4EE', d: '#0E1613', use: 'الأرضية', cr: '— / —' },
+        { token: '--ag-sheet', fl: 'surfaceContainer', l: '#FBFCF9', d: '#16201C', use: 'كروت، شيتات، حقول', cr: '— / —' },
+        { token: '--ag-sheet-sunk', fl: 'surfaceContainerLow', l: '#E4E9E2', d: '#0A110E', use: 'الكعب، خلفية الصفحة الطويلة', cr: '— / —' },
+        { token: '--ag-ink', fl: 'onSurface', l: '#14201B', d: '#E6ECE7', use: 'النص، حدود الحقول', cr: '15.1 / 15.4' },
+        { token: '--ag-ink-2', fl: 'onSurfaceVariant', l: '#46544D', d: '#A3B2AA', use: 'نص ثانوي، وقت', cr: '7.2 / 8.3' },
+        { token: '--ag-ink-disabled', fl: 'ext.inkDisabled', l: '#8A968F', d: '#5C6B63', use: 'معطّل فقط', cr: 'n/a' },
+        { token: '--ag-brand', fl: 'primary', l: '#1E5A45', d: '#7FC2A5', use: 'أفعال، تاب نشط، محمي', cr: '7.3 / 8.9' },
+        { token: '--ag-on-brand', fl: 'onPrimary', l: '#FFFFFF', d: '#0E1613', use: 'نص فوق الأخضر', cr: '8.1 / 8.9' },
+        { token: '--ag-brand-tint', fl: 'primaryContainer', l: '#DCE8E0', d: '#173A2D', use: 'رسالة طالعة، تحديد', cr: 'ink 13.2 / 10.2' },
+        { token: '--ag-serial', fl: 'error', l: '#B3261E', d: '#F2867C', use: 'متأخر، قفل، المسلسل', cr: '5.9 / 7.4' },
+        { token: '--ag-on-serial', fl: 'onError', l: '#FFFFFF', d: '#0E1613', use: 'نص فوق الأحمر', cr: '6.5 / 7.4' },
+        { token: '--ag-serial-tint', fl: 'errorContainer', l: '#F6E1DE', d: '#3A1C19', use: 'خلفية متأخر', cr: 'serial 5.2 / 6.2' },
+        { token: '--ag-guilloche', fl: 'ext.guilloche', l: '#9DB8AA', d: '#2F4A3E', use: 'نقشة فقط', cr: 'deco' },
+        { token: '--ag-rule', fl: 'outlineVariant', l: '#C9D3CC', d: '#2A3832', use: 'فواصل زخرفية', cr: 'deco' }
+      ],
+      types: [
+        { token: 'display-l', fl: 'displayLarge', spec: '44/52 700', ff: ru, fs: '30px', fw: '700', sample: 'أ. هالة منصور' },
+        { token: 'display-m', fl: 'displayMedium', spec: '32/40 700', ff: ru, fs: '26px', fw: '700', sample: 'النهارده' },
+        { token: 'display-s', fl: 'displaySmall', spec: '24/32 700', ff: ru, fs: '22px', fw: '700', sample: 'الفريق' },
+        { token: 'words', fl: 'ext.amountWords', spec: '16/26 400', ff: ru, fs: '16px', fw: '400', sample: 'فقط مليونان وأربعمائة وخمسون ألف جنيه لا غير' },
+        { token: 'title-l', fl: 'titleLarge', spec: '22/30 700', ff: ar, fs: '20px', fw: '700', sample: 'متابعات متأخرة' },
+        { token: 'title-m', fl: 'titleMedium', spec: '17/26 600', ff: ar, fs: '17px', fw: '600', sample: 'أ. نرمين صبحي' },
+        { token: 'body-l', fl: 'bodyLarge', spec: '17/28 400', ff: ar, fs: '17px', fw: '400', sample: 'شقة 140م في التجمع الخامس' },
+        { token: 'body', fl: 'bodyMedium', spec: '15/24 400', ff: ar, fs: '15px', fw: '400', sample: 'العرض ساري لآخر الأسبوع' },
+        { token: 'label', fl: 'labelLarge', spec: '14/20 600', ff: ar, fs: '14px', fw: '600', sample: 'اتصل دلوقتي' },
+        { token: 'caption', fl: 'labelSmall', spec: '12/18 500', ff: ar, fs: '12px', fw: '500', sample: 'من 3 ساعات · فيسبوك' },
+        { token: 'amount-xl', fl: 'ext.amountXl', spec: '32/40 600 tnum', ff: mo, fs: '28px', fw: '600', sample: '2,450,000 ج' },
+        { token: 'amount', fl: 'ext.amount', spec: '18/24 500 tnum', ff: mo, fs: '18px', fw: '500', sample: '6,800,000 ج' },
+        { token: 'serial', fl: 'ext.serial', spec: '13/18 500 +.14em', ff: mo, fs: '13px', fw: '500', sample: 'AG 24 001873 · 17:00' }
+      ],
+      space: [
+        { t: '--ag-space-1', v: '4', w: '16px' }, { t: '--ag-space-2', v: '8', w: '32px' }, { t: '--ag-space-3', v: '12', w: '48px' },
+        { t: '--ag-space-4', v: '16', w: '64px' }, { t: '--ag-space-5', v: '20', w: '80px' }, { t: '--ag-space-6', v: '24', w: '96px' },
+        { t: '--ag-space-8', v: '32', w: '128px' }, { t: '--ag-space-12', v: '48', w: '192px' }, { t: '--ag-space-16', v: '64', w: '256px' }
+      ],
+      motion: [
+        { t: 'fast', d: '120ms', e: 'linear', use: 'fade، reduce-motion' },
+        { t: 'standard', d: '160ms', e: 'cubic-bezier(.2,0,0,1)', use: 'أي حاجة عادية' },
+        { t: 'tear', d: '240ms', e: 'cubic-bezier(.3,0,.2,1)', use: 'قطع الكعب: لفة 4° ونزول 24px' },
+        { t: 'count', d: '420ms', e: 'cubic-bezier(.2,0,0,1)', use: 'عدّاد الفلوس' },
+        { t: 'stamp-fill', d: '2000ms', e: 'linear', use: 'دوسة القفل الطويلة' },
+        { t: 'void', d: '900ms', e: 'steps(9)', use: 'ظهور «مقفول»' },
+        { t: 'serial-flash', d: '600ms', e: 'steps(3)', use: 'المسلسل لما يتأخر' },
+        { t: 'sheet', d: '220ms', e: 'cubic-bezier(.2,0,0,1)', use: 'الشيت اللي بيطلع من تحت' }
+      ],
+      icons: [
+        { n: 'today', d: 'M3 5h18v16H3zM3 10h18M8 3v4M16 3v4' },
+        { n: 'clients', d: 'M5 8a4 4 0 1 0 8 0a4 4 0 1 0 -8 0M2 21c0-4 3-6 7-6s7 2 7 6M16 4a4 4 0 0 1 0 8M22 21c0-3-2-5-4-5.5' },
+        { n: 'chat', d: 'M4 4h16v12H9l-5 4z' },
+        { n: 'me', d: 'M8 8a4 4 0 1 0 8 0a4 4 0 1 0 -8 0M4 21c0-4 4-6 8-6s8 2 8 6' },
+        { n: 'call', d: 'M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z' },
+        { n: 'done', d: 'M4 12l5 5L20 6' },
+        { n: 'lock', d: 'M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4' },
+        { n: 'clock', d: 'M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0M12 7v5l3 2' },
+        { n: 'back-rtl', d: 'M9 5l7 7-7 7' },
+        { n: 'send-rtl', d: 'M21 4L3 11l7 3 3 7z' },
+        { n: 'stub', d: 'M3 5h18v14H3zM8 5v14' },
+        { n: 'transfer', d: 'M4 8h14l-4-4M20 16H6l4 4' }
+      ],
+      copy: [
+        { s: 'زرار الاتصال', y: 'اتصل دلوقتي', n: 'قم بالاتصال بالعميل', w: 'فعل مصري، كلمتين' },
+        { s: 'متابعة فاتت', y: 'متأخر يومين', n: 'تجاوز الموعد المحدد', w: 'المدة بالأيام بدل التاريخ' },
+        { s: 'قفل الحساب (البيّاع)', y: 'الحساب ده اتقفل من الإدارة', n: 'تم حظرك', w: 'محترم ومن غير اتهام' },
+        { s: 'فاضي', y: 'صفحة نضيفة', n: 'لا توجد بيانات', w: 'بنحتفل مش بنبلّغ' },
+        { s: 'خطأ رقم', y: 'الرقم ناقص رقم', n: 'رقم الهاتف غير صالح', w: 'نقول المشكلة بالظبط' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

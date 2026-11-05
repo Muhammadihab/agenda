@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإيصال — النظام</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;600;800&amp;family=Readex+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.h{font-family:'Handjet',sans-serif}
+.zb{-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;padding-bottom:20px}
+.bar{background:repeating-linear-gradient(90deg,#23252B 0 2px,transparent 2px 3px,#23252B 3px 4px,transparent 4px 7px,#23252B 7px 10px,transparent 10px 11px,#23252B 11px 12px,transparent 12px 15px)}
+.lead{flex:1;border-bottom:2px dotted #5A5D66;margin:0 6px;transform:translateY(-5px)}
+.sec{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.1em;color:#5A5D66}
+.slip{background:#F5F6F4;padding:18px}
+h2{margin:0}
+button{font-family:'Readex Pro',sans-serif}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:1440px;height:2900px;box-sizing:border-box;padding:64px;background:#E3E4E0;color:#23252B;font-family:'Readex Pro',sans-serif;display:flex;flex-direction:column;gap:52px;overflow:hidden">
+
+  <header style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="sec" style="text-align:right">02 / الإيصال · THERMAL RECEIPT</div>
+      <h1 class="h" style="margin:0;font-size:150px;line-height:.9;font-weight:800">الإيصال</h1>
+      <div style="font-size:18px;font-weight:600;color:#A3134C">المصدر: إيصال ماكينة فوري، فاتورة الكاشير، و«تقفيل الوردية» اللي بيطلع من ماكينة الفيزا آخر اليوم.</div>
+    </div>
+    <div class="slip zb" style="display:flex;flex-direction:column;gap:10px;font-size:18px;line-height:1.8;font-weight:500">
+      <p style="margin:0">كل حاجة البيّاع بيعملها بتطلع إيصال ليه رقم عملية: مكالمة، رسالة، تعديل سعر. ومفيش حاجة بتتمسح؛ أي تعديل هو إيصال جديد.</p>
+      <p style="margin:0">ورق الكاشير عنده تحذير حقيقي: شريط وردي بيظهر لما الرول يقرّب يخلص. إحنا بنستخدمه للعميل اللي «بيقرّب يخلص» من إيدك.</p>
+    </div>
+  </header>
+
+  <section style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="font-size:28px">الألوان: حبر حراري، ووردي آخر الرول</h2><span class="sec">LIGHT = الكاونتر · DARK = وردية الليل</span></div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+      <div class="slip zb" style="display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:1px dashed #23252B"><b>فاتح · ورق على الكاونتر</b><span class="m" style="font-size:12px">AA vs paper</span></div>
+        <sc-for list="{{light}}" as="t" hint-placeholder-count="7">
+          <div style="display:grid;grid-template-columns:52px 120px minmax(0,1fr) 80px 54px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px dashed #A4A7AE">
+            <span style="height:32px;border:1px solid #23252B;background:{{t.hex}}"></span><span class="m" style="font-size:13px;text-align:right">{{t.name}}</span><span style="font-size:14px">{{t.role}}</span><span class="m" style="font-size:13px">{{t.hex}}</span><span class="m" style="font-size:13px;font-weight:700">{{t.cr}}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div class="zb" style="background:#1C1D21;color:#EDEDE9;padding:18px;display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:1px dashed #EDEDE9"><b>غامق · وردية الليل</b><span class="m" style="font-size:12px">AA vs paper</span></div>
+        <sc-for list="{{dark}}" as="t" hint-placeholder-count="7">
+          <div style="display:grid;grid-template-columns:52px 120px minmax(0,1fr) 80px 54px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px dashed #44464D">
+            <span style="height:32px;border:1px solid #EDEDE9;background:{{t.hex}}"></span><span class="m" style="font-size:13px;text-align:right">{{t.name}}</span><span style="font-size:14px">{{t.role}}</span><span class="m" style="font-size:13px">{{t.hex}}</span><span class="m" style="font-size:13px;font-weight:700">{{t.cr}}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px">
+    <div class="slip" style="display:flex;flex-direction:column;gap:0">
+      <div style="display:flex;justify-content:space-between;padding-bottom:10px"><h2 style="font-size:24px">الخط: الطابعة، والكاشير</h2><span class="sec">TYPE</span></div>
+      <div style="border-top:1px dashed #23252B;display:grid;grid-template-columns:140px minmax(0,1fr);gap:8px 16px;align-items:baseline;padding-top:12px">
+        <span class="m" style="font-size:12px;text-align:right">display 64/64<br>Handjet 800</span><span class="h" style="font-size:64px;line-height:64px;font-weight:800">مبروك يا أحمد</span>
+        <span class="m" style="font-size:12px;text-align:right">total 40/44<br>Handjet 600</span><span class="h m" style="font-size:40px;line-height:44px;font-weight:600;text-align:right;font-family:'Handjet',sans-serif">2,450,000 ج</span>
+        <span class="m" style="font-size:12px;text-align:right">title 22/30<br>Readex 600</span><span style="font-size:22px;line-height:30px;font-weight:600">متابعات النهارده</span>
+        <span class="m" style="font-size:12px;text-align:right">body 16/24<br>Readex 400</span><span style="font-size:16px;line-height:24px">شقة 140م في التجمع الخامس، تشطيب كامل.</span>
+        <span class="m" style="font-size:12px;text-align:right">label 13/20<br>Readex 500</span><span style="font-size:13px;line-height:20px;font-weight:500">آخر حركة · من ساعتين</span>
+        <span class="m" style="font-size:12px;text-align:right">line 14/24<br>JetBrains Mono</span><span class="m" style="font-size:14px;line-height:24px;text-align:right">TXN 0004231 · 14:15:02 · POS-07</span>
+      </div>
+      <p style="margin:12px 0 0;font-size:14px;line-height:1.7;color:#5A5D66">Handjet فيه حروف عربي متبنية من نقط ومربعات زي رأس الطابعة الحرارية. بنستخدمه للعناوين الكبيرة والإجمالي وبس، ومش أقل من 32px. الكلام كله Readex Pro، والأرقام JetBrains Mono بأرقام جدولية.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div class="slip" style="display:flex;flex-direction:column;gap:8px"><b>المسافات · أساس 4، والسطر 24</b>
+        <sc-for list="{{space}}" as="s" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px;align-items:center"><span class="m" style="font-size:12px;text-align:right">{{s.n}}</span><span style="height:10px;background:#23252B;width:{{s.w}}"></span></div></sc-for>
+        <span style="font-size:13px;color:#5A5D66">كل الصفوف بتمشي على شبكة 24px زي «سطر» الطابعة. القايمة بتتقري زي الإيصال.</span>
+      </div>
+      <div class="slip" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;font-size:13px">
+        <div style="display:flex;flex-direction:column;gap:8px"><b style="font-size:15px">الحواف والخطوط</b>
+          <span>حواف: <span class="m">0</span> في كل حتة</span>
+          <span style="display:flex;align-items:center;gap:8px"><span style="width:56px;border-top:1px dashed #23252B"></span>فاصل</span>
+          <span style="display:flex;align-items:center;gap:8px"><span style="width:56px;border-top:4px double #23252B"></span>الإجمالي</span>
+          <span style="display:flex;align-items:center;gap:8px"><span style="width:56px;border-top:2px dotted #5A5D66"></span>نقط السعر</span>
+          <span style="display:flex;align-items:center;gap:8px"><span class="zb" style="width:56px;height:6px;background:#23252B;padding:0"></span>قطع</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px"><b style="font-size:15px">الارتفاع والحركة</b>
+          <span>e0 · ورق على الكاونتر</span><span>e1 · مقطوع بسنّة</span><span>e2 · مدبّس (دبوس فوق)</span>
+          <span><span class="m">40ms/line</span> · الطباعة سطر بسطر</span><span><span class="m">120ms</span> · القطع + رجّة <span class="m">2px</span></span><span>reduce · يظهر مرة واحدة</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="font-size:28px">العناصر المميزة، وشغلانة كل واحد</h2><span class="sec">SIGNATURE</span></div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;justify-content:center;gap:6px"><div style="border-inline-start:12px solid #C2185B;padding-inline-start:8px;font-size:14px">م. شريف · <b style="color:#C2185B">3 أيام</b></div><div style="border-inline-start:6px solid #C2185B;padding-inline-start:8px;font-size:14px">كريم فؤاد · <b style="color:#C2185B">يوم</b></div><div style="border-inline-start:3px solid #C2185B;padding-inline-start:8px;font-size:14px">منى · <b style="color:#C2185B">5 ساعات</b></div></div><b>الشريط الوردي</b><span style="font-size:14px;line-height:1.6">شريط آخر الرول. الشغلانة: <b>التأخير</b>. بيتخن كل ما التأخير يطول (<span class="m">3→6→12px</span>)، ودايمًا معاه الكلمة.</span></div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;justify-content:center;gap:2px" class="m"><span style="font-size:13px;text-align:right">TXN 0004231</span><span style="font-size:13px;text-align:right">14:15:02 · AHMED.S</span><span style="font-size:13px;text-align:right">EDIT PRICE 2,600,000→2,450,000</span></div><b>رقم العملية</b><span style="font-size:14px;line-height:1.6">كل حركة ليها رقم. الشغلانة: <b>الأمان</b>. مفيش حاجة بتتمسح، والتعديل إيصال جديد، فصاحب الشغل يعرف مين غيّر إيه وإمتى.</span></div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;justify-content:center;gap:4px"><div style="display:flex;align-items:baseline;font-size:14px"><span>المقدّم 10%</span><span class="lead"></span><span class="m">245,000</span></div><div style="display:flex;align-items:baseline;font-size:15px;border-top:4px double #23252B;padding-top:4px;font-weight:700"><span>الإجمالي</span><span class="lead"></span><span class="m">2,450,000 ج</span></div></div><b>النقط والإجمالي</b><span style="font-size:14px;line-height:1.6">السعر دايمًا في آخر السطر بعد نقط. الشغلانة: <b>الفلوس</b>. كل الأرقام تحت بعض، والإجمالي تحته خطين.</span></div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;justify-content:center;gap:4px;align-items:center"><span class="bar" style="width:180px;height:48px"></span><span class="m" style="font-size:12px">AG-001873</span></div><b>الباركود</b><span style="font-size:14px;line-height:1.6">كود كل عميل. الشغلانة: <b>نقل الملكية</b>. صاحب الشغل يصوّر باركود العميل من موبايل البيّاع ويحوّله لحد تاني في ثانية.</span></div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center"><span class="m" style="font-size:20px;letter-spacing:.06em">+20 10• ••• •678</span></div><b>نجوم الفيزا</b><span style="font-size:14px;line-height:1.6">زي إيصال الكارت اللي بيطبع آخر ٤ أرقام بس. الشغلانة: <b>الحماية</b>. الرقم متخبّي، والاتصال بيعدّي من أجندة.</span></div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;justify-content:center;gap:2px;font-size:13px"><b class="h" style="font-size:28px;line-height:1">تقفيل اليوم · Z</b><span>مكالمات <span class="m">23</span> · متابعات <span class="m">14/16</span></span><span>صفقات <span class="m">1</span> · <span class="m">2,450,000 ج</span></span></div><b>تقفيل الوردية</b><span style="font-size:14px;line-height:1.6">زي تقرير Z بتاع الكاشير. الشغلانة: <b>المحاسبة</b>. كل بيّاع بيقفّل يومه الساعة 9 بالليل، وصاحب الشغل بيستلم الإيصالات.</span></div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center;position:relative"><span style="position:absolute;top:18px;width:44px;height:6px;border:2px solid #5A5D66;border-bottom:0"></span><span style="font-size:15px;margin-top:20px">«عايز الدور الأرضي بس»</span></div><b>الدبّوس</b><span style="font-size:14px;line-height:1.6">ملاحظة متدبّسة فوق الإيصال. الشغلانة: <b>الأولوية</b>. أهم حاجة عن العميل تفضل فوق مهما الرسايل زادت.</span></div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px"><span class="h" style="font-size:26px;font-weight:800">احتفظ بالإيصال</span><span class="m" style="font-size:11px">LOGIKA · متأمّن من جوّا</span></div><b>الديل</b><span style="font-size:14px;line-height:1.6">ذيل كل إيصال. الشغلانة: <b>المشاركة</b>. كل إيصال بيتبعت صورة على واتساب من غير ما يطلّع أي رقم موبايل.</span></div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="font-size:28px">المكوّنات</h2><span class="sec">COMPONENTS</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+      <div class="slip" style="display:flex;flex-direction:column;gap:10px"><span class="sec">BUTTON</span>
+        <button style="height:52px;border:0;background:#23252B;color:#F5F6F4;font-size:16px;font-weight:600">اتصل دلوقتي</button>
+        <button style="height:48px;border:1.5px dashed #23252B;background:transparent;color:#23252B;font-size:16px;font-weight:600">ابعت واتساب</button>
+        <button style="height:48px;border:0;background:#C2185B;color:#fff;font-size:16px;font-weight:600">اقفل الحساب</button>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:12px"><span class="sec">INPUT · سطر فاضي</span>
+        <label style="display:flex;align-items:baseline;gap:8px;font-size:14px;min-height:48px">الاسم:<input value="هالة منصور" style="flex:1;min-width:0;height:44px;border:0;border-bottom:2px dotted #23252B;background:transparent;font:500 17px 'Readex Pro',sans-serif;color:#23252B;outline:none"></label>
+        <label style="display:flex;align-items:baseline;gap:8px;font-size:14px;min-height:48px;font-weight:600">الميزانية:<input class="m" value="2,450,000" style="flex:1;min-width:0;height:44px;border:0;border-bottom:3px solid #23252B;background:#E9EAE6;font:700 18px 'JetBrains Mono',monospace;color:#23252B;outline:none;text-align:left;padding:0 6px"></label>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:10px"><span class="sec">PHONE · +20</span>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:14px">رقم الموبايل
+          <span style="display:flex;direction:ltr;height:52px;border:1.5px solid #23252B"><span class="m" style="width:62px;display:flex;align-items:center;justify-content:center;background:#23252B;color:#F5F6F4;font-weight:700">+20</span><input class="m" value="100 234 5678" aria-label="الرقم" style="flex:1;min-width:0;border:0;background:transparent;font:500 18px 'JetBrains Mono',monospace;padding:0 12px;outline:none"></span>
+          <span style="font-size:12px;color:#5A5D66">بنشيل الصفر لوحدنا. <span class="m">11</span> رقم.</span>
+        </label>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:10px"><span class="sec">STAGE · خطوة 4 من 5</span>
+        <div class="m" style="font-size:22px;letter-spacing:.1em;text-align:right">[■■■■□]</div>
+        <div style="display:flex;align-items:baseline;font-size:14px"><span>المرحلة</span><span class="lead"></span><b>عرض سعر</b></div>
+        <span style="font-size:12px;color:#5A5D66">جديد · اتكلمنا · معاينة · <b style="color:#23252B">عرض سعر</b> · اتقفلت</span>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:8px"><span class="sec">STATUS</span>
+        <span style="min-height:36px;border:1px solid #23252B;display:flex;align-items:center;padding:0 10px;font-size:14px">النهارده <span class="m" style="margin-inline-start:6px">17:00</span></span>
+        <span style="min-height:36px;border-inline-start:6px solid #C2185B;background:#F5E3EA;display:flex;align-items:center;padding:0 10px;font-size:14px;font-weight:700;color:#A3134C">متأخر يوم</span>
+        <span style="min-height:36px;border:1px dashed #5A5D66;display:flex;align-items:center;padding:0 10px;font-size:14px;color:#5A5D66">*** لم يتم الاتصال ***</span>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:8px"><span class="sec">TOAST</span>
+        <div class="zb" style="background:#23252B;color:#F5F6F4;padding:12px 14px;display:flex;justify-content:space-between;align-items:center"><span style="display:flex;flex-direction:column"><b>اتسجّلت المتابعة</b><span class="m" style="font-size:12px;text-align:right;color:#A4A7AE">TXN 0004231</span></span><button style="height:44px;border:1px dashed #F5F6F4;background:transparent;color:#F5F6F4;padding:0 12px">رجّعها</button></div>
+      </div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:6px"><span class="sec">CUSTOMER CARD</span>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><b style="font-size:18px">أ. هالة منصور</b><span class="m" style="font-size:12px">AG-001873</span></div>
+        <span style="font-size:14px">شقة 140م · التجمع الخامس</span>
+        <div style="display:flex;align-items:baseline;font-size:14px"><span>المرحلة</span><span class="lead"></span><span>عرض سعر</span></div>
+        <div style="display:flex;align-items:baseline;font-size:16px;font-weight:700;border-top:4px double #23252B;padding-top:4px"><span>الإجمالي</span><span class="lead"></span><span class="m">2,450,000 ج</span></div>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:0"><span class="sec" style="padding-bottom:8px">FOLLOW-UP ROW</span>
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr) 44px;gap:8px;align-items:center;min-height:56px;border-bottom:1px dashed #23252B"><span class="m" style="font-weight:700;text-align:right">17:00</span><span style="display:flex;flex-direction:column"><b style="font-size:15px">أ. هالة منصور</b><span style="font-size:12px;color:#5A5D66">تبعتلها العرض المعدّل</span></span><button aria-label="تمّت" style="width:44px;height:44px;border:1.5px solid #23252B;background:transparent;color:#23252B;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></button></div>
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr) 44px;gap:8px;align-items:center;min-height:56px;border-inline-start:6px solid #C2185B;padding-inline-start:6px"><span class="m" style="font-weight:700;text-align:right;color:#A3134C">امبارح</span><span style="display:flex;flex-direction:column"><b style="font-size:15px">كريم فؤاد</b><span style="font-size:12px;color:#A3134C;font-weight:600">متأخر يوم</span></span><button aria-label="تمّت" style="width:44px;height:44px;border:1.5px solid #23252B;background:transparent;color:#23252B;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></button></div>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:8px"><span class="sec">WHATSAPP</span>
+        <div class="zb" style="align-self:flex-start;max-width:85%;background:#E9EAE6;padding:8px 12px 18px;font-size:15px">العرض لسه ساري؟<span class="m" style="display:block;font-size:11px;text-align:left;color:#5A5D66">14:02</span></div>
+        <div class="zb" style="align-self:flex-end;max-width:85%;background:#23252B;color:#F5F6F4;padding:8px 12px 18px;font-size:15px">أيوه لآخر الأسبوع.<span class="m" style="display:block;font-size:11px;text-align:left;color:#A4A7AE">✓✓ 14:10 · TXN 4228</span></div>
+      </div>
+      <div class="slip" style="display:flex;flex-direction:column;gap:8px"><span class="sec">BOTTOM NAV</span>
+        <nav style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px dashed #23252B">
+          <a href="#" style="height:60px;display:flex;align-items:center;justify-content:center;background:#23252B;color:#F5F6F4;text-decoration:none;font-weight:600;font-size:13px">النهارده</a>
+          <a href="#" style="height:60px;display:flex;align-items:center;justify-content:center;color:#23252B;text-decoration:none;font-size:13px">العملاء</a>
+          <a href="#" style="height:60px;display:flex;align-items:center;justify-content:center;color:#23252B;text-decoration:none;font-size:13px">واتساب <span class="m" style="margin-inline-start:4px;border-inline-start:4px solid #C2185B;padding-inline-start:3px">3</span></a>
+          <a href="#" style="height:60px;display:flex;align-items:center;justify-content:center;color:#23252B;text-decoration:none;font-size:13px">تقفيل</a>
+        </nav>
+        <span style="font-size:12px;color:#5A5D66">كلام بس، من غير أيقونات. التاب الرابعة «تقفيل» بتفتح تقرير Z بتاع اليوم.</span>
+      </div>
+      <div class="slip zb" style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center"><span class="sec" style="align-self:flex-start">EMPTY</span>
+        <span class="m" style="font-size:14px">- - - - - - - - - - - - - -</span>
+        <span class="h" style="font-size:36px;font-weight:800;line-height:1">مفيش متأخرات</span>
+        <span style="font-size:14px;color:#5A5D66">الإجمالي: <span class="m">0</span>. خلّص اللي فاضل وقفّل بدري.</span>
+        <span class="m" style="font-size:14px">- - - - - - - - - - - - - -</span>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      light: [
+        { name: 'counter', role: 'الأرضية · الكاونتر', hex: '#E3E4E0', cr: '—' },
+        { name: 'paper', role: 'ورق الإيصال', hex: '#F5F6F4', cr: '—' },
+        { name: 'ink', role: 'حبر حراري · كل حاجة', hex: '#23252B', cr: '14.3' },
+        { name: 'ink-2', role: 'نص ثانوي', hex: '#5A5D66', cr: '6.1' },
+        { name: 'roll-end', role: 'آخر الرول · متأخر', hex: '#C2185B', cr: '5.4' },
+        { name: 'roll-text', role: 'نص على وردي فاتح', hex: '#A3134C', cr: '6.4' },
+        { name: 'roll-tint', role: 'خلفية المتأخر', hex: '#F5E3EA', cr: 'bg' }
+      ],
+      dark: [
+        { name: 'counter', role: 'الأرضية', hex: '#111214', cr: '—' },
+        { name: 'paper', role: 'ورق الإيصال', hex: '#1C1D21', cr: '—' },
+        { name: 'ink', role: 'النص', hex: '#EDEDE9', cr: '15.0' },
+        { name: 'ink-2', role: 'نص ثانوي', hex: '#A4A7AE', cr: '7.6' },
+        { name: 'roll-end', role: 'آخر الرول', hex: '#F48FB1', cr: '8.0' },
+        { name: 'roll-text', role: 'نص المتأخر', hex: '#F7A8C4', cr: '9.3' },
+        { name: 'roll-tint', role: 'خلفية المتأخر', hex: '#3A1F2A', cr: 'bg' }
+      ],
+      space: [ { n: '4', w: '16px' }, { n: '8', w: '32px' }, { n: '12', w: '48px' }, { n: '16', w: '64px' }, { n: '24 · سطر', w: '96px' }, { n: '48 · سطرين', w: '192px' }, { n: '72', w: '288px' } ]
+    };
+  }
+}
+</script>
+</body>
+</html>

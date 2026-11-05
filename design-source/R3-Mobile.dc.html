@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>أجندة — الموبايل</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'Geist Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.a{font-family:'Alexandria',sans-serif}
+.phone{width:390px;height:844px;box-sizing:border-box;overflow:hidden;border:10px solid #1B1D1B;border-radius:52px;display:flex;flex-direction:column;position:relative}
+.cap{font-size:14px;line-height:1.7;color:#3D403B;max-width:390px}
+.sample{font-family:'Geist Mono',monospace;font-size:10px;border:1px solid currentColor;border-radius:999px;padding:1px 8px}
+.ico{width:22px;height:22px}
+button{font-family:'IBM Plex Sans Arabic',sans-serif}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:1440px;height:2100px;box-sizing:border-box;padding:56px 64px;background:#E4E3DD;color:#0A0B0A;font-family:'IBM Plex Sans Arabic',sans-serif;display:flex;flex-direction:column;gap:40px;overflow:hidden">
+
+  <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 class="a" style="margin:0;font-size:34px;font-weight:800">الموبايل · للبيّاع</h2><span class="m" style="font-size:12px;color:#5A5D58">FLUTTER · 390 · بيانات عينة</span></div>
+
+  <section style="display:flex;gap:41px;align-items:flex-start">
+    <sc-for list="{{themes}}" as="t" hint-placeholder-count="2">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="phone" style="background:{{t.bg}};color:{{t.ink}};border-color:{{t.frame}}">
+          <div style="padding:22px 18px 0;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid {{t.ink}};padding-bottom:8px"><span class="a" style="font-size:15px;font-weight:800">أجندة</span><span style="font-size:11px;display:flex;gap:8px;align-items:center">التلات 3 نوفمبر · <span class="m">عدد 214</span><span class="sample" style="color:{{t.ink2}}">عينة</span></span></div>
+            <h1 class="a" style="margin:2px 0 0;font-size:25px;line-height:1.3;font-weight:800">3 فاتوك. ابدأ بـم. شريف،<br><span style="color:{{t.ink2}}">مستنيك من يومين.</span></h1>
+          </div>
+          <svg width="214" height="214" viewBox="0 0 300 300" style="align-self:center;margin:4px 0" role="img" aria-label="ساعة اليوم">
+            <circle cx="150" cy="150" r="138" fill="none" stroke="{{t.ink}}" stroke-width="7" stroke-dasharray="2 70.26" transform="rotate(-90.8 150 150)"/>
+            <circle cx="150" cy="150" r="118" fill="none" stroke="{{t.track}}" stroke-width="14"/>
+            <path d="M32 150 A118 118 0 0 1 260.9 109.6" fill="none" stroke="{{t.ink}}" stroke-width="14" stroke-linecap="round"/>
+            <circle cx="33" cy="134.6" r="12" fill="{{t.red}}" stroke="{{t.bg}}" stroke-width="3"/>
+            <circle cx="91" cy="47.8" r="8" fill="{{t.bg}}"/>
+            <circle cx="233.4" cy="66.6" r="8" fill="{{t.bg}}"/>
+            <circle cx="209" cy="252.2" r="12" fill="{{t.surface}}" stroke="{{t.brand}}" stroke-width="5"/>
+            <circle cx="91" cy="252.2" r="12" fill="{{t.surface}}" stroke="{{t.brand}}" stroke-width="3" stroke-dasharray="5 4"/>
+            <line x1="150" y1="150" x2="276" y2="104" stroke="{{t.red}}" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="150" cy="150" r="8" fill="{{t.red}}"/>
+            <text x="150" y="200" text-anchor="middle" font-family="Geist Mono" font-size="34" font-weight="600" fill="{{t.ink}}">14:20</text>
+          </svg>
+          <div style="flex:1;overflow:hidden;padding:0 12px;display:flex;flex-direction:column;gap:8px">
+            <div style="background:{{t.surface}};border-radius:20px;overflow:hidden">
+              <sc-for list="{{late}}" as="r" hint-placeholder-count="3">
+                <div style="display:grid;grid-template-columns:4px minmax(0,1fr) 44px;gap:12px;align-items:center;min-height:56px;padding-inline-end:8px;border-bottom:1px solid {{t.line}}">
+                  <span style="align-self:stretch;background:{{t.red}}"></span>
+                  <span style="display:flex;flex-direction:column;min-width:0"><span style="display:flex;justify-content:space-between;gap:6px"><b style="font-size:14px">{{r.name}}</b><span style="font-size:12px;font-weight:700;color:{{t.red}}">{{r.late}}</span></span><span style="font-size:12px;color:{{t.ink2}}">{{r.sub}}</span></span>
+                  <button aria-label="اتصل" style="width:44px;height:44px;border:0;border-radius:50%;background:{{t.red}};color:{{t.onred}};display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></button>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:8px">
+              <div style="background:{{t.surface}};border-radius:20px;padding:12px 14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:{{t.ink2}}">الجاية · النهارده</span><span style="display:flex;justify-content:space-between;align-items:baseline"><b style="font-size:14px">أ. هالة منصور</b><span class="m" style="font-size:15px;font-weight:700">17:00</span></span><span style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:13px">يوسف حمدي</span><span class="m" style="font-size:13px;color:{{t.ink2}}">19:00</span></span></div>
+              <div style="border:1.5px dashed {{t.ink2}};border-radius:20px;padding:12px 14px;display:flex;flex-direction:column;gap:2px"><span style="font-size:11px;color:{{t.ink2}}">جداد · محدش كلّمهم</span><span class="m" style="font-size:30px;font-weight:700;line-height:1.1;text-align:right">3</span><span style="font-size:11px;color:{{t.ink2}}">رنا · إسلام · دينا</span></div>
+            </div>
+          </div>
+          <nav style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:6px 8px 14px;background:{{t.bg}}">
+            <a href="#" style="height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:{{t.ink}};text-decoration:none;font-size:11px;font-weight:700"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12l5-2"/></svg>النهارده</a>
+            <a href="#" style="height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:{{t.ink2}};text-decoration:none;font-size:11px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="3"/><path d="M5 5h14M7 2h10"/></svg>المحفظة</a>
+            <a href="#" style="height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:{{t.ink2}};text-decoration:none;font-size:11px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>واتساب</a>
+            <a href="#" style="height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:{{t.ink2}};text-decoration:none;font-size:11px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>أنا</a>
+          </nav>
+        </div>
+        <span class="cap"><b>{{t.title}}</b> {{t.note}}</span>
+      </div>
+    </sc-for>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="phone" style="background:#0A0B0A;color:#F1F1EC;border-color:#000">
+        <div style="padding:22px 18px 10px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end"><h1 class="a" style="margin:0;font-size:32px;font-weight:800">المحفظة</h1><span class="m" style="font-size:28px;font-weight:600;color:#A0A39D">68</span></div>
+          <div style="display:flex;gap:6px;overflow:hidden"><span style="height:34px;padding:0 14px;border-radius:999px;background:#F1F1EC;color:#0A0B0A;display:flex;align-items:center;font-size:13px;font-weight:700;white-space:nowrap">الأهم الأول</span><span style="height:34px;padding:0 14px;border-radius:999px;border:1px solid #3A3D3A;display:flex;align-items:center;font-size:13px;white-space:nowrap">عرض سعر <span class="m" style="margin-inline-start:4px">9</span></span><span style="height:34px;padding:0 14px;border-radius:999px;border:1px solid #3A3D3A;display:flex;align-items:center;font-size:13px;white-space:nowrap">اتقفلت <span class="m" style="margin-inline-start:4px">6</span></span></div>
+        </div>
+        <div style="flex:1;overflow:hidden;padding:4px 14px;position:relative">
+          <sc-for list="{{stack}}" as="c" hint-placeholder-count="8">
+            <div style="height:{{c.h}};margin-bottom:{{c.mb}};border-radius:22px;background:{{c.bg}};color:{{c.fg}};border:{{c.bd}};box-sizing:border-box;padding:14px 18px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;box-shadow:0 -1px 0 rgba(0,0,0,.35)">
+              <span style="position:absolute;inset-block:0;inset-inline-start:0;width:6px;background:{{c.alert}}"></span>
+              <div style="display:flex;justify-content:space-between;align-items:center"><b class="a" style="font-size:{{c.fs}};font-weight:700">{{c.name}}</b><span class="m" style="font-size:12px;opacity:.85">№ {{c.n}}</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:12px"><span style="font-weight:{{c.fw}};color:{{c.tagc}}">{{c.tag}}</span><span class="m" style="font-size:14px;font-weight:600">{{c.amt}}</span></div>
+              <sc-if value="{{c.full}}" hint-placeholder-val="{{false}}">
+                <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+                  <span style="font-size:14px">شقة 140م · التجمع الخامس</span>
+                  <span style="display:flex;gap:4px"><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.3)"></span></span>
+                  <div style="display:flex;justify-content:space-between;align-items:center"><span class="m" style="font-size:30px;font-weight:600">2,450,000 ج</span><span style="height:30px;padding:0 10px;border-radius:999px;background:#FFFFFF;color:#0F6B4F;display:flex;align-items:center;font-size:12px;font-weight:700">النهارده <span class="m" style="margin-inline-start:4px">17:00</span></span></div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <span class="cap"><b>المحفظة.</b> كل عميل كارت، ومترتّبين: الأهم فوق. اللون بيغمق مع المرحلة، من رمادي فاتح لحد الأخضر الغامق، ولما الصفقة تتقفل الكارت يبقى أسود. المتأخر له شريط أحمر على الجنب وكلمة «متأخر».</span>
+    </div>
+  </section>
+
+  <section style="display:flex;gap:41px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="phone" style="background:#F3F2EE">
+        <div style="height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 8px"><button aria-label="رجوع" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0B0A" stroke-width="1.75" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button><span class="sample" style="color:#5A5D58;margin-left:8px">عينة</span></div>
+        <div style="margin:0 14px;height:208px;border-radius:24px;background:#0F6B4F;color:#FFFFFF;padding:18px 20px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;justify-content:space-between;font-size:12px"><span class="m">№ 1873</span><span>عرض سعر · <span class="m">4/5</span></span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><b class="a" style="font-size:28px">أ. هالة منصور</b><span style="font-size:13px;opacity:.9">شقة 140م · التجمع الخامس · مع أحمد سمير</span></div>
+          <span style="display:flex;gap:4px"><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:#FFFFFF"></span><span style="flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.3)"></span></span>
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="m" style="font-size:28px;font-weight:600">2,450,000 ج</span><span style="font-size:11px;display:flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>رقم الشركة</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:16px 14px 6px">
+          <span style="display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600"><button aria-label="اتصل" style="width:56px;height:56px;border:0;border-radius:50%;background:#0A0B0A;color:#F3F2EE;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></button>اتصل</span>
+          <span style="display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600"><button aria-label="واتساب" style="width:56px;height:56px;border:0;border-radius:50%;background:#FFFFFF;color:#0A0B0A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></button>واتساب</span>
+          <span style="display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600"><button aria-label="تمّت المتابعة" style="width:56px;height:56px;border:0;border-radius:50%;background:#FFFFFF;color:#0F6B4F;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></button>تمّت</span>
+        </div>
+        <div style="margin:10px 14px 0;background:#FFFFFF;border-radius:20px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center"><span style="display:flex;flex-direction:column"><span style="font-size:11px;color:#5A5D58">المتابعة الجاية · فاضل <span class="m">2:40</span></span><b style="font-size:14px">النهارده <span class="m">17:00</span> · العرض المعدّل</b></span><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="#E2E1DB" stroke-width="5"/><path d="M24 5 A19 19 0 1 1 9.5 36.3" fill="none" stroke="#0F6B4F" stroke-width="5" stroke-linecap="round"/></svg></div>
+        <div style="margin:18px 20px 0;display:flex;flex-direction:column;gap:6px;border-inline-start:3px solid #0A0B0A;padding-inline-start:14px">
+          <span class="a" style="font-size:22px;line-height:1.4;font-weight:700">«جوزي عايز يشوف الريسبشن.»</span>
+          <span style="font-size:12px;color:#5A5D58">آخر كلام من هالة · واتساب · <span class="m">14:12</span></span>
+        </div>
+        <div style="flex:1;overflow:hidden;margin:16px 14px 0;display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:700">التاريخ</span>
+          <div style="display:flex;justify-content:space-between;font-size:13px;border-top:1px solid #DAD9D2;padding-top:8px"><span>معاينة في الموقع</span><span class="m" style="color:#5A5D58">28.10</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;border-top:1px solid #DAD9D2;padding-top:8px"><span>اتبعت عرض سعر <span class="m">2,600,000</span></span><span class="m" style="color:#5A5D58">01.11</span></div>
+        </div>
+      </div>
+      <span class="cap"><b>البروفايل.</b> الكارت نفسه بيكبر لما تدوس عليه. تلات زراير كبيرة، وبعدها المتابعة الجاية، و«آخر كلام» العميل قاله مكتوب بخط كبير زي اقتباس في جرنال.</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="phone" style="background:#0A0B0A;color:#F1F1EC;border-color:#000">
+        <div style="padding:12px 10px 12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #2A2D2A">
+          <button aria-label="رجوع" style="width:44px;height:44px;border:0;background:transparent;color:#F1F1EC;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          <span style="width:52px;height:34px;border-radius:8px;background:#5FD0A4;flex:none"></span>
+          <span style="display:flex;flex-direction:column;flex:1;min-width:0"><b style="font-size:15px">أ. هالة منصور</b><span style="font-size:11px;color:#A0A39D">عرض سعر · <span class="m">2.45M</span> · رقم الشركة</span></span>
+          <span class="sample" style="color:#A0A39D">عينة</span>
+        </div>
+        <div style="flex:1;overflow:hidden;padding:16px 14px;display:flex;flex-direction:column;gap:10px">
+          <span style="align-self:center;font-size:11px;color:#A0A39D;background:#161816;border-radius:999px;padding:3px 10px">النهارده</span>
+          <div style="align-self:flex-start;max-width:80%;background:#161816;border-radius:20px 20px 20px 6px;padding:10px 14px;font-size:15px;line-height:1.55">مساء الخير، العرض اللي بعته امبارح لسه ساري؟<span class="m" style="display:block;font-size:10px;color:#A0A39D;text-align:left">14:02</span></div>
+          <div style="align-self:flex-end;max-width:80%;background:#F1F1EC;color:#0A0B0A;border-radius:20px 20px 6px 20px;padding:10px 14px;font-size:15px;line-height:1.55">مساء النور يا أستاذة هالة. أيوه ساري لآخر الأسبوع: مقدم <span class="m">10%</span> والباقي على <span class="m">6</span> سنين.<span class="m" style="display:block;font-size:10px;color:#0F6B4F;text-align:left">✓✓ 14:10</span></div>
+          <div style="align-self:flex-start;max-width:80%;background:#161816;border-radius:20px 20px 20px 6px;padding:10px 14px;font-size:15px;line-height:1.55">طب ينفع نعاين تاني يوم السبت؟ جوزي عايز يشوف الريسبشن.<span class="m" style="display:block;font-size:10px;color:#A0A39D;text-align:left">14:12</span></div>
+          <div style="align-self:flex-end;max-width:80%;background:#F1F1EC;color:#0A0B0A;border-radius:20px 20px 6px 20px;padding:10px 14px;font-size:15px;line-height:1.55">أكيد. هكلمك الساعة <span class="m">5</span> النهارده ونثبّت الميعاد.<span class="m" style="display:block;font-size:10px;color:#0F6B4F;text-align:left">✓✓ 14:15</span></div>
+          <div style="align-self:center;margin-top:6px;background:#161816;border-radius:16px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:13px"><svg width="26" height="26" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="#2A2D2A" stroke-width="5"/><path d="M24 5 A19 19 0 1 1 9.5 36.3" fill="none" stroke="#5FD0A4" stroke-width="5" stroke-linecap="round"/></svg>اتحطّت متابعة النهارده <span class="m">17:00</span> لوحدها</div>
+        </div>
+        <div style="display:flex;gap:6px;padding:0 14px 8px;overflow:hidden"><span style="height:34px;padding:0 12px;border-radius:999px;border:1px solid #3A3D3A;display:flex;align-items:center;font-size:12px;white-space:nowrap">ابعت العرض PDF</span><span style="height:34px;padding:0 12px;border-radius:999px;border:1px solid #3A3D3A;display:flex;align-items:center;font-size:12px;white-space:nowrap">حدد معاينة السبت</span><span style="height:34px;padding:0 12px;border-radius:999px;border:1px solid #3A3D3A;display:flex;align-items:center;font-size:12px;white-space:nowrap">اللوكيشن</span></div>
+        <div style="display:flex;gap:8px;padding:6px 12px 18px">
+          <input aria-label="رسالة" placeholder="اكتب رسالة…" style="flex:1;min-width:0;height:48px;border:0;border-radius:999px;background:#161816;color:#F1F1EC;font:400 15px 'IBM Plex Sans Arabic',sans-serif;padding:0 18px;outline:none">
+          <button aria-label="ابعت" style="width:48px;height:48px;border:0;border-radius:50%;background:#5FD0A4;color:#0A0B0A;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 4L3 11l7 3 3 7z"/></svg></button>
+        </div>
+      </div>
+      <span class="cap"><b>الواتساب جوّه أجندة.</b> بيتبعت من رقم الشركة. ولما العميلة تقول «هكلمك الساعة 5»، أجندة بتحط المتابعة على الساعة لوحدها، والردود الجاهزة بتختصر الكتابة.</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="phone" style="background:#1B2420;color:#F1F1EC;border-color:#000;align-items:center;padding-top:40px;gap:22px">
+        <span style="font-size:15px;opacity:.85">الثلاثاء، 3 نوفمبر</span>
+        <span class="m" style="font-size:86px;font-weight:600;line-height:.9;letter-spacing:-.03em">14:20</span>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="width:76px;height:76px;border-radius:50%;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center"><svg width="60" height="60" viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="118" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="26"/><path d="M32 150 A118 118 0 0 1 260.9 109.6" fill="none" stroke="#F1F1EC" stroke-width="26" stroke-linecap="round"/><line x1="150" y1="150" x2="270" y2="106" stroke="#FF6F5E" stroke-width="14" stroke-linecap="round"/><circle cx="33" cy="134.6" r="22" fill="#FF6F5E"/></svg></div>
+          <div style="width:170px;height:76px;border-radius:22px;background:rgba(0,0,0,.35);padding:10px 14px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:2px"><b style="font-size:14px;color:#FF6F5E">3 فاتوك</b><span style="font-size:12px">ابدأ بـم. شريف</span></div>
+        </div>
+        <div style="margin-top:auto;margin-bottom:28px;width:350px;border-radius:28px;background:rgba(0,0,0,.55);padding:16px 18px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="display:flex;align-items:center;gap:8px;font-size:12px;opacity:.85"><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><g transform="rotate(-90 24 24)" fill="none" stroke-width="5"><circle cx="24" cy="24" r="19" stroke="#5FD0A4" stroke-dasharray="20 4"/></g><line x1="24" y1="24" x2="35" y2="20" stroke="#FF6F5E" stroke-width="4" stroke-linecap="round"/></svg>أجندة · الجاية</span><span class="m" style="font-size:22px;font-weight:600">2:40</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="display:flex;flex-direction:column"><b style="font-size:16px">أ. هالة منصور</b><span style="font-size:12px;opacity:.8"><span class="m">17:00</span> · العرض المعدّل</span></span><span style="width:48px;height:48px;border-radius:50%;background:#5FD0A4;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0B0A" stroke-width="1.75" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span></div>
+          <span style="height:4px;border-radius:2px;background:rgba(255,255,255,.2)"><span style="display:block;height:4px;width:72%;border-radius:2px;background:#5FD0A4"></span></span>
+        </div>
+      </div>
+      <span class="cap"><b>من غير ما تفتح.</b> الساعة ويدجت دايرة على شاشة القفل، وجنبها ويدجت «3 فاتوك». والمكالمة الجاية Live Activity فيها عدّاد وزرار اتصال. يعني البيّاع يتابع من برّا التطبيق.</span>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const R = '#C8321F';
+    return {
+      themes: [
+        { title: 'النهارده · فاتح.', note: 'المانشيت فوق بيقولك تبدأ بمين. الساعة فيها النقط اللي اتعملت باهتة، والأحمر اللي فات، والأخضر اللي جاي. وتحتها المتأخرين الأول، بعدهم النهارده، وبعدهم الجداد.', bg: '#F3F2EE', surface: '#FFFFFF', ink: '#0A0B0A', ink2: '#5A5D58', track: '#E2E1DB', line: '#EEEDE8', red: '#C8321F', onred: '#FFFFFF', brand: '#0F6B4F', frame: '#1B1D1B' },
+        { title: 'النهارده · غامق.', note: 'نفس التصميم بليل. الأحمر بقى أفتح عشان يتقري، والساعة شكلها فخم أكتر على الأسود.', bg: '#0A0B0A', surface: '#161816', ink: '#F1F1EC', ink2: '#A0A39D', track: '#232623', line: '#232623', red: '#FF6F5E', onred: '#0A0B0A', brand: '#5FD0A4', frame: '#000000' }
+      ],
+      late: [
+        { name: 'م. شريف عبد العظيم', late: 'متأخر يومين', sub: 'فيلا · زايد · 6,800,000 ج' },
+        { name: 'كريم فؤاد', late: 'متأخر يوم', sub: 'دوبلكس · مدينتي · 4,150,000 ج' },
+        { name: 'أ. منى الدسوقي', late: 'من 5 ساعات', sub: 'IELTS مسائي · 7,500 ج' }
+      ],
+      stack: [
+        { name: 'م. شريف عبد العظيم', n: '1544', tag: 'متأخر يومين · عرض سعر', tagc: '#FFD2CB', fw: '700', amt: '6,800,000', bg: '#0F6B4F', fg: '#FFFFFF', bd: '0', alert: '#FF6F5E', h: '86px', mb: '-22px', fs: '16px', full: false },
+        { name: 'كريم فؤاد', n: '1790', tag: 'متأخر يوم · معاينة', tagc: '#7A1A0E', fw: '700', amt: '4,150,000', bg: '#93C2AC', fg: '#0A0B0A', bd: '0', alert: '#C8321F', h: '86px', mb: '-22px', fs: '16px', full: false },
+        { name: 'أ. هالة منصور', n: '1873', tag: 'عرض سعر · 4/5', tagc: '#FFFFFF', fw: '500', amt: '', bg: '#0F6B4F', fg: '#FFFFFF', bd: '0', alert: 'transparent', h: '218px', mb: '-22px', fs: '24px', full: true },
+        { name: 'أ. نرمين صبحي', n: '1902', tag: 'اتكلمنا · 11:00', tagc: '#0A0B0A', fw: '500', amt: '3,200,000', bg: '#CFE0D6', fg: '#0A0B0A', bd: '0', alert: 'transparent', h: '86px', mb: '-22px', fs: '16px', full: false },
+        { name: 'محمود رجب', n: '1931', tag: 'معاينة · 13:30', tagc: '#0A0B0A', fw: '500', amt: '5,600,000', bg: '#93C2AC', fg: '#0A0B0A', bd: '0', alert: 'transparent', h: '86px', mb: '-22px', fs: '16px', full: false },
+        { name: 'رنا عادل', n: '2004', tag: 'جديد · من 3 ساعات', tagc: '#0A0B0A', fw: '500', amt: '—', bg: '#E7E5DF', fg: '#0A0B0A', bd: '0', alert: 'transparent', h: '86px', mb: '-22px', fs: '16px', full: false },
+        { name: 'أ. نادية فوزي', n: '1622', tag: 'اتقفلت ✓', tagc: '#5FD0A4', fw: '700', amt: '3,100,000', bg: '#000000', fg: '#F1F1EC', bd: '1px solid #2A2D2A', alert: 'transparent', h: '86px', mb: '0', fs: '16px', full: false }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>أجندة R4 — النهارده</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Alexandria:wght@600;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'Geist Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.n{font-variant-numeric:tabular-nums lining-nums}
+.h{font-family:'Amiri',serif}
+.phone{width:390px;height:844px;box-sizing:border-box;overflow:hidden;border:10px solid #000;border-radius:54px;display:flex;flex-direction:column;position:relative}
+.cap{font-size:14px;line-height:1.75;color:#B9BBB4;max-width:390px}
+.sample{font-family:'Geist Mono',monospace;font-size:10px;border:1px solid currentColor;border-radius:999px;padding:1px 8px}
+button{font-family:'IBM Plex Sans Arabic',sans-serif}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:1440px;height:1150px;box-sizing:border-box;padding:48px 64px;background:#141514;color:#F2F1EC;font-family:'IBM Plex Sans Arabic',sans-serif;display:flex;flex-direction:column;gap:32px;overflow:hidden">
+
+  <header style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+    <h2 class="h" style="margin:0;font-size:52px;line-height:1.1;font-weight:700">النهارده: الساعة هي البطل.</h2>
+    <p style="margin:0;font-size:15px;line-height:1.8;color:#B9BBB4;max-width:560px">ساعة يوم الشغل من <span class="m">9</span> الصبح لـ<span class="m">9</span> بليل، على قوس <span class="m">270°</span>. المتأخر من الأيام اللي فاتت بيفيض برّه القوس كشُرَط حمرا. وتحت الساعة جملة المانشيت، والقايمة شيت بتسحبه لفوق.</p>
+  </header>
+
+  <section style="display:flex;justify-content:space-between;align-items:flex-start">
+    <sc-for list="{{heroes}}" as="t" hint-placeholder-count="2">
+      <div style="display:flex;flex-direction:column;gap:12px;order:{{t.order}}">
+        <div class="phone" style="background:{{t.bg}};color:{{t.ink}};border-color:{{t.frame}}">
+          <div style="padding:20px 22px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:{{t.ink2}}"><span style="font-family:'Alexandria',sans-serif;font-weight:800;font-size:15px;color:{{t.ink}}">أجندة</span><span>التلات 3 نوفمبر</span><span class="sample">عينة</span></div>
+          <svg width="350" height="350" viewBox="0 0 400 400" style="align-self:center;margin-top:10px" role="img" aria-label="ساعة يوم الشغل: 3 متأخرين، الجاية 17:00">
+            <path d="M93.9 306.1 A150 150 0 1 1 306.1 306.1" fill="none" stroke="{{t.track}}" stroke-width="22" stroke-linecap="round"/>
+            <path d="M93.9 306.1 A150 150 0 0 1 161.2 55.1" fill="none" stroke="{{t.ink}}" stroke-width="22" stroke-linecap="round"/>
+            <line x1="114" y1="349" x2="105" y2="364.5" stroke="{{t.red}}" stroke-width="7" stroke-linecap="round"/>
+            <line x1="141.2" y1="361.6" x2="135" y2="378.5" stroke="{{t.red}}" stroke-width="7" stroke-linecap="round"/>
+            <text x="86" y="392" font-family="IBM Plex Sans Arabic" font-size="15" font-weight="700" fill="{{t.red}}">+2 من قبل</text>
+            <text x="112" y="290" text-anchor="middle" font-family="Geist Mono" font-size="13" fill="{{t.ink2}}">9</text>
+            <text x="86" y="156" text-anchor="middle" font-family="Geist Mono" font-size="13" fill="{{t.ink2}}">12</text>
+            <text x="200" y="80" text-anchor="middle" font-family="Geist Mono" font-size="13" fill="{{t.ink2}}">15</text>
+            <text x="314" y="156" text-anchor="middle" font-family="Geist Mono" font-size="13" fill="{{t.ink2}}">18</text>
+            <text x="288" y="290" text-anchor="middle" font-family="Geist Mono" font-size="13" fill="{{t.ink2}}">21</text>
+            <circle cx="50" cy="200" r="6" fill="{{t.bg}}"/>
+            <circle cx="116.7" cy="75.3" r="6" fill="{{t.bg}}"/>
+            <circle cx="84.1" cy="295.2" r="18" fill="{{t.red}}" stroke="{{t.bg}}" stroke-width="4"/>
+            <text x="84.1" y="301" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-size="16" font-weight="700" fill="{{t.onred}}">م</text>
+            <circle cx="306.1" cy="93.9" r="18" fill="{{t.bg}}" stroke="{{t.brand}}" stroke-width="4"/>
+            <text x="306.1" y="99.5" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-size="16" font-weight="700" fill="{{t.brand}}">ه</text>
+            <circle cx="350" cy="200" r="18" fill="{{t.bg}}" stroke="{{t.brand}}" stroke-width="3" stroke-dasharray="5 4"/>
+            <text x="350" y="205.5" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-size="16" font-weight="700" fill="{{t.brand}}">ي</text>
+            <line x1="166.9" y1="76.4" x2="154.5" y2="30" stroke="{{t.red}}" stroke-width="5" stroke-linecap="round"/>
+            <text x="150" y="20" text-anchor="middle" font-family="Geist Mono" font-size="14" font-weight="600" fill="{{t.red}}">14:20</text>
+            <text x="200" y="240" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-size="132" font-weight="600" fill="{{t.red}}">3</text>
+            <text x="200" y="282" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-size="22" font-weight="600" fill="{{t.ink}}">فاتوك</text>
+          </svg>
+          <h1 class="h" style="margin:0 24px;font-size:31px;line-height:1.35;font-weight:700;text-align:center">ابدأ بـم. شريف،<br><span style="color:{{t.ink2}}">مستنيك من يومين.</span></h1>
+          <div style="margin-top:auto;background:{{t.surface}};border-radius:30px 30px 0 0;padding:10px 16px 26px;display:flex;flex-direction:column;gap:12px">
+            <span style="align-self:center;width:40px;height:5px;border-radius:3px;background:{{t.track}}"></span>
+            <div style="display:flex;gap:6px;font-size:12px"><span style="height:30px;padding:0 12px;border-radius:999px;background:{{t.red}};color:{{t.onred}};display:flex;align-items:center;font-weight:700"><span class="m">3</span>&#160;فاتوك</span><span style="height:30px;padding:0 12px;border-radius:999px;background:{{t.chip}};display:flex;align-items:center"><span class="m">2</span>&#160;جايين</span><span style="height:30px;padding:0 12px;border-radius:999px;border:1.5px dashed {{t.ink2}};display:flex;align-items:center"><span class="m">3</span>&#160;جداد</span></div>
+            <div style="display:grid;grid-template-columns:44px minmax(0,1fr) 48px;gap:12px;align-items:center">
+              <span style="width:44px;height:44px;border-radius:50%;background:{{t.red}};color:{{t.onred}};display:flex;align-items:center;justify-content:center;font-weight:700">م</span>
+              <span style="display:flex;flex-direction:column"><b style="font-size:15px">م. شريف عبد العظيم</b><span style="font-size:12px;color:{{t.ink2}}">فيلا زايد · <span class="n">6.8</span> مليون · من يومين</span></span>
+              <button aria-label="اتصل بشريف" style="width:48px;height:48px;border:0;border-radius:50%;background:{{t.ink}};color:{{t.bg}};display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></button>
+            </div>
+          </div>
+        </div>
+        <span class="cap"><b style="color:#F2F1EC">{{t.title}}</b> {{t.note}}</span>
+      </div>
+    </sc-for>
+
+    <div style="display:flex;flex-direction:column;gap:12px;order:2">
+      <div class="phone" style="background:#0B0C0C;color:#F2F1EC">
+        <div style="padding:18px 20px 12px;display:flex;align-items:center;gap:14px">
+          <svg width="74" height="74" viewBox="0 0 400 400" aria-hidden="true"><path d="M93.9 306.1 A150 150 0 1 1 306.1 306.1" fill="none" stroke="#242725" stroke-width="34" stroke-linecap="round"/><path d="M93.9 306.1 A150 150 0 0 1 161.2 55.1" fill="none" stroke="#F2F1EC" stroke-width="34" stroke-linecap="round"/><line x1="166.9" y1="76.4" x2="154.5" y2="30" stroke="#FF6F5E" stroke-width="14" stroke-linecap="round"/><text x="200" y="250" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-size="150" font-weight="600" fill="#FF6F5E">3</text></svg>
+          <span style="display:flex;flex-direction:column;gap:2px"><span class="h" style="font-size:24px;font-weight:700">ابدأ بـم. شريف</span><span style="font-size:12px;color:#A3A69F"><span class="m">14:20</span> · الجاية هالة <span class="m">17:00</span></span></span>
+        </div>
+        <div style="flex:1;overflow:hidden;background:#161817;border-radius:30px 30px 0 0;padding:10px 16px;display:flex;flex-direction:column;gap:4px">
+          <span style="align-self:center;width:40px;height:5px;border-radius:3px;background:#2E322F;margin-bottom:6px"></span>
+          <span style="font-size:12px;font-weight:700;color:#FF6F5E;padding:4px 0">فاتوك · <span class="m">3</span></span>
+          <sc-for list="{{late}}" as="r" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:12px;align-items:center;min-height:60px;border-bottom:1px solid #232624">
+              <span style="width:42px;height:42px;border-radius:50%;background:#FF6F5E;color:#0B0C0C;display:flex;align-items:center;justify-content:center;font-weight:700">{{r.i}}</span>
+              <span style="display:flex;flex-direction:column;min-width:0"><b style="font-size:15px">{{r.name}}</b><span style="font-size:12px;color:#A3A69F">{{r.sub}}</span></span>
+              <span style="font-size:12px;font-weight:700;color:#FF6F5E">{{r.late}}</span>
+            </div>
+          </sc-for>
+          <span style="font-size:12px;font-weight:700;padding:14px 0 4px">جايين النهارده · <span class="m">2</span></span>
+          <sc-for list="{{next}}" as="r" hint-placeholder-count="2">
+            <div style="display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:12px;align-items:center;min-height:60px;border-bottom:1px solid #232624">
+              <span style="width:42px;height:42px;border-radius:50%;border:2.5px {{r.line}} #5FD0A4;color:#5FD0A4;display:flex;align-items:center;justify-content:center;font-weight:700;box-sizing:border-box">{{r.i}}</span>
+              <span style="display:flex;flex-direction:column;min-width:0"><b style="font-size:15px">{{r.name}}</b><span style="font-size:12px;color:#A3A69F">{{r.sub}}</span></span>
+              <span class="m" style="font-size:16px;font-weight:600">{{r.t}}</span>
+            </div>
+          </sc-for>
+          <span style="font-size:12px;color:#A3A69F;padding:10px 0 4px">خلصوا الصبح: نرمين <span class="m">11:00</span> · محمود <span class="m">13:30</span></span>
+          <span style="font-size:12px;font-weight:700;padding:10px 0 4px">جداد · محدش كلّمهم</span>
+          <div style="display:flex;gap:8px"><sc-for list="{{fresh}}" as="r" hint-placeholder-count="3"><span style="flex:1;border:1.5px dashed #4A4E4B;border-radius:18px;padding:10px;display:flex;flex-direction:column;gap:2px"><b style="font-size:13px">{{r.name}}</b><span style="font-size:11px;color:#A3A69F">{{r.sub}}</span></span></sc-for></div>
+        </div>
+      </div>
+      <span class="cap"><b style="color:#F2F1EC">الشيت فوق.</b> لما تسحب القايمة لفوق، الساعة بتصغر وتبقى أيقونة حيّة جنب جملة المانشيت. الترتيب: اللي فاتك الأول، بعده الجاي، وبعدهم الجداد.</span>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1150}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      heroes: [
+        { order: '1', title: 'البطل · غامق.', note: 'أول ما تفتح: ساعة واحدة كبيرة ورقم واحد. التلاتة الحمر في النص هم كل اللي محتاج تعرفه. وجملة المانشيت مكتوبة بخط جرنال.', bg: '#0B0C0C', surface: '#161817', ink: '#F2F1EC', ink2: '#A3A69F', track: '#242725', red: '#FF6F5E', onred: '#0B0C0C', brand: '#5FD0A4', chip: '#232624', frame: '#000' },
+        { order: '3', title: 'البطل · فاتح.', note: 'نفس الشاشة بالنهار: ورق هادي وحبر أسود والأحمر بس على اللي فاتك. التباين: الأحمر 4.8:1، والثانوي 6:1.', bg: '#F2F1EC', surface: '#FFFFFF', ink: '#0B0C0C', ink2: '#5A5D58', track: '#E2E1DB', red: '#C8321F', onred: '#FFFFFF', brand: '#0E5E46', chip: '#F2F1EC', frame: '#1B1D1B' }
+      ],
+      late: [
+        { i: 'ش', name: 'م. شريف عبد العظيم', sub: 'فيلا · زايد · 6,800,000 ج', late: 'يومين' },
+        { i: 'ك', name: 'كريم فؤاد', sub: 'دوبلكس · مدينتي · 4,150,000 ج', late: 'يوم' },
+        { i: 'م', name: 'أ. منى الدسوقي', sub: 'IELTS مسائي · 7,500 ج', late: '5 ساعات' }
+      ],
+      next: [
+        { i: 'ه', name: 'أ. هالة منصور', sub: 'العرض المعدّل · 2,450,000 ج', t: '17:00', line: 'solid' },
+        { i: 'ي', name: 'يوسف حمدي', sub: 'ألماني A1 · مبدئي', t: '19:00', line: 'dashed' }
+      ],
+      fresh: [ { name: 'رنا عادل', sub: 'فيسبوك · 3 س' }, { name: 'إسلام توفيق', sub: 'OLX · 5 س' }, { name: 'دينا مجدي', sub: 'ترشيح · 6 س' } ]
+    };
+  }
+}
+</script>
+</body>
+</html>

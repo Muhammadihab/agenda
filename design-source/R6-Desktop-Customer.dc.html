@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أجندة — العميل والمحادثة</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&amp;family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F5F6F8}
+*{box-sizing:border-box}
+.n{font-family:'Geist',sans-serif;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate;letter-spacing:-.01em}
+.mono{font-family:'Geist Mono',monospace;direction:ltr;unicode-bidi:isolate}
+.b{height:34px;padding:0 12px;border-radius:8px;font:500 13px 'Readex Pro',sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid #D9DDE3;background:#FFFFFF;color:#1D2939;box-shadow:0 1px 2px rgba(16,24,40,.05);white-space:nowrap;cursor:pointer}
+.bp{background:#0B1220;color:#FFFFFF;border-color:#0B1220;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 1px 2px rgba(16,24,40,.25)}
+.ib{width:36px;height:36px;border-radius:9px;border:0;background:transparent;color:#4A5565;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.av{border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:600;flex:none}
+.it{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:11px;padding:11px 14px;align-items:center;border-radius:10px;margin:0 6px}
+.lbl{font-size:12px;color:#6A7282}
+.sec{padding:16px 18px;border-bottom:1px solid #F0F1F4;display:flex;flex-direction:column;gap:10px}
+.kv{display:flex;justify-content:space-between;font-size:13px}
+.kv span:first-child{color:#6A7282}
+.tag{height:22px;padding:0 8px;border-radius:6px;font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;white-space:nowrap}
+.bub{max-width:60%;padding:9px 13px;font-size:14px;line-height:1.6}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="width:100%;height:1000px;background:#F5F6F8;color:#0B1220;font-family:'Readex Pro',sans-serif;display:flex;overflow:hidden">
+
+  <aside style="flex:0 0 64px;background:#FBFBFC;border-inline-end:1px solid #EAECF0;padding:14px 0;display:flex;flex-direction:column;align-items:center;gap:4px">
+    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" style="margin-bottom:14px"><rect width="32" height="32" rx="9" fill="#0B1220"/><path d="M10 22.5 16 9.5l6 13" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="19" r="2.2" fill="#2FC29B"/></svg>
+    <a href="#" class="ib" aria-label="الرئيسية"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></a>
+    <a href="#" class="ib" aria-label="المتابعات"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></a>
+    <a href="#" class="ib" aria-label="المحادثات" style="background:#FFFFFF;box-shadow:0 0 0 1px #EAECF0,0 1px 2px rgba(16,24,40,.05);color:#0B1220"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L4 20z"/></svg></a>
+    <a href="#" class="ib" aria-label="العملاء"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.5"/><path d="M2.5 20c.5-3.5 3.1-5.5 6.5-5.5s6 2 6.5 5.5"/></svg></a>
+    <a href="#" class="ib" aria-label="الصفقات"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="4.5" height="16" rx="1.2"/><rect x="9.75" y="4" width="4.5" height="11" rx="1.2"/><rect x="16" y="4" width="4.5" height="7" rx="1.2"/></svg></a>
+  </aside>
+
+  <section style="flex:0 0 330px;background:#FFFFFF;border-inline-end:1px solid #EAECF0;display:flex;flex-direction:column;min-width:0">
+    <div style="padding:18px 16px 10px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h1 style="margin:0;font-size:17px;font-weight:600">المحادثات</h1><span style="display:flex;gap:6px;align-items:center"><span style="font-size:11px;color:#6A7282;border:1px solid #EAECF0;border-radius:6px;padding:0 6px">بيانات عينة</span><button class="b" style="height:30px;width:30px;padding:0" aria-label="فلتر"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg></button></span></div>
+      <label style="height:36px;border:1px solid #EAECF0;background:#F9FAFB;border-radius:9px;display:flex;align-items:center;gap:8px;padding:0 10px;color:#8A93A3"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input aria-label="دوّر" placeholder="الاسم أو آخر 4 أرقام" style="flex:1;min-width:0;border:0;outline:none;background:transparent;font:400 13px 'Readex Pro',sans-serif"></label>
+      <div style="display:flex;gap:2px;border-bottom:1px solid #EAECF0;font-size:13px"><span style="padding:6px 8px 9px;border-bottom:2px solid #0B1220;font-weight:500">الكل</span><span style="padding:6px 8px 9px;color:#6A7282">متأخر <span class="n" style="color:#C4320A">3</span></span><span style="padding:6px 8px 9px;color:#6A7282">مش مقروء <span class="n">5</span></span><span style="padding:6px 8px 9px;color:#6A7282">بتاعتي</span></div>
+    </div>
+    <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;gap:2px">
+      <div class="it" style="background:#F2F4F7"><span class="av" style="width:38px;height:38px;background:#FCE7F6;color:#C11574;font-size:13px">هـ م</span><span style="display:flex;flex-direction:column;min-width:0;gap:2px"><b style="font-size:13.5px;font-weight:500">أ. هالة منصور</b><span style="font-size:12.5px;color:#6A7282;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">رسالة صوتية · <span class="n">0:24</span></span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="n" style="font-size:11.5px;color:#8A93A3">14:15</span><span class="tag" style="background:#FFF6E5;color:#B54708"><span class="n">17:00</span></span></span></div>
+      <div class="it"><span class="av" style="width:38px;height:38px;background:#FEE4E2;color:#B42318;font-size:13px">ش ع</span><span style="display:flex;flex-direction:column;min-width:0;gap:2px"><b style="font-size:13.5px;font-weight:500">م. شريف عبد العظيم</b><span style="font-size:12.5px;color:#6A7282;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">مستني العرض المعدّل للفيلا</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="font-size:11.5px;color:#8A93A3">السبت</span><span class="tag" style="background:#FEF3F2;color:#B42318">يومين</span></span></div>
+      <div class="it"><span class="av" style="width:38px;height:38px;background:#E0EAFF;color:#3538CD;font-size:13px">ك ف</span><span style="display:flex;flex-direction:column;min-width:0;gap:2px"><b style="font-size:13.5px;font-weight:500">كريم فؤاد</b><span style="font-size:12.5px;color:#6A7282;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">كلّمني بعد القبض إن شاء الله</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="font-size:11.5px;color:#8A93A3">امبارح</span><span class="tag" style="background:#FEF3F2;color:#B42318">يوم</span></span></div>
+      <div class="it"><span class="av" style="width:38px;height:38px;background:#F2F4F7;color:#344054;font-size:13px">ر ع</span><span style="display:flex;flex-direction:column;min-width:0;gap:2px"><b style="font-size:13.5px;font-weight:600">رنا عادل</b><span style="font-size:12.5px;color:#0B1220;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">لو سمحت أسعار شقق أكتوبر</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="n" style="font-size:11.5px;color:#0E7C66;font-weight:600">11:42</span><span class="n" style="min-width:18px;height:18px;border-radius:9px;background:#0E7C66;color:#fff;font-size:10.5px;display:flex;align-items:center;justify-content:center">2</span></span></div>
+      <div class="it"><span class="av" style="width:38px;height:38px;background:#D1FADF;color:#05603A;font-size:13px">ن ص</span><span style="display:flex;flex-direction:column;min-width:0;gap:2px"><b style="font-size:13.5px;font-weight:500">أ. نرمين صبحي</b><span style="font-size:12.5px;color:#6A7282;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">تمام، هبعتلك صور الشقة</span></span><span class="n" style="font-size:11.5px;color:#8A93A3">11:05</span></div>
+      <div class="it"><span class="av" style="width:38px;height:38px;background:#FEF0C7;color:#B54708;font-size:13px">ي ح</span><span style="display:flex;flex-direction:column;min-width:0;gap:2px"><b style="font-size:13.5px;font-weight:500">يوسف حمدي</b><span style="font-size:12.5px;color:#6A7282;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">مواعيد الألماني A1 المسائي إيه؟</span></span><span class="n" style="font-size:11.5px;color:#8A93A3">10:30</span></div>
+      <div class="it"><span class="av" style="width:38px;height:38px;background:#F2F4F7;color:#344054;font-size:13px">م ر</span><span style="display:flex;flex-direction:column;min-width:0;gap:2px"><b style="font-size:13.5px;font-weight:500">محمود رجب</b><span style="font-size:12.5px;color:#6A7282;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">أنا تحت في الكمبوند</span></span><span class="n" style="font-size:11.5px;color:#8A93A3">13:28</span></div>
+    </div>
+  </section>
+
+  <section style="flex:1;min-width:0;display:flex;flex-direction:column">
+    <header style="background:#FFFFFF;border-bottom:1px solid #EAECF0;padding:12px 20px 0;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="av" style="width:36px;height:36px;background:#FCE7F6;color:#C11574;font-size:13px">هـ م</span>
+        <span style="display:flex;flex-direction:column;line-height:1.35"><b style="font-size:15px;font-weight:600">أ. هالة منصور</b><span style="font-size:12px;color:#6A7282;display:flex;align-items:center;gap:5px"><span style="width:6px;height:6px;border-radius:50%;background:#12B76A"></span>أونلاين · بتكلّم رقم الشركة · مع أحمد سمير</span></span>
+        <span style="margin-inline-start:auto;display:flex;gap:6px;align-items:center"><button class="b"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>اتصال</button><button class="b">حوّل لزميل</button><button class="b bp"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>اتقفلت الصفقة</button></span>
+      </div>
+      <div style="display:flex;gap:18px;font-size:13px"><span style="padding-bottom:10px;border-bottom:2px solid #0B1220;font-weight:500">المحادثة</span><span style="padding-bottom:10px;color:#6A7282">النشاط <span class="n">9</span></span><span style="padding-bottom:10px;color:#6A7282">الملفات <span class="n">2</span></span><span style="padding-bottom:10px;color:#6A7282">المهام <span class="n">3</span></span></div>
+    </header>
+    <div style="flex:1;padding:22px 32px;display:flex;flex-direction:column;gap:10px;overflow:hidden;background-color:#F5F6F8;background-image:radial-gradient(#E4E7EC 1px,transparent 1px);background-size:18px 18px">
+      <div style="align-self:center;display:flex;align-items:center;gap:10px;width:100%;color:#8A93A3;font-size:12px"><span style="flex:1;height:1px;background:#E4E7EC"></span>النهارده<span style="flex:1;height:1px;background:#E4E7EC"></span></div>
+      <div class="bub" style="align-self:flex-start;background:#FFFFFF;border:1px solid #EAECF0;border-radius:14px 14px 14px 4px;box-shadow:0 1px 2px rgba(16,24,40,.04)">مساء الخير، العرض اللي بعته امبارح لسه ساري؟<span class="n" style="display:block;font-size:10.5px;color:#8A93A3;text-align:left">14:02</span></div>
+      <div class="bub" style="align-self:flex-end;background:#0B1220;color:#FFFFFF;border-radius:14px 14px 4px 14px">مساء النور يا أستاذة هالة. أيوه ساري لآخر الأسبوع: مقدم <span class="n">10%</span> والباقي على <span class="n">6</span> سنين.<span style="display:block;font-size:10.5px;color:#98A2B3;text-align:left"><span class="n">14:10</span> · أحمد · اتقرت</span></div>
+      <div style="align-self:flex-end;background:#FFFFFF;border:1px solid #EAECF0;border-radius:12px;padding:8px 10px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 2px rgba(16,24,40,.04)"><span style="width:36px;height:44px;border-radius:6px;background:#FEF3F2;color:#B42318;font-size:10px;font-weight:700;display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;font-family:'Geist',sans-serif">PDF</span><span style="display:flex;flex-direction:column;gap:1px"><b style="font-size:13px;font-weight:500">عرض سعر · شقة 140م</b><span style="font-size:12px;color:#6A7282"><span class="n">2,450,000</span> ج · <span class="n">240 KB</span> · اتفتح مرتين</span></span></div>
+      <div style="align-self:flex-start;background:#FFFFFF;border:1px solid #EAECF0;border-radius:14px 14px 14px 4px;padding:9px 12px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 2px rgba(16,24,40,.04)"><button aria-label="تشغيل" style="width:30px;height:30px;border-radius:50%;border:0;background:#0B1220;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="#fff"/></svg></button><svg width="150" height="22" viewBox="0 0 150 22" aria-hidden="true"><g fill="#0B1220"><rect x="0" y="8" width="3" height="6" rx="1.5"/><rect x="6" y="5" width="3" height="12" rx="1.5"/><rect x="12" y="2" width="3" height="18" rx="1.5"/><rect x="18" y="6" width="3" height="10" rx="1.5"/><rect x="24" y="3" width="3" height="16" rx="1.5"/></g><g fill="#C9CED6"><rect x="30" y="7" width="3" height="8" rx="1.5"/><rect x="36" y="4" width="3" height="14" rx="1.5"/><rect x="42" y="8" width="3" height="6" rx="1.5"/><rect x="48" y="5" width="3" height="12" rx="1.5"/><rect x="54" y="7" width="3" height="8" rx="1.5"/><rect x="60" y="3" width="3" height="16" rx="1.5"/><rect x="66" y="6" width="3" height="10" rx="1.5"/><rect x="72" y="8" width="3" height="6" rx="1.5"/><rect x="78" y="4" width="3" height="14" rx="1.5"/><rect x="84" y="7" width="3" height="8" rx="1.5"/><rect x="90" y="5" width="3" height="12" rx="1.5"/><rect x="96" y="8" width="3" height="6" rx="1.5"/><rect x="102" y="6" width="3" height="10" rx="1.5"/><rect x="108" y="9" width="3" height="4" rx="1.5"/><rect x="114" y="6" width="3" height="10" rx="1.5"/><rect x="120" y="8" width="3" height="6" rx="1.5"/><rect x="126" y="5" width="3" height="12" rx="1.5"/><rect x="132" y="9" width="3" height="4" rx="1.5"/></g></svg><span class="n" style="font-size:11.5px;color:#6A7282">0:24</span></div>
+      <div style="align-self:flex-start;max-width:60%;font-size:12.5px;color:#6A7282;padding:0 4px;line-height:1.6">«طب ينفع نعاين تاني يوم السبت؟ جوزي عايز يشوف الريسبشن.» · نص الرسالة الصوتية</div>
+      <div style="align-self:stretch;background:#FFF8E6;border:1px dashed #F5D48A;border-radius:12px;padding:10px 14px;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.6"><span class="av" style="width:24px;height:24px;background:#D1FADF;color:#05603A;font-size:10px">أ س</span><span><b style="font-weight:500">ملاحظة داخلية</b> · جوزها هو صاحب القرار. كلّمه هو السبت، وجهّز صور الريسبشن. <span style="color:#8A93A3">· مش بتتبعت للعميلة</span></span></div>
+      <div class="bub" style="align-self:flex-end;background:#0B1220;color:#FFFFFF;border-radius:14px 14px 4px 14px">أكيد، هكلمك الساعة <span class="n">5</span> النهارده ونثبّت الميعاد.<span style="display:block;font-size:10.5px;color:#98A2B3;text-align:left"><span class="n">14:15</span> · أحمد · اتوصلت</span></div>
+      <div style="align-self:center;display:flex;align-items:center;gap:8px;font-size:12.5px;color:#4A5565;background:#FFFFFF;border:1px solid #EAECF0;border-radius:999px;padding:5px 12px 5px 6px;box-shadow:0 1px 2px rgba(16,24,40,.04)"><span style="width:22px;height:22px;border-radius:50%;background:#FFF6E5;color:#B54708;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>اتحطّت متابعة النهارده <b class="n" style="font-weight:600">17:00</b> من كلامك · <a href="#" style="color:#0E7C66;text-decoration:none;font-weight:500">غيّر</a></div>
+    </div>
+    <div style="background:#FFFFFF;border-top:1px solid #EAECF0;padding:12px 20px 14px">
+      <div style="border:1px solid #D9DDE3;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.05);display:flex;flex-direction:column">
+        <input aria-label="رسالة" placeholder="اكتب رد لهالة… أو / للردود الجاهزة" style="height:46px;border:0;padding:0 14px;font:400 14px 'Readex Pro',sans-serif;outline:none;border-radius:12px 12px 0 0">
+        <div style="display:flex;align-items:center;gap:4px;padding:6px 8px;border-top:1px solid #F0F1F4">
+          <button class="ib" aria-label="إرفاق ملف" style="width:32px;height:32px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5l-8 8a5 5 0 0 1-7-7l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7L9.7 17a1.7 1.7 0 0 1-2.4-2.4L15 7"/></svg></button>
+          <button class="ib" aria-label="ابعت عرض سعر" style="width:32px;height:32px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h6M9 17h4"/></svg></button>
+          <button class="ib" aria-label="ابعت لوكيشن" style="width:32px;height:32px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></button>
+          <span style="width:1px;height:18px;background:#EAECF0;margin:0 4px"></span>
+          <span style="font-size:12px;color:#6A7282;display:flex;align-items:center;gap:6px"><span style="width:28px;height:16px;border-radius:9px;background:#FFF6E5;border:1px solid #F5D48A;position:relative"><span style="position:absolute;top:2px;inset-inline-end:2px;width:10px;height:10px;border-radius:50%;background:#B54708"></span></span>ملاحظة داخلية</span>
+          <button class="b bp" style="margin-inline-start:auto;height:32px">ابعت <span class="kbd mono" style="font-size:10.5px;color:#98A2B3;border:1px solid #344054;border-radius:4px;padding:0 4px">↵</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside style="flex:0 0 340px;background:#FFFFFF;border-inline-start:1px solid #EAECF0;display:flex;flex-direction:column;overflow:hidden">
+    <div class="sec" style="padding-top:20px">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="mono" style="font-size:11.5px;color:#8A93A3">AG-001873</span><span class="tag" style="background:#F2F4F7;color:#344054;display:flex;gap:4px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0E7C66" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>ملك الشركة</span></div>
+      <span style="font-size:12px;color:#6A7282">قيمة الصفقة</span>
+      <span style="display:flex;align-items:baseline;gap:6px"><span class="n" style="font-size:28px;font-weight:600;line-height:1">2,450,000</span><span style="font-size:14px;color:#4A5565">ج</span></span>
+      <span style="font-size:12.5px;color:#4A5565">مقدم <span class="n">245,000</span> · <span class="n">6</span> سنين · خصم <span class="n">5.8%</span> من <span class="n">2.6M</span></span>
+    </div>
+    <div class="sec">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="lbl">المرحلة</span><span style="font-size:12px;color:#6A7282">احتمال القفل <b class="n" style="color:#0B1220">70%</b></span></div>
+      <div style="display:flex;flex-direction:column;gap:0;position:relative">
+        <div style="display:flex;align-items:center;gap:10px;height:30px;font-size:13px"><span style="width:18px;height:18px;border-radius:50%;background:#0E7C66;display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span style="color:#4A5565">جديد</span><span class="n" style="margin-inline-start:auto;font-size:11.5px;color:#8A93A3">22.10</span></div>
+        <div style="display:flex;align-items:center;gap:10px;height:30px;font-size:13px"><span style="width:18px;height:18px;border-radius:50%;background:#0E7C66;display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span style="color:#4A5565">اتكلمنا</span><span class="n" style="margin-inline-start:auto;font-size:11.5px;color:#8A93A3">23.10</span></div>
+        <div style="display:flex;align-items:center;gap:10px;height:30px;font-size:13px"><span style="width:18px;height:18px;border-radius:50%;background:#0E7C66;display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span style="color:#4A5565">معاينة</span><span class="n" style="margin-inline-start:auto;font-size:11.5px;color:#8A93A3">28.10</span></div>
+        <div style="display:flex;align-items:center;gap:10px;height:30px;font-size:13px"><span style="width:18px;height:18px;border-radius:50%;background:#FFFFFF;border:2px solid #0E7C66;box-shadow:0 0 0 3px #E6F4EF"></span><b style="font-weight:600">عرض سعر</b><span style="margin-inline-start:auto;font-size:11.5px;color:#0E7C66;font-weight:500">من <span class="n">2</span> يوم</span></div>
+        <div style="display:flex;align-items:center;gap:10px;height:30px;font-size:13px"><span style="width:18px;height:18px;border-radius:50%;border:1.5px dashed #C9CED6"></span><span style="color:#8A93A3">اتقفلت</span></div>
+      </div>
+    </div>
+    <div class="sec">
+      <span class="lbl">المهام</span>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px"><span style="width:18px;height:18px;border-radius:5px;border:1.5px solid #D0D5DD;flex:none;margin-top:1px"></span><span style="display:flex;flex-direction:column;flex:1"><span>تبعت العرض المعدّل</span><span style="font-size:11.5px;color:#B54708">النهارده <span class="n">17:00</span></span></span></label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px"><span style="width:18px;height:18px;border-radius:5px;border:1.5px solid #D0D5DD;flex:none;margin-top:1px"></span><span style="display:flex;flex-direction:column;flex:1"><span>معاينة تانية مع الزوج</span><span style="font-size:11.5px;color:#6A7282">السبت · مبدئي</span></span></label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#8A93A3"><span style="width:18px;height:18px;border-radius:5px;background:#0B1220;flex:none;margin-top:1px;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span style="text-decoration:line-through">تبعت صور الريسبشن</span></label>
+    </div>
+    <div class="sec" style="border-bottom:0">
+      <span class="lbl">التفاصيل</span>
+      <div class="kv"><span>الموبايل</span><span class="n">+20 100 ••• ••78</span></div>
+      <div class="kv"><span>المصدر</span><span>إعلان فيسبوك · شقق التجمع</span></div>
+      <div class="kv"><span>المسؤول</span><span style="display:flex;align-items:center;gap:6px"><span class="av" style="width:20px;height:20px;background:#D1FADF;color:#05603A;font-size:9px">أ س</span>أحمد سمير</span></div>
+      <div class="kv"><span>من أول تواصل</span><span><span class="n">12</span> يوم · <span class="n">9</span> مكالمات</span></div>
+    </div>
+  </aside>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

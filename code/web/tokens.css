@@ -1,0 +1,102 @@
+/* أجندة — design tokens v1 (Next.js / CSS)
+   Font: Readex Pro 300 / 400 / 500 (Google Fonts). No 700. */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500&display=swap');
+
+:root {
+  /* color — light */
+  --bg: #EEEFF2;            /* الأرضية */
+  --surface: #FFFFFF;       /* الكارت */
+  --surface-2: #FAFAFB;     /* أسفل تدرّج الكارت */
+  --line: #E6E8EC;
+  --ink: #111111;           /* الحبر + طبقة «دلوقتي» */
+  --ink-2: #7A808B;         /* نص تاني */
+  --ink-3: #565B66;         /* نص شرح */
+  --muted: #B9BDC6;
+  --accent: #FF6A1F;        /* برتقالي: حاجة واحدة في الشاشة */
+  --accent-soft: #FFE6D9;
+  --late: #E2560F;          /* كلمة «متأخر» */
+  --danger: #E5484D;        /* إنهاء مكالمة فقط */
+  --now: #111111;           /* كروت دلوقتي، الشريط، الريل */
+  --on-now: #FFFFFF;
+  --on-now-2: #9DA2AC;
+
+  /* type */
+  --font: 'Readex Pro', system-ui, sans-serif;
+  --fs-num-xl: 46px;  --fw-num-xl: 300;
+  --fs-title: 34px;   --fw-title: 500;
+  --fs-heading: 22px; --fw-heading: 500;
+  --fs-body: 15px;    --fw-body: 400;
+  --fs-caption: 12.5px;
+
+  /* shape */
+  --r-card: 28px; --r-row: 24px; --r-sheet: 40px; --r-tile: 18px; --r-button: 14px; --r-icon: 14px; --r-seg: 14px; --r-seg-item: 10px;
+  /* pill (999) فقط للشريط العايم والمفاتيح. الزراير مش كبسولة */
+  --r-pill: 999px;
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 22px; --sp-6: 32px;
+  --h-button: 52px; --h-chip: 40px; --round-s: 46px; --round-l: 58px; --touch-min: 44px;
+  --shadow-card: inset 0 1px 0 #fff, 0 1px 2px rgba(17,17,17,.04), 0 8px 20px -14px rgba(17,17,17,.25);
+  --shadow-float: 0 2px 8px -4px rgba(17,17,17,.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E0F12; --surface: #1A1C21; --surface-2: #1A1C21; --line: #26292F;
+    --ink: #F2F3F5; --ink-2: #8E939C; --ink-3: #A3A8B1; --muted: #4A4E56;
+    --accent: #FF7A33; --accent-soft: #3A2216; --late: #FF9A63;
+    --now: #1F2127; --on-now: #F2F3F5; --on-now-2: #8E939C;
+    --shadow-card: none; --shadow-float: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E0F12; --surface: #1A1C21; --surface-2: #1A1C21; --line: #26292F;
+  --ink: #F2F3F5; --ink-2: #8E939C; --ink-3: #A3A8B1; --muted: #4A4E56;
+  --accent: #FF7A33; --accent-soft: #3A2216; --late: #FF9A63;
+  --now: #1F2127; --on-now: #F2F3F5; --on-now-2: #8E939C;
+  --shadow-card: none; --shadow-float: none;
+}
+
+html { direction: rtl; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: var(--fs-body); }
+
+/* الأرقام: عرض ثابت + LTR معزول جوه العربي. «ج» برّه الـ span */
+.num { font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
+
+.card { background: linear-gradient(180deg, var(--surface), var(--surface-2)); border-radius: var(--r-card); box-shadow: var(--shadow-card); }
+.btn { height: var(--h-button); padding: 0 26px; border: 0; border-radius: 16px; font: 500 15px var(--font); display: inline-flex; align-items: center; justify-content: center; }
+.btn--accent { color: #fff; background: linear-gradient(180deg, #FF7D36 0%, #FF6A1F 55%, #F45F15 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 8px 18px -10px rgba(242,94,20,.7); }
+.btn--ink { color: #fff; background: linear-gradient(180deg, #2C2D32 0%, #141518 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 8px 18px -10px rgba(17,17,17,.6); }
+.btn--ghost { color: var(--ink); background: var(--surface); box-shadow: inset 0 0 0 1px #E3E5EA, 0 1px 2px rgba(17,17,17,.05); }
+.btn--on-dark { color: #fff; background: rgba(255,255,255,.09); box-shadow: inset 0 1px 0 rgba(255,255,255,.07); }
+.switch { width: 46px; height: 28px; border-radius: 999px; }
+/* أيكون لوحدها: من غير إطار ولا خلفية. مساحة اللمس 44 مش باينة */
+.icon-btn { width: var(--touch-min); height: var(--touch-min); border: 0; background: transparent; color: var(--ink); display: grid; place-items: center; }
+.icon-btn--accent { color: var(--accent); }
+/* الزراير كلام بس، من غير أيكون جواها */
+/* الشريط/الريل: المختار أيكون برتقالي + نقطة 5px تحته */
+.nav-item[aria-current] { color: var(--accent); position: relative; }
+.nav-item[aria-current]::after { content: ''; position: absolute; bottom: 3px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+/* الفلاتر: تابات بخط تحت */
+.tabs { display: flex; gap: 22px; border-bottom: 1px solid #DADDE2; }
+.tabs > button { position: relative; padding: 8px 0 10px; border: 0; background: none; font: 400 14px var(--font); color: var(--ink-2); }
+.tabs > button[aria-selected="true"] { color: var(--ink); font-weight: 500; }
+.tabs > button[aria-selected="true"]::after { content: ''; position: absolute; inset-inline: 0; bottom: -1px; height: 2px; border-radius: 2px; background: var(--ink); }
+.chip { height: 38px; padding: 0 16px; border-radius: 10px; background: var(--surface); font-size: 13.5px; display: inline-flex; align-items: center; }
+
+/* العلامة: حلقة برتقالي = محدش كلّمه */
+.ring { padding: 2.5px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.ring > img { border: 2.5px solid var(--bg); border-radius: 50%; display: block; }
+
+/* الحالة: أيكون 14 + كلمة، سطر واحد */
+.status { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink); white-space: nowrap; }
+.status--late { color: var(--late); }
+
+/* شريط الأكشن: كارت واحد، خانات بخط رفيع، أيكون + كلمة */
+.action-bar { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: 0 1px 2px rgba(17,17,17,.05), 0 8px 20px -16px rgba(17,17,17,.3); }
+.action-bar > button { height: 66px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; font: 400 12px var(--font); color: var(--ink-3); }
+.action-bar > button + button { border-inline-start: 1px solid var(--line); }
+.action-bar > button.is-primary { color: var(--accent); }
+
+/* القايمة: كارت واحد والعناصر بخطوط */
+.list { background: var(--surface); border-radius: var(--r-row); overflow: hidden; }
+.list > * + * { border-top: 1px solid var(--line); }
+.list > * { padding: 12px 16px; display: flex; align-items: center; gap: 12px; }

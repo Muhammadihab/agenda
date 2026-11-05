@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>أوزاليد — النظام</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+.m{font-family:'Martian Mono',monospace;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.d{font-family:'Alexandria',sans-serif}
+.grid{background-image:linear-gradient(#D5D8E6 1px,transparent 1px),linear-gradient(90deg,#D5D8E6 1px,transparent 1px);background-size:16px 16px}
+.hatch{background-image:repeating-linear-gradient(45deg,#2F3A8F 0 1px,transparent 1px 6px)}
+.sec{font-family:'Martian Mono',monospace;font-size:12px;letter-spacing:.08em;color:#575E8F}
+.box{border:1px solid #2F3A8F;background:#F2F3EE;padding:18px}
+h2{margin:0}
+button{font-family:'Noto Sans Arabic',sans-serif}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" class="grid" style="width:1440px;height:2900px;box-sizing:border-box;padding:64px;background-color:#F2F3EE;color:#2F3A8F;font-family:'Noto Sans Arabic',sans-serif;display:flex;flex-direction:column;gap:52px;overflow:hidden">
+
+  <header style="display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:40px;align-items:end;border:2px solid #2F3A8F;background:#F2F3EE;padding:28px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="sec" style="text-align:right">03 / أوزاليد · DIAZO PRINT</div>
+      <h1 class="d" style="margin:0;font-size:120px;line-height:1;font-weight:800">أوزاليد</h1>
+      <div style="font-size:18px;font-weight:600;color:#B71C1C">المصدر: طبعة الأوزاليد من المكتبة اللي جنب كلية الهندسة، لوحة الرسم المساحي، وجدول البيانات في ركن كل لوحة.</div>
+      <p style="margin:6px 0 0;font-size:18px;line-height:1.8;font-weight:500;color:#2F3A8F">كل عميل لوحة: رقم لوحة، مراجعة، مقياس، وتوقيع. المرحلة هي حرف المراجعة، والفلوس والمساحة بيتكتبوا بخطوط أبعاد، والحاجة اللي اتأخرت المهندس بيحوّطها بسحابة حمرا زي ما بيعمل مع أي تعديل.</p>
+    </div>
+    <div style="border:2px solid #2F3A8F;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));font-size:12px">
+      <div style="grid-column:span 4;padding:10px;border-bottom:1px solid #2F3A8F;display:flex;justify-content:space-between;align-items:baseline"><span class="d" style="font-size:22px;font-weight:700">جدول البيانات</span><span class="sec">TITLE BLOCK</span></div>
+      <div style="grid-column:span 2;padding:8px;border-bottom:1px solid #2F3A8F;border-left:1px solid #2F3A8F"><div class="sec">المشروع</div>أ. هالة منصور</div>
+      <div style="padding:8px;border-bottom:1px solid #2F3A8F;border-left:1px solid #2F3A8F"><div class="sec">DWG</div><span class="m">001873</span></div>
+      <div style="padding:8px;border-bottom:1px solid #2F3A8F"><div class="sec">REV</div><span class="m" style="font-size:16px;font-weight:600">D</span></div>
+      <div style="padding:8px;border-left:1px solid #2F3A8F"><div class="sec">رسم</div>أحمد س.</div>
+      <div style="padding:8px;border-left:1px solid #2F3A8F"><div class="sec">مراجعة</div>وليد ج.</div>
+      <div style="padding:8px;border-left:1px solid #2F3A8F"><div class="sec">التاريخ</div><span class="m">03.11.26</span></div>
+      <div style="padding:8px"><div class="sec">مقياس</div><span class="m">1:100</span></div>
+    </div>
+  </header>
+
+  <section style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 class="d" style="font-size:28px">الألوان: طبعتين حقيقيتين</h2><span class="sec">LIGHT = DIAZO (بنفسجي على أبيض) · DARK = CYANOTYPE (أبيض على أزرق)</span></div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+      <div class="box" style="display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:2px solid #2F3A8F"><b>فاتح · أوزاليد</b><span class="m" style="font-size:11px">AA vs paper</span></div>
+        <sc-for list="{{light}}" as="t" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:52px 110px minmax(0,1fr) 80px 50px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px solid #D5D8E6"><span style="height:32px;border:1px solid #2F3A8F;background:{{t.hex}}"></span><span class="m" style="font-size:12px;text-align:right">{{t.name}}</span><span style="font-size:14px">{{t.role}}</span><span class="m" style="font-size:12px">{{t.hex}}</span><span class="m" style="font-size:12px;font-weight:600">{{t.cr}}</span></div></sc-for>
+      </div>
+      <div style="background:#0F2A5C;color:#EAF0FF;padding:18px;display:flex;flex-direction:column;background-image:linear-gradient(#1B3A75 1px,transparent 1px),linear-gradient(90deg,#1B3A75 1px,transparent 1px);background-size:16px 16px">
+        <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:2px solid #EAF0FF"><b>غامق · بلوبرنت</b><span class="m" style="font-size:11px">AA vs ground</span></div>
+        <sc-for list="{{dark}}" as="t" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:52px 110px minmax(0,1fr) 80px 50px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px solid #24447F;background:#0F2A5C"><span style="height:32px;border:1px solid #EAF0FF;background:{{t.hex}}"></span><span class="m" style="font-size:12px;text-align:right">{{t.name}}</span><span style="font-size:14px">{{t.role}}</span><span class="m" style="font-size:12px">{{t.hex}}</span><span class="m" style="font-size:12px;font-weight:600">{{t.cr}}</span></div></sc-for>
+      </div>
+    </div>
+    <p style="margin:0;font-size:14px;background:#F2F3EE;align-self:flex-start;padding:4px 0">الوضع الغامق مش «نسخة غامقة»: هو الطبعة التانية اللي كانت موجودة فعلًا. المهندسين الكبار لسه بيقولوا على أي لوحة «بلوبرنت».</p>
+  </section>
+
+  <section style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px">
+    <div class="box" style="display:flex;flex-direction:column;gap:0">
+      <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:2px solid #2F3A8F"><h2 class="d" style="font-size:22px">الخط: كتابة اللوحة</h2><span class="sec">TYPE</span></div>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px 16px;align-items:baseline;padding-top:12px">
+        <span class="m" style="font-size:11px;text-align:right">display 48/56<br>Alexandria 800</span><span class="d" style="font-size:48px;line-height:56px;font-weight:800">النهارده</span>
+        <span class="m" style="font-size:11px;text-align:right">title 22/30<br>Alexandria 700</span><span class="d" style="font-size:22px;line-height:30px;font-weight:700">أ. هالة منصور</span>
+        <span class="m" style="font-size:11px;text-align:right">body 16/26<br>Noto Sans Ar 400</span><span style="font-size:16px;line-height:26px">شقة 140م في التجمع الخامس.</span>
+        <span class="m" style="font-size:11px;text-align:right">label 12/18<br>Noto Sans Ar 600</span><span style="font-size:12px;line-height:18px;font-weight:600;letter-spacing:.02em">رسم · مراجعة · مقياس</span>
+        <span class="m" style="font-size:11px;text-align:right">dim 18/24<br>Martian Mono 500</span><span class="m" style="font-size:18px;line-height:24px;font-weight:500;text-align:right">2,450,000 ج · 140 m²</span>
+      </div>
+      <p style="margin:12px 0 0;font-size:14px;line-height:1.7;color:#575E8F">Alexandria هندسي وعريض، قريب من الحروف اللي المهندس بيكتبها بالمسطرة. Martian Mono للأبعاد والأرقام، عريض وواضح حتى على <span class="m">11px</span>.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><b>المسافات · أساس 4، والشبكة 16</b>
+        <sc-for list="{{space}}" as="s" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:60px minmax(0,1fr);gap:10px;align-items:center"><span class="m" style="font-size:11px;text-align:right">{{s.n}}</span><span style="display:flex;align-items:center;width:{{s.w}};border-inline:1px solid #2F3A8F;height:10px;position:relative"><span style="flex:1;border-top:1px solid #2F3A8F"></span></span></div></sc-for>
+      </div>
+      <div class="box" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;font-size:13px">
+        <div style="display:flex;flex-direction:column;gap:8px"><b style="font-size:15px">الخطوط = المعنى</b>
+          <span style="display:flex;gap:8px;align-items:center"><span style="width:56px;border-top:2.5px solid #2F3A8F"></span>مؤكَّد</span>
+          <span style="display:flex;gap:8px;align-items:center"><span style="width:56px;border-top:1.5px dashed #2F3A8F"></span>مبدئي / مسودّة</span>
+          <span style="display:flex;gap:8px;align-items:center"><span style="width:56px;border-top:1px solid #575E8F"></span>مساعد</span>
+          <span style="display:flex;gap:8px;align-items:center"><span class="hatch" style="width:56px;height:14px;border:1px solid #2F3A8F"></span>محمي</span>
+          <span>حواف: <span class="m">0</span> دايمًا</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px"><b style="font-size:15px">الارتفاع والحركة</b>
+          <span>مفيش ضل. الطبقات بتبان بسُمك الخط بس.</span>
+          <span><span class="m">600ms</span> · رسم الخط (dashoffset)</span>
+          <span><span class="m">300ms</span> · ظهور السحابة</span>
+          <span><span class="m">500ms</span> · تطبيق اللوحة A4</span>
+          <span>reduce · بدون رسم، تظهر على طول</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 class="d" style="font-size:28px">العناصر المميزة، وشغلانة كل واحد</h2><span class="sec">SIGNATURE</span></div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center"><svg width="200" height="70" viewBox="0 0 200 70" aria-hidden="true"><path d="M20 50c-12 0-12-18 0-18 0-12 18-12 20-2 4-10 22-10 24 0 4-10 22-10 24 0 4-10 22-10 24 0 4-10 22-10 24 0 10-2 14 14 4 18 8 6 0 18-10 14-2 10-20 10-24 2-4 8-22 8-24 0-4 8-22 8-24 0-4 8-22 8-24 0-6 6-18 4-18-4z" fill="none" stroke="#C62828" stroke-width="1.75"/><text x="100" y="45" text-anchor="middle" font-family="Noto Sans Arabic" font-size="15" fill="#2F3A8F" font-weight="700">م. شريف</text></svg></div><b>سحابة المراجعة</b><span style="font-size:14px;line-height:1.6">زي ما المهندس بيحوّط أي تعديل. الشغلانة: <b>التأخير</b>. أي متابعة عدّى ميعادها بتتحوّط بسحابة حمرا وجنبها «متأخر».</span></div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center;gap:6px"><svg width="40" height="36" viewBox="0 0 40 36" aria-hidden="true"><path d="M20 3L37 33H3z" fill="none" stroke="#2F3A8F" stroke-width="2"/><text x="20" y="28" text-anchor="middle" font-family="Martian Mono" font-size="13" fill="#2F3A8F" font-weight="600">D</text></svg><span style="font-size:15px;font-weight:600">عرض سعر</span></div><b>حرف المراجعة</b><span style="font-size:14px;line-height:1.6">A جديد، B اتكلمنا، C معاينة، D عرض سعر، E اتقفلت. الشغلانة: <b>المرحلة</b>. حرف واحد في المثلث بيقول الصفقة فين.</span></div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:4px"><span class="m" style="font-size:15px;text-align:center;font-weight:600">2,450,000 ج</span><span style="display:flex;align-items:center;height:12px;border-inline:1.5px solid #2F3A8F"><span style="width:0;height:0;border:5px solid transparent;border-left-color:#2F3A8F"></span><span style="flex:1;border-top:1px solid #2F3A8F"></span><span style="width:0;height:0;border:5px solid transparent;border-right-color:#2F3A8F"></span></span></div><b>خط الأبعاد</b><span style="font-size:14px;line-height:1.6">الشغلانة: <b>الفلوس والمساحة</b>. طول الخط ليه معنى: في القوايم أطول خط هو أكبر صفقة، فبتقارن من غير جدول.</span></div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center"><span class="hatch m" style="padding:10px 14px;border:1px solid #2F3A8F;font-size:15px"><span style="background:#F2F3EE;padding:2px 6px">+20 100 ••• ••78</span></span></div><b>التشطيب (hatch)</b><span style="font-size:14px;line-height:1.6">في الرسم المعماري الحيطة المقطوعة بتتشطّب. الشغلانة: <b>الحماية</b>. أي داتا ملك الشركة بتتشطّب ومتتنسخش.</span></div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center;gap:12px"><span style="width:84px;height:48px;border:1.5px dashed #2F3A8F;display:flex;align-items:center;justify-content:center;font-size:12px">مبدئي</span><span style="width:84px;height:48px;border:2.5px solid #2F3A8F;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">مؤكَّد</span></div><b>القلم الرصاص والحبر</b><span style="font-size:14px;line-height:1.6">الشغلانة: <b>اليقين</b>. ميعاد متأكّد = خط حبر. ميعاد «هشوف وأقولك» = خط متقطّع. البيّاع بيعرف إيه اللي مش مضمون.</span></div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;flex-direction:column;justify-content:center;gap:2px"><div style="display:flex;height:10px;border:1px solid #2F3A8F"><span style="flex:1;background:#2F3A8F"></span><span style="flex:1"></span><span style="flex:1;background:#2F3A8F"></span><span style="flex:1"></span><span style="flex:1;background:#C62828"></span><span style="flex:1"></span></div><div class="m" style="display:flex;justify-content:space-between;font-size:10px;direction:rtl"><span>09</span><span>11</span><span>13</span><span>15</span><span>17</span><span>19</span><span>21</span></div></div><b>مقياس الرسم</b><span style="font-size:14px;line-height:1.6">الشغلانة: <b>الوقت</b>. اليوم بيتشاف كمسطرة؛ كل خانة ساعتين، والأحمر هو «دلوقتي».</span></div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center"><div style="border:2px solid #2F3A8F;width:180px;font-size:11px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))"><span style="padding:4px 6px;border-left:1px solid #2F3A8F">خصم 6%</span><span style="padding:4px 6px;font-family:'Alexandria';font-weight:700">وليد ج. ✕</span></div></div><b>خانة الاعتماد</b><span style="font-size:14px;line-height:1.6">الشغلانة: <b>الصلاحيات</b>. أي خصم فوق <span class="m">5%</span> محتاج توقيع صاحب الشغل في جدول البيانات قبل ما يتبعت.</span></div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><div style="height:96px;display:flex;align-items:center;justify-content:center"><svg width="90" height="80" viewBox="0 0 90 80" aria-hidden="true"><rect x="10" y="8" width="70" height="64" fill="none" stroke="#2F3A8F" stroke-width="1.5"/><path d="M10 30h40v42M50 30v-22" fill="none" stroke="#2F3A8F" stroke-width="1.5"/><text x="30" y="22" font-size="9" fill="#2F3A8F" font-family="Martian Mono">4.2</text><text x="58" y="56" font-size="9" fill="#2F3A8F" font-family="Martian Mono">3.6</text></svg></div><b>كروكي الوحدة</b><span style="font-size:14px;line-height:1.6">الشغلانة: <b>الذاكرة</b>. البيّاع بيرسم الوحدة بصباعه في ٣ خطوط، والعميل بيتفكر بالشقة مش باسمه. وفي مراكز التدريب بيبقى جدول الحصص.</span></div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 class="d" style="font-size:28px">المكوّنات</h2><span class="sec">COMPONENTS</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+      <div class="box" style="display:flex;flex-direction:column;gap:10px"><span class="sec">BUTTON</span>
+        <button style="height:52px;border:0;background:#2F3A8F;color:#F2F3EE;font-weight:700;font-size:16px">اتصل دلوقتي</button>
+        <button style="height:48px;border:1.5px solid #2F3A8F;background:transparent;color:#2F3A8F;font-weight:600;font-size:16px">ابعت واتساب</button>
+        <button style="height:48px;border:1.5px dashed #2F3A8F;background:transparent;color:#2F3A8F;font-weight:600;font-size:16px">حدد ميعاد مبدئي</button>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:12px"><span class="sec">INPUT · خانة في الجدول</span>
+        <label style="display:grid;grid-template-columns:96px minmax(0,1fr);border:1.5px solid #2F3A8F;min-height:48px"><span style="font-size:12px;font-weight:600;padding:6px 8px;border-left:1px solid #2F3A8F;display:flex;align-items:center">الاسم</span><input value="هالة منصور" style="border:0;background:transparent;font:500 16px 'Noto Sans Arabic',sans-serif;color:#2F3A8F;padding:0 10px;outline:none;min-width:0"></label>
+        <label style="display:grid;grid-template-columns:96px minmax(0,1fr);border:2.5px solid #2F3A8F;min-height:48px;background:#E6E8F2"><span style="font-size:12px;font-weight:600;padding:6px 8px;border-left:1px solid #2F3A8F;display:flex;align-items:center">الميزانية</span><input class="m" value="2,450,000" style="border:0;background:transparent;font:500 16px 'Martian Mono',monospace;color:#2F3A8F;padding:0 10px;outline:none;text-align:left;min-width:0"></label>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><span class="sec">PHONE · +20</span>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600">الموبايل
+          <span style="display:flex;direction:ltr;min-height:48px;border:1.5px solid #2F3A8F"><span class="m" style="width:60px;display:flex;align-items:center;justify-content:center;border-right:1px solid #2F3A8F;font-weight:600">+20</span><input class="m" value="100 234 5678" aria-label="الرقم" style="flex:1;min-width:0;border:0;background:transparent;font:500 16px 'Martian Mono',monospace;padding:0 10px;outline:none;color:#2F3A8F"></span>
+          <span style="font-size:12px;color:#575E8F;font-weight:400">من غير الصفر. <span class="m">10</span> أرقام.</span>
+        </label>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><span class="sec">STAGE · جدول المراجعات</span>
+        <div style="border:1.5px solid #2F3A8F;font-size:13px">
+          <sc-for list="{{revs}}" as="r" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:36px minmax(0,1fr) 70px;border-bottom:1px solid #D5D8E6;min-height:28px;align-items:center;background:{{r.bg}};color:{{r.fg}};font-weight:{{r.fw}}"><span class="m" style="text-align:center">{{r.l}}</span><span>{{r.name}}</span><span class="m" style="font-size:11px">{{r.d}}</span></div></sc-for>
+        </div>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:10px"><span class="sec">STATUS</span>
+        <span style="min-height:36px;border:2.5px solid #2F3A8F;display:flex;align-items:center;padding:0 10px;font-size:14px">النهارده <span class="m" style="margin-inline-start:6px">17:00</span> · مؤكَّد</span>
+        <span style="min-height:36px;border:1.5px dashed #2F3A8F;display:flex;align-items:center;padding:0 10px;font-size:14px">السبت · مبدئي</span>
+        <span style="min-height:36px;border:1.75px solid #C62828;border-radius:18px;display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:700;color:#C62828;align-self:flex-start;outline:1.75px solid #C62828;outline-offset:3px">متأخر يومين</span>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:10px"><span class="sec">TOAST · ملاحظة على اللوحة</span>
+        <div style="display:flex;align-items:center;gap:10px"><span style="width:40px;border-top:1px solid #2F3A8F;position:relative"></span><div style="flex:1;border:1.5px solid #2F3A8F;background:#F2F3EE;padding:10px 12px;display:flex;justify-content:space-between;align-items:center"><span><b>اتسجّلت المتابعة</b><br><span class="m" style="font-size:11px">REV D · 14:15</span></span><button style="height:44px;border:0;background:transparent;color:#2F3A8F;text-decoration:underline;font-weight:700">رجّعها</button></div></div>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px;grid-column:span 2"><span class="sec">CUSTOMER CARD · لوحة مصغّرة</span>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) 200px;border:2px solid #2F3A8F">
+          <div style="padding:12px 14px;display:flex;flex-direction:column;gap:6px;border-left:1px solid #2F3A8F">
+            <span class="d" style="font-size:22px;font-weight:700">أ. هالة منصور</span>
+            <span style="font-size:14px">شقة 140م · التجمع الخامس</span>
+            <span class="m" style="font-size:14px;font-weight:600;text-align:center">2,450,000 ج</span>
+            <span style="display:flex;align-items:center;height:10px;border-inline:1.5px solid #2F3A8F"><span style="flex:1;border-top:1px solid #2F3A8F"></span></span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));font-size:11px">
+            <span style="padding:6px;border-bottom:1px solid #2F3A8F;border-left:1px solid #2F3A8F"><span class="sec" style="font-size:10px">DWG</span><br><span class="m">001873</span></span>
+            <span style="padding:6px;border-bottom:1px solid #2F3A8F;display:flex;align-items:center;gap:6px"><svg width="26" height="24" viewBox="0 0 40 36" aria-hidden="true"><path d="M20 3L37 33H3z" fill="none" stroke="#2F3A8F" stroke-width="2.5"/><text x="20" y="28" text-anchor="middle" font-family="Martian Mono" font-size="14" fill="#2F3A8F" font-weight="600">D</text></svg>عرض سعر</span>
+            <span style="padding:6px;border-left:1px solid #2F3A8F"><span class="sec" style="font-size:10px">رسم</span><br>أحمد س.</span>
+            <span style="padding:6px"><span class="sec" style="font-size:10px">التالي</span><br><span class="m">17:00</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:0"><span class="sec" style="padding-bottom:6px">FOLLOW-UP ROW</span>
+        <div style="display:grid;grid-template-columns:54px minmax(0,1fr) 44px;gap:8px;align-items:center;min-height:56px;border-bottom:1px solid #2F3A8F"><span class="m" style="font-weight:600;text-align:right">17:00</span><span style="display:flex;flex-direction:column"><b style="font-size:15px">أ. هالة منصور</b><span style="font-size:12px;color:#575E8F">REV D · العرض المعدّل</span></span><button aria-label="تمّت" style="width:44px;height:44px;border:1.5px solid #2F3A8F;background:transparent;color:#2F3A8F;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></button></div>
+        <div style="display:grid;grid-template-columns:54px minmax(0,1fr) 44px;gap:8px;align-items:center;min-height:56px;border-bottom:1px dashed #2F3A8F"><span class="m" style="text-align:right">السبت</span><span style="display:flex;flex-direction:column"><b style="font-size:15px">معاينة تانية · مبدئي</b><span style="font-size:12px;color:#575E8F">مستني تأكيد جوزها</span></span><button aria-label="تمّت" style="width:44px;height:44px;border:1.5px dashed #2F3A8F;background:transparent;color:#2F3A8F;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></button></div>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><span class="sec">WHATSAPP · ملاحظة بخط إشارة</span>
+        <div style="align-self:flex-start;max-width:85%;border:1px solid #2F3A8F;padding:8px 10px;font-size:15px;position:relative">العرض لسه ساري؟<span class="m" style="display:block;font-size:10px;text-align:left;color:#575E8F">14:02</span></div>
+        <div style="align-self:flex-end;max-width:85%;border:2px solid #2F3A8F;background:#E6E8F2;padding:8px 10px;font-size:15px">أيوه لآخر الأسبوع.<span class="m" style="display:block;font-size:10px;text-align:left">✓✓ 14:10</span></div>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:8px"><span class="sec">BOTTOM NAV</span>
+        <nav style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:2px solid #2F3A8F">
+          <a href="#" style="height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#2F3A8F;color:#F2F3EE;text-decoration:none;font-size:12px;font-weight:700"><span class="m" style="font-size:10px">A1</span>النهارده</a>
+          <a href="#" style="height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#2F3A8F;text-decoration:none;font-size:12px;border-right:1px solid #2F3A8F"><span class="m" style="font-size:10px">A2</span>العملاء</a>
+          <a href="#" style="height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#2F3A8F;text-decoration:none;font-size:12px;border-right:1px solid #2F3A8F"><span class="m" style="font-size:10px">A3</span>واتساب</a>
+          <a href="#" style="height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#2F3A8F;text-decoration:none;font-size:12px;border-right:1px solid #2F3A8F"><span class="m" style="font-size:10px">A4</span>أنا</a>
+        </nav>
+      </div>
+      <div class="box" style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center"><span class="sec" style="align-self:flex-start">EMPTY</span>
+        <div style="width:200px;height:80px;border:1.5px dashed #2F3A8F;display:flex;align-items:center;justify-content:center"><span class="m" style="font-size:11px">DWG ------ · REV –</span></div>
+        <span class="d" style="font-size:24px;font-weight:700">لوحة فاضية</span>
+        <span style="font-size:14px;color:#575E8F">مفيش تعديلات متأخرة. الرسم نضيف.</span>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      light: [
+        { name: 'paper', role: 'ورق الأوزاليد', hex: '#F2F3EE', cr: '—' },
+        { name: 'grid', role: 'شبكة الرسم · زخرفة', hex: '#D5D8E6', cr: 'deco' },
+        { name: 'line', role: 'خط الطبعة · كل النص', hex: '#2F3A8F', cr: '8.8' },
+        { name: 'line-2', role: 'نص ثانوي', hex: '#575E8F', cr: '5.5' },
+        { name: 'pencil', role: 'قلم أحمر · متأخر', hex: '#C62828', cr: '5.0' },
+        { name: 'fill', role: 'خانة نشطة', hex: '#E6E8F2', cr: 'bg' },
+        { name: 'on-line', role: 'نص فوق الخط', hex: '#F2F3EE', cr: '8.8' }
+      ],
+      dark: [
+        { name: 'ground', role: 'أزرق البلوبرنت', hex: '#0F2A5C', cr: '—' },
+        { name: 'grid', role: 'شبكة · زخرفة', hex: '#24447F', cr: 'deco' },
+        { name: 'line', role: 'خط أبيض · النص', hex: '#EAF0FF', cr: '12.3' },
+        { name: 'line-2', role: 'نص ثانوي', hex: '#A9BCE6', cr: '7.4' },
+        { name: 'pencil', role: 'قلم أحمر', hex: '#FF9E8A', cr: '7.0' },
+        { name: 'fill', role: 'خانة نشطة', hex: '#1B3A75', cr: 'bg' },
+        { name: 'on-line', role: 'نص فوق الأبيض', hex: '#0F2A5C', cr: '12.3' }
+      ],
+      space: [ { n: '4', w: '16px' }, { n: '8', w: '32px' }, { n: '12', w: '48px' }, { n: '16', w: '64px' }, { n: '24', w: '96px' }, { n: '32', w: '128px' }, { n: '48', w: '192px' } ],
+      revs: [
+        { l: 'A', name: 'جديد', d: '22.10', bg: 'transparent', fg: '#575E8F', fw: '400' },
+        { l: 'B', name: 'اتكلمنا', d: '23.10', bg: 'transparent', fg: '#575E8F', fw: '400' },
+        { l: 'C', name: 'معاينة', d: '28.10', bg: 'transparent', fg: '#575E8F', fw: '400' },
+        { l: 'D', name: 'عرض سعر', d: '01.11', bg: '#2F3A8F', fg: '#F2F3EE', fw: '700' },
+        { l: 'E', name: 'اتقفلت', d: '—', bg: 'transparent', fg: '#575E8F', fw: '400' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
